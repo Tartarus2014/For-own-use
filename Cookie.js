@@ -5,8 +5,8 @@
 hostname = api.m.jd.com,*.iqiyi.com
 
 
-# > 京东签到获取cookie
+# > 京东签到获取cookie  （api.m.jd.com）
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
-# > 爱奇艺获取cookie
+# > 爱奇艺获取cookie   （*.iqiyi.com）
 http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
