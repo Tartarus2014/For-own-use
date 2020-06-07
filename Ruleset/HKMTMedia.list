@@ -1,6 +1,12 @@
 # (HKMTMedia)
-# > 愛奇藝台灣站
-DOMAIN,cache.video.iqiyi.com
+# > iQiyi
+USER-AGENT,QIYI*
+USER-AGENT,iQiYi*
+DOMAIN-KEYWORD,qiyi
+DOMAIN-SUFFIX,qy.net
+IP-CIDR,101.227.0.0/16,no-resolve
+IP-CIDR,101.224.0.0/13,no-resolve
+IP-CIDR,119.176.0.0/12,no-resolve
 # > Bilibili
 USER-AGENT,bili*
 USER-AGENT,Bilibili*
