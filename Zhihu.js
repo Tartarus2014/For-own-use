@@ -1,6 +1,6 @@
 # ZhiHu Ads
 
-hostname = www.zhihu.com, api.zhihu.com,
+hostname = www.zhihu.com, api.zhihu.com
 
 # 知乎 （www.zhihu.com, api.zhihu.com）
 http-response https://api.zhihu.com/moments/recommend script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js
