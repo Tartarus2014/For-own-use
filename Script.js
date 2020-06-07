@@ -2,7 +2,7 @@
 #破解部分app vip及去除应用内广告
 #需配合主机名共同使用
 
-hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com
+hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com,118.89.204.198
 
 # 微信去广告 （mp.weixin.qq.com）
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
@@ -38,3 +38,10 @@ http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness
 # 淘宝比价 (trade-acs.m.taobao.com)
 http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+
+# 知乎 （www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198）
+http-response https://api.zhihu.com/moments/recommend script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js, requires-body=true, timeout=10, tag=知乎
+http-response https://api.zhihu.com/topstory/recommend script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20recommend.js, requires-body=true, timeout=10, tag=知乎
+http-response https://api.zhihu.com/v4/questions script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20answer.js, requires-body=true, timeout=10, tag=知乎
+http-response https://api.zhihu.com/people/ script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js, requires-body=true, timeout=10, tag=知乎
+http-request https?://link.zhihu.com/\?target= script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20link.js, requires-body=true, timeout=10, tag=知乎
