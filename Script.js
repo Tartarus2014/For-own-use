@@ -2,7 +2,7 @@
 #破解部分app vip及去除应用内广告
 #需配合主机名共同使用
 
-hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, www.zhihu.com, api.zhihu.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com
+hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com
 
 # 微信去广告 （mp.weixin.qq.com）
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
@@ -26,12 +26,6 @@ http-response https://app.bilibili.com/x/v2/account/mine\?access_key script-path
 http-response https://app.bilibili.com/x/v2/view\?access_key script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20view%20relate.js
 http-response https://api.bilibili.com/x/v2/reply/main\?access_key script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20reply.js
 http-response https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20live.js
-
-# 知乎 （www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198）
-http-response https://api.zhihu.com/moments/recommend script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js
-http-response https://api.zhihu.com/topstory/recommend script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20recommend.js
-http-response https://api.zhihu.com/v4/questions script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20answer.js
-http-response https://api.zhihu.com/people/ script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js
 
 # Display netflix ratings(ios.prod.ftl.netflix.com)
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
