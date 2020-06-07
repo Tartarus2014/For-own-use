@@ -2,7 +2,7 @@
 #破解部分app vip及去除应用内广告
 #需配合主机名共同使用
 
-hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com
+hostname = mp.weixin.qq.com, api.gamer.com.tw, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com
 
 # 微信去广告 （mp.weixin.qq.com）
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
