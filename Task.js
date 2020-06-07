@@ -53,3 +53,6 @@ cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/script
 
 # 饿了么  
 cron "4 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
+
+# 10010
+cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
