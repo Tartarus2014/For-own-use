@@ -46,4 +46,7 @@ cron "0 */6 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/
 cron "4 0 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js
 
 # 微博
-cron "9 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+cron "4 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+
+# rrtv
+cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
