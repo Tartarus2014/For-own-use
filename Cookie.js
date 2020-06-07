@@ -2,7 +2,7 @@
 # 该订阅仅适用于定时签到脚本的Cookie获取. 
 # 您可以在使用后手动将其禁用，以免产生不必要的MITM.
 
-hostname = api.m.jd.com, *.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, m.client.10010.com, daojia.jd.com, i.meituan.com, music.163.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, promotion.waimai.meituan.com, *.rrys2019.com, ios.zmzapi.com, draw.jdfcloud.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com
+hostname = api.m.jd.com, *.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, m.client.10010.com, daojia.jd.com, i.meituan.com, music.163.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, promotion.waimai.meituan.com, *.rrys2019.com, ios.zmzapi.com, draw.jdfcloud.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv
 
 
 # 京东  （api.m.jd.com）
@@ -58,3 +58,6 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 http-request https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
 # > 钱包js
 http-request https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+
+# rrtv(*.rr.tv)
+http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
