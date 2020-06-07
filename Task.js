@@ -58,4 +58,4 @@ cron "4 0 * * *" script-path=https://raw.githubusercontent.com/songyangzz/Quantu
 cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js
 
 # 吾爱破解
-cron "5 * * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
