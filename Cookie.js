@@ -2,8 +2,7 @@
 # 该订阅仅适用于定时签到脚本的Cookie获取. 
 # 您可以在使用后手动将其禁用，以免产生不必要的MITM.
 
-hostname = api.m.jd.com, *.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, m.client.10010.com, daojia.jd.com, i.meituan.com, music.163.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, promotion.waimai.meituan.com, *.rrys2019.com, ios.zmzapi.com, draw.jdfcloud.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me
-
+hostname = api.m.jd.com, *.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, m.client.10010.com, daojia.jd.com, i.meituan.com, music.163.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, promotion.waimai.meituan.com, *.rrys2019.com, ios.zmzapi.com, draw.jdfcloud.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me, act.10010.com, m.client.10010.com
 
 # 京东  （api.m.jd.com）
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -64,3 +63,8 @@ http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githu
 
 # 饿了么 (h5.ele.me)
 http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js, timeout=10
+
+# 10010 (act.10010.com, m.client.10010.com)
+http-request ^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+http-request ^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+http-request ^https:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
