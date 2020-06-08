@@ -1,4 +1,4 @@
-hostname=api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
+hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
 
 # 微博 (api.weibo.cn, mapi.weibo.com, *.uve.weibo.com)
 http-response ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js, requires-body=true, timeout=10
