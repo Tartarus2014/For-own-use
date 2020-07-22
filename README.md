@@ -1,2 +1,2 @@
 # Scripts
-LOON
+自用
