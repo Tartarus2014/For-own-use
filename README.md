@@ -1,2 +1,1 @@
-# Scripts
-自用
+For-own-use
