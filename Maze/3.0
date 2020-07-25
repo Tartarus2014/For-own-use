@@ -1,0 +1,221 @@
+# Loon全局配置 by MazeTsz ,导入配置后，直接修改订阅里的链接即可。更新规则，更新脚本后即可使用。
+# 全分组去广告，脚本，签到，cookie，天气脚本
+# 带国际tiktok解锁
+# 云音乐解锁规则，节点远程订阅，默认直连，可在策略组手动开启。
+# =请使用 Safari 浏览器访问网站。首先下载 证书，进入「设置」>「通用」>「描述文件」，安装「UnblockNeteaseMusic Root CA」，并在「设置」>「通用」>「关于本机」>「证书信任设置」开启对「UnblockNeteaseMusic Root CA」的信任。
+# =证书链接：https://cdn.jsdelivr.net/gh/nondanee/UnblockNeteaseMusic@master/ca.crt
+# YouTube默认去广告，油管会员的请把 hostname 里的修改为 *.googlevideo.com.bak，否则无法载入视频。
+# 𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚策略为解锁B站地区，默认直连，切换HKMT规则即为自动解锁模式。
+# 增加动画疯分流，默认走台湾
+#
+# Load-Balance:负载均衡，根据选择的负载均衡算法选择子策略，目前三种算法:
+#   -Random:随机选择子策略
+#   -PCC:基于Random，不同于Random，PCC会让相同主机名的请求锁定同一节点
+#   -Round-Robin:轮询选择子策略
+#  
+# 由于负载均衡策略，并不是所有机场都能适用，所以该策略需要手动调整：
+# 「配置-节点-筛选订阅节点」，设置💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞节点组
+#   -包含订阅，默认机场，如果多个机场订阅，请自行勾选添加
+#   -节点选择，把需要参与负载均衡策略的节点逐一勾上，并保存。
+#  （PS.请选择同地区节点，并且遵从各机场的最大IP限制数，该机场节点选择数量应小于限制数）
+#   -在策略组 🖲️𝐏𝐫𝐨𝐱𝐲 选择 💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞.𝑷𝒄𝒄 启用。
+
+
+[General]
+ipv6 = false
+skip-proxy = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,198.51.100.0/24,224.0.0.0/4,*.local,localhostlocal
+bypass-tun = 10.0.0.0/8,127.0.0.0/8,169.254.0.0/16,192.0.2.0/24,192.168.0.0/16,198.51.100.0/24,224.0.0.0/4
+# [DNS] => DNS 服务器
+dns-server = 1.2.4.8,119.29.29.29,223.5.5.5
+allow-udp-proxy = true
+host = 127.0.0.1
+
+[Remote Proxy]
+# 订阅节点
+# 别名 = 订阅URL
+
+✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭 = https://XXX.COM
+🎧 𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜 = https://git.io/JfNq3
+
+[Remote Filter]
+# 筛选订阅节点，筛选后的结果可加入到策略组中，目前支持三种筛选方式
+# NodeSelect: 使用在UI上选择的节点。
+# NameKeyword: 根据提供的关键词对订阅中所有节点的名称进行筛选，使用筛选后的节点。
+# NameRegex: 根据提供的正则表达式对订阅中所有节点的名称进行筛选，使用筛选后的节点。
+💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞 = NodeSelect,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = ".*"
+🇭🇰香港 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "香港|HK"
+🇨🇳台湾 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "台湾|TW"
+🇯🇵日本 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "日本|JP"
+🇰🇷韩国 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "韩国|KR"
+🇺🇸美国 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "美国|US"
+🇸🇬新加坡 = NameRegex,✈️ 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, FilterKey = "新加坡|SG"
+🎧music = NameRegex,🎧 𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜, FilterKey = "🎧|unblock|music|云音乐"
+
+[Proxy]
+# 本地节点
+# 内置 DIRECT、REJECT 策略
+# 节点名称 = 协议，服务器地址，服务器端口，加密协议，密码，
+# vmess
+# 节点名称 = 协议，服务器地址，端口，加密方式，UUID，传输方式:(tcp/ws),path：websocket握手header中的path，host：websocket握手header中的path，over-tls:是否tls，tls-name：远端w服务器域名，skip-cert-verify：是否跳过证书校验（默认否）
+#5 = vmess, 1.2.3.4, 10086, aes-128-gcm,”uuid“,transport:ws,path:/,host:icloud.com,over-tls:true,tls-name:youtTlsServerName.com,skip-cert-verify:false
+
+[Proxy Group]
+# 策略组
+# 节点选项
+# select模式,手动选择模式
+# url-test模式，给提供的url发出http header请求，根据返回结果，选择测速最快的节点，默认间隔600s，测速超时时间5s，为了避免资源浪费，建议节点数不要过多，只支持单个节点和远端节点，其他会被忽略
+# fallback模式，和url-test类似，不同的是会根据顺序返回第一个可用的节点，为了避免资源浪费，建议节点数不要过多，只支持单个节点和远端节点，其他会被忽略
+🕹𝐅𝐢𝐧𝐚𝐥 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🖲️𝐏𝐫𝐨𝐱𝐲 = select,♻️𝐀𝐮𝐭𝐨,💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞.𝑷𝒄𝒄,🌀𝐒𝐞𝐥𝐞𝐜𝐭
+💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞.𝑷𝒄𝒄 = load-balance,💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞,url = http://www.gstatic.com/generate_204,interval = 600,max-timeout = 3000,algorithm = Pcc
+# 🔘𝐑𝐚𝐧𝐝𝐨𝐦 = load-balance,💠𝐁𝐚𝐥𝐚𝐧𝐜𝐞,url = http://www.gstatic.com/generate_204,interval = 600,max-timeout = 3000,algorithm = Random
+
+♻️𝐀𝐮𝐭𝐨 = url-test,🇭🇰香港,🇯🇵日本,🇰🇷韩国,🇺🇸美国,🇸🇬新加坡,url = http://bing.com/,interval = 600
+🌀𝐒𝐞𝐥𝐞𝐜𝐭 = select,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇰🇷韩国,🇺🇸美国,🇸🇬新加坡
+
+🌏𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🔅𝐇𝐊𝐌𝐓
+🎧𝐍𝐞𝐭𝐞𝐚𝐬𝐞 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🎧𝐌𝐮𝐬𝐢𝐜
+🎵𝐓𝐢𝐤𝐓𝐨𝐤 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🖥𝐍𝐞𝐭𝐟𝐥𝐢𝐱 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🇨🇳𝐓𝐖,🇺🇸𝐔𝐒,🇸🇬𝐒𝐆,🇭🇰𝐇𝐊
+💳𝐏𝐚𝐲𝐏𝐚𝐥 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+📱𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🎬𝐘𝐨𝐮𝐓𝐮𝐛𝐞 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🇭🇰𝐇𝐊,🇺🇸𝐔𝐒
+📺𝐁𝐚𝐡𝐚𝐦𝐮𝐭 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🇨🇳𝐓𝐖,🇭🇰𝐇𝐊,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+🔅𝐇𝐊𝐌𝐓 = select,🇨🇳𝐓𝐖,🇭🇰𝐇𝐊
+
+# 🔓网易云音乐灰色歌曲,需要节点支持解锁
+
+🇭🇰𝐇𝐊 = url-test,🇭🇰香港,url = http://bing.com/,interval = 600
+🇨🇳𝐓𝐖 = url-test,🇨🇳台湾,url = http://bing.com/,interval = 600
+🇸🇬𝐒𝐆 = url-test,🇸🇬新加坡,url = http://bing.com/,interval = 600
+🇰🇷𝐊𝐑 = url-test,🇰🇷韩国,url = http://bing.com/,interval = 600
+🇯🇵𝐉𝐏 = url-test,🇯🇵日本,url = http://bing.com/,interval = 600
+🇺🇸𝐔𝐒 = url-test,🇺🇸美国,url = http://bing.com/,interval = 600
+🎧𝐌𝐮𝐬𝐢𝐜 = select,🎧music
+
+# 网络测速
+🚀𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭 = select,🖲️𝐏𝐫𝐨𝐱𝐲,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+
+# 苹果服务
+🍎𝐀𝐩𝐩𝐥𝐞 = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,🖲️𝐏𝐫𝐨𝐱𝐲
+
+# 白名单模式 PROXY，黑名单模式 DIRECT
+
+# 广告拦截
+🔴𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤 = fallback,🇭🇰香港,🇨🇳台湾,🇯🇵日本,🇰🇷韩国,🇺🇸美国,🇸🇬新加坡,REJECT,url = http://bing.com/,interval = 600
+🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = select,⛔️𝐑𝐞𝐣𝐞𝐜𝐭,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+
+# 直接连接
+🎯𝐃𝐢𝐫𝐞𝐜𝐭 = select,DIRECT
+
+# 拦截
+⛔️𝐑𝐞𝐣𝐞𝐜𝐭 = select,REJECT
+
+# SSID
+# 别名 = ssid，默认 = 策略， 蜂窝 = 策略， ssid名称 = 策略
+#SSID = ssid, default = PROXY, cellular = DIRECT, ”DivineEngine“ = PROXY
+
+[Rule]
+
+# 本地规则
+# Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR
+# Strategy:DIRECT,Proxy,REJECT
+# Options:force-remote-dns(Default:false),no-resolve
+
+DOMAIN-SUFFIX,ehg-youtube.hitbox.com,reject
+
+# GeoIP China
+GEOIP,CN,🎯𝐃𝐢𝐫𝐞𝐜𝐭
+FINAL,🕹𝐅𝐢𝐧𝐚𝐥
+
+[Remote Rule]
+
+# 订阅规则
+# > Ad Block
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, tag=𝐀𝐝 𝐋𝐢𝐛𝐲, enabled=true
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Tide.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, tag=𝐀𝐝 𝐓𝐢𝐝𝐞, enabled=true
+# > BlockOTA 屏蔽苹果升级，默认关闭
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, tag=𝐁𝐥𝐨𝐜𝐤𝐎𝐓𝐀, enabled=false
+# > Antirevoke 证书过期
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list, policy=🚫𝐀𝐝 𝐁𝐥𝐨𝐜𝐤, tag=𝐀𝐧𝐭𝐢𝐫𝐞𝐯𝐨𝐤𝐞, enabled=true
+# > NeteaseMusic
+https://raw.githubusercontent.com/Mazetsz/ACL4SSR/master/Clash/NetEaseCloudMusic.list, policy=🎧𝐍𝐞𝐭𝐞𝐚𝐬𝐞, tag=𝐍𝐞𝐭𝐞𝐚𝐬𝐞𝐌𝐮𝐬𝐢𝐜, enabled=true
+# > TikTok
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/TikTok.list, policy=🎵𝐓𝐢𝐤𝐓𝐨𝐤, tag=𝐓𝐢𝐤𝐓𝐨𝐤, enabled=true
+# > Youtube
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/YouTube.list, policy=🎬𝐘𝐨𝐮𝐓𝐮𝐛𝐞, tag=𝐘𝐨𝐮𝐓𝐮𝐛𝐞, enabled=true
+# > Netflix
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Netflix.list, policy=🖥𝐍𝐞𝐭𝐟𝐥𝐢𝐱, tag=𝐍𝐞𝐭𝐟𝐥𝐢𝐱, enabled=true
+# > Bahamut
+https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Media/Bahamut.list, policy=📺𝐁𝐚𝐡𝐚𝐦𝐮𝐭, tag=𝐁𝐚𝐡𝐚𝐦𝐮𝐭, enabled=true
+# > PronHub
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Pornhub.list, policy=🔞𝐏𝐨𝐫𝐧𝐇𝐮𝐛, tag=𝐏𝐨𝐫𝐧𝐇𝐮𝐛, enabled=true
+# > Telegram
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Telegram.list, policy=📱𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦, tag=𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦, enabled=true
+# > PayPal
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/PayPal.list, policy=💳𝐏𝐚𝐲𝐏𝐚𝐥, tag=𝐏𝐚𝐲𝐏𝐚𝐥, enabled=true
+# > Outlook、Gmail
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Mail.list, policy=🖲️𝐏𝐫𝐨𝐱𝐲, tag=𝐌𝐚𝐢𝐥, enabled=true
+# > GoogleDrive
+https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/GoogleDrive.list, policy=🖲️𝐏𝐫𝐨𝐱𝐲, tag=𝐆𝐨𝐨𝐠𝐥𝐞𝐃𝐫𝐢𝐯𝐞, enabled=true
+# > Speedtest
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Speedtest.list, policy=🚀𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭, tag=𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_CDN.list, policy=🍎𝐀𝐩𝐩𝐥𝐞, tag=𝐀𝐩𝐩𝐥𝐞_𝐂𝐃𝐍, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Apple_API.list, policy=🍎𝐀𝐩𝐩𝐥𝐞, tag=𝐀𝐩𝐩𝐥𝐞_𝐀𝐏𝐈, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/AsianMedia.list, policy=🌏𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚, tag=𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/GlobalMedia.list, policy=🖲️𝐏𝐫𝐨𝐱𝐲, tag=𝐆𝐥𝐨𝐛𝐚𝐥𝐌𝐞𝐝𝐢𝐚, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Domestic.list, policy=🎯𝐃𝐢𝐫𝐞𝐜𝐭, tag=𝐃𝐨𝐦𝐞𝐬𝐭𝐢𝐜, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list, policy=🖲️𝐏𝐫𝐨𝐱𝐲, tag=𝐆𝐥𝐨𝐛𝐚𝐥, enabled=true
+
+[URL Rewrite]
+# 本地重写
+
+# > Redirect Google Service
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+
+# > TikTok Unlock (By Choler)
+# 区域请修改下方国家代码，默认为日本 JP
+
+(?<=_region=)CN(?=&) JP 307
+(?<=&app_version=)16..(?=.?.?&) 1 307
+(?<=\?version_code=)16..(?=.?.?&) 1 307
+
+# > 抖音 去广告&水印
+# 需配合脚本使用
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
+
+enable = true
+
+[Remote Rewrite]
+#订阅重写 去广告 by eHpo
+# 格式：订阅url，别名(可选)
+https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf, tag=eHpo, enabled=true
+https://raw.githubusercontent.com/nzw9314/Loon/master/Q-Search_All_in_one.conf, tag=Q-Search_All_in_one, enabled=false
+[Script]
+# 本地脚本
+enable = true
+# 天气提醒
+cron "0 */2 * * *" script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/weather.js, tag=天气
+# 降雨提醒
+cron "0 0-21/3 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/hourlyWeather.js, tag=降雨提醒
+
+[Remote Script]
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Display%20netflix%20ratings.conf, tag=netfilx, enabled=true
+# 远程脚本
+https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=签到, enabled=true
+https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=脚本, enabled=true
+https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, enabled=false
+
+[MITM]
+enable = true
+hostname = *.googlevideo.com,*.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
+skip-server-cert-verify = true
+ca-p12 = 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
+ca-passphrase = 1Q5A4AXU
