@@ -1,5 +1,6 @@
-[Script]
-http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://Choler.github.io/Surge/Script/YouTube.js
+[URL Rewrite]
+# >> Youtube 会员不要开启此插件
+^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - REJECT
 
 [MITM]
 hostname = *.googlevideo.com 
