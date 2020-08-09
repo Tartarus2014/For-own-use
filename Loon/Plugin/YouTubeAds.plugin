@@ -1,10 +1,6 @@
 [Rule]
-# 如果您是 YouTube Premium，请不要开启此模块。
+# 如果您是 YouTube Premium，请不要开启此插件。
 URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
-
-[Script]
-# > By Choler
-http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/YouTube.js
 
 [MITM]
 hostname = *.googlevideo.com 
