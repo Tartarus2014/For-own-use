@@ -1,9 +1,7 @@
 [URL Rewrite]
-# 换区+去水印下载
 (?<=_region=)CN(?=&) JP 307
 (?<=&app_version=)1(6|7)..(?=.?.?&) 1 307
 (?<=\?version_code=)1(6|7)..(?=.?.?&) 1 307
-(.*video_id=\w{32})(.*watermark=)(.*) $1 302
 
 [MITM]
 hostname = *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
