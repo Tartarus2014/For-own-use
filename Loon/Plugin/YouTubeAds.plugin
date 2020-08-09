@@ -1,6 +1,6 @@
 [URL Rewrite]
 # >> Youtube 会员不要开启此插件
-^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject
+^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
 
 [MITM]
 hostname = *.googlevideo.com 
