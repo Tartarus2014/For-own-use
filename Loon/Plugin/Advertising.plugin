@@ -164,6 +164,8 @@
 # ^(http|https):\/\/[\w-]+\.googlevideo\.com\/.+(&oad|ctier) - reject
 ^(http|https):\/\/\w+\.youtube\.com\/api\/stats\/ads - reject
 ^(http|https):\/\/\w+\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/(www.)?g\.cn https:\/\/www.google.com 302
+^https?:\/\/(www.)?google\.cn https:\/\/www.google.com 302
 # > Gofun - gateway.shouqiev.com
 ^(http|https):\/\/gateway\.shouqiev\.com\/fsda\/app\/bootImage\.json - reject
 # > Guotai Junan Securities - dl.app.gtja.com
