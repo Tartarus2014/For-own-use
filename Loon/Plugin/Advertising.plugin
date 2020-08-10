@@ -1,7 +1,7 @@
 [URL Rewrite]
-# 重写规则
 # Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?:\/\/(www.)?g\.cn https:\/\/www.google.com 302
+^https?:\/\/(www.)?google\.cn https:\/\/www.google.com 302
 
 # Redirect HTTP to HTTPS
 ^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
