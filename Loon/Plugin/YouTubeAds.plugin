@@ -1,3 +1,4 @@
+# 跳过片头广告
 [URL Rewrite]
 # >> Youtube 会员不要开启此插件
 ^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
