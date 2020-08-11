@@ -1,0 +1,19 @@
+[Rule]
+DOMAIN,appcloud2.zhihu.com,REJECT
+DOMAIN,118.89.204.198,REJECT
+USER-AGENT,AVOS*,REJECT
+URL-REGEX,https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad),REJECT
+
+[Script]
+http-response ^https?:\/\/api\.zhihu\.com\/people requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_去除MCN信息
+http-response ^https?:\/\/api\.zhihu\.com\/(moments|topstory)\/recommend requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_信息流去广告及黑名单增强
+http-response ^https?:\/\/api\.zhihu\.com\/settings\/blocked_users requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_获取黑名单
+http-response ^https?:\/\/api\.zhihu\.com\/v4/questions requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_回答去广告及黑名单增强
+http-response ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message) requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_官方消息去广告
+http-request ^https?:\/\/api\.zhihu\.com\/moments\/recent requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_去除最常访问
+http-request ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/count requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_去除未读消息红点
+http-request ^https?:\/\/api\.zhihu\.com\/me\/guides requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_指南屏蔽
+
+
+[MITM]
+hostname = www.zhihu.com,api.zhihu.com,link.zhihu.com,118.89.204.198
