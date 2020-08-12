@@ -1,7 +1,14 @@
 # 跳过片头广告
-[URL Rewrite]
-# >> Youtube 会员不要开启此插件
+[Url Rewrite]
+# >> Youtube
 ^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
+^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
+
+[Script]
+# > By Choler
+http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/YouTube.js
 
 [MITM]
 hostname = *.googlevideo.com 
