@@ -58,18 +58,6 @@
 ^(http|https):\/\/(www.)?yuanchengxiezuo\.com\/ https://www.teamviewer.com/ 302
 ^(http|https):\/\/(www.)?zbrushcn.com/ https://pixologic.com/ 302
 
-# TikTok (By wzw1997007) - *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
-# (?<=_region=)CN(?=&) JP 307
-# (?<=&app_version=)16..(?=.?.?&) 1 307
-# (?<=\?version_code=)16..(?=.?.?&) 1 307
-
-#Resso (By JO2EY) - api.resso.app
-# (?<=(carrier|account|sys|sim)_region=)cn in 307
-
-# AbeamTV - api.abema.io
-^(http|https):\/\/api\.abema\.io\/v\d\/ip\/check - reject
-
-# 如果你解锁了「模块」功能可以使用 Block-Ads.sgmodule 后删除以下 Rewrite 部分
 
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
