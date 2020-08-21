@@ -95,7 +95,7 @@
 # ---
 # > AcFun - api-new.app.acfun.cn
 ^(http|https):\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
-# > 爱美剧 - api.bjxkhc.com
+# > AiMeiJu - api.bjxkhc.com
 ^(http|https):\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
 
 # B
@@ -191,6 +191,8 @@
 # > DayDayCook - *.daydaycook.com
 ^(http|https):\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/ - reject
 ^(http|https):\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/ - reject
+# > DingDongMaiCai - maicai.api.ddxq.mobi
+^(http|https):\/\/maicai\.api\.ddxq\.mobi\/advert\/ - reject
 
 # E
 # > eLong - mobile-api2011.elong.com,123.59.31.1,119.18.193.135
@@ -221,7 +223,7 @@
 
 # G
 # > Google - *.googlevideo.com,*.youtube.com
-^(http|https):\/\/[\w-]+\.googlevideo\.com\/.+(&oad|ctier) - reject
+# ^(http|https):\/\/[\w-]+\.googlevideo\.com\/.+(&oad|ctier) - reject
 ^(http|https):\/\/\w+\.youtube\.com\/api\/stats\/ads - reject
 ^(http|https):\/\/\w+\.youtube\.com\/(pagead|ptracking) - reject
 # > Gofun - gateway.shouqiev.com
@@ -236,6 +238,8 @@
 ^(http|https):\/\/smkmp\.96225.com\/smkcenter\/ad/ - reject
 # > Huomao - api.huomao.com
 ^(http|https):\/\/api\.huomao\.com\/channels\/loginAd - reject
+# > HanjuTV
+^(http|https):\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? - reject
 
 # I
 # > iFLY Input - imeclient.openspeech.cn
@@ -255,7 +259,7 @@
 
 # J
 # > JD - api.m.jd.com,ms.jr.jd.com,img*.360buyimg.com
-^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
+# ^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
 ^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts - reject
 ^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
 ^(http|https):\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
@@ -279,7 +283,7 @@
 ^(http|https):\/\/api\.gotokeep\.com\/ads - reject
 # > Kuaikan Comics - api.kkmh.com
 ^(http|https):\/\/api\.kkmh\.com\/v\d+\/(ad|advertisement)\/ - reject
-# > KOOWO - 122.14.246.33,175.102.178.52 (仅 Surge 可用)
+# > KOOWO - 122.14.246.33,175.102.178.52
 ^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/MobileAdServer\/ - reject
 ^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/EcomResourceServer/AdPlayPage/adinfo - reject
 
@@ -380,8 +384,8 @@
 # S
 # ---(Sina)---
 # > Weibo - *.uve.weibo.com,weibointl.api.weibo.cn,api.weibo.cn, mapi.weibo.com
-^(http|https):\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php - reject
-^(http|https):\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua - reject
+# ^(http|https):\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php - reject
+# ^(http|https):\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua - reject
 ^(http|https):\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads - reject
 # > tianqitong - tqt.weibo.cn
 ^(http|https):\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=(tqt_sdkad|tqtad) - reject
@@ -444,7 +448,7 @@
 ^(http|https):\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - reject
 # > Tencent WeChat - mp.weixin.qq.com
-# ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) - reject
+# ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) - reject
 # ---
 # > TuNiu - m.tuniu.com
 ^(http|https):\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
@@ -458,9 +462,10 @@
 # V
 # > VUE - api.vuevideo.net
 ^(http|https):\/\/api\.vuevideo\.net\/api\/v\d\/ad\/ - reject
-# > VariFlight - app.variflight.com
+# > VariFlight - app.variflight.com,api.cdmcaac.com
 ^(http|https):\/\/app\.variflight\.com\/ad\/ - reject
 ^(http|https):\/\/app\.variflight\.com\/v\d\/advert\/ - reject
+^(http|https):\/\/api\.cdmcaac\.com\/ad\/ - reject
 # > VISTOPIA - api.vistopia.com.cn
 ^(http|https):\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
 
@@ -522,6 +527,9 @@
 ^(http|https):\/\/api\.izuiyou\.com\/ad\/ - reject
 # > Zhan - tiku.zhan.com
 ^(http|https):\/\/tiku\.zhan\.com\/Common\/newAd\/ - reject
+# > Zhangyue - webboot.zhangyue.com,saad.ms.zhangyue.net
+^(http|https):\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
+^(http|https):\/\/saad\.ms\.zhangyue\.net\/ad - reject
 
 [Script]
 # ---(By Choler)---
