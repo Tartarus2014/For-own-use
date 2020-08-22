@@ -1,5 +1,5 @@
 [URL Rewrite]
-(?<=_region=)CN(?=&) JP 307
+(?<=_region=)CN(?=&)  307
 (?<=&app_version=)1[6-9]..(?=.?.?&) 1 307
 (?<=\?version_code=)1[6-9]..(?=.?.?&) 1 307
 
