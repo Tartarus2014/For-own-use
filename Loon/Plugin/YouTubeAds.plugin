@@ -1,10 +1,7 @@
 # 跳过片头广告
 [Url Rewrite]
 # >> Youtube
-^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
-^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) _ reject-dict
 
 [MITM]
 hostname = *.googlevideo.com 
