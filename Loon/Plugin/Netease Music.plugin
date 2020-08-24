@@ -1,5 +1,8 @@
 [Rule]
 # > Netease Music
+# > 需要配置专门的节点和证书 还可以使用
+# > 证书链接：https://cdn.jsdelivr.net/gh/nondanee/UnblockNeteaseMusic@master/ca.crt
+# > 节点订阅：https://git.io/JfNq3
 DOMAIN,apm.music.163.com
 DOMAIN,apm3.music.163.com
 DOMAIN,interface.music.163.com
