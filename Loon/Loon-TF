@@ -89,31 +89,44 @@ test-timeout = 3
 # fallback模式, 和url-test类似, 不同的是会根据顺序返回第一个可用的节点, 为了避免资源浪费, 建议节点数不要过多, 只支持单个节点和远端节点, 其他会被忽略
 # 🔓网易云音乐灰色歌曲,需要节点支持解锁
 
-🖲️节点选择 = select,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点,🌀手动选择,
+🖲️节点选择 = select,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点,🌀手动选择,💠负载均衡 
 🌀手动选择 = select,✈️ 机场订阅
+💠负载均衡 = select,香港节点,狮城节点,美国节点
 🚫广告屏蔽 = select,⛔️请求拦截,🎯全球直连
-🕹FINAL = select,🎯全球直连,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点
+🕹FINAL = select,🎯全球直连,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点,💠负载均衡 
 🍎苹果服务 = select,🎯全球直连,🖲️节点选择
 🎧网易音乐 = select,🎯全球直连,🎧解锁节点
-🖥奈飞视频 = select,🖲️节点选择,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点
-🎬油管视频 = select,🖲️节点选择,🇭🇰香港节点,🇰🇷韩国节点,🇺🇸美国节点
-📺巴哈姆特 = select,🖲️节点选择,🇨🇳台湾节点,🇭🇰香港节点
-🎵国际抖音 = select,🖲️节点选择,🎯全球直连,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点
-💳国际支付 = select,🖲️节点选择,,🎯全球直连,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点
-📱电报消息 = select,🖲️节点选择,,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点
-🚀网络测速 = select,🎯全球直连,🖲️节点选择,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点
-🌏国外媒体 = select,🖲️节点选择,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇰🇷韩国节点,🇺🇸美国节点
+🖥奈飞视频 = select,🖲️节点选择,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点,💠负载均衡 
+🎬油管视频 = select,🖲️节点选择,🇭🇰香港节点,🇰🇷韩国节点,🇺🇸美国节点,💠负载均衡 
+📺巴哈姆特 = select,🖲️节点选择,🇨🇳台湾节点,🇭🇰香港节点,💠负载均衡 
+🎵国际抖音 = select,🖲️节点选择,🎯全球直连,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点,💠负载均衡 
+💳国际支付 = select,🖲️节点选择,,🎯全球直连,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点,💠负载均衡 
+📱电报消息 = select,🖲️节点选择,,🇭🇰香港节点,🇸🇬狮城节点,🇺🇸美国节点,💠负载均衡 
+🚀网络测速 = select,🎯全球直连,🖲️节点选择,🇭🇰香港节点,🇨🇳台湾节点,🇺🇸美国节点,💠负载均衡 
+🌏国外媒体 = select,🖲️节点选择,🇸🇬狮城节点,🇭🇰香港节点,🇨🇳台湾节点,🇰🇷韩国节点,🇺🇸美国节点,💠负载均衡 
 🌏国内媒体 = select,🎯全球直连,🔅媒体解锁
 
 🎯全球直连 = select,DIRECT
 ⛔️请求拦截 = select,REJECT
 
+# 自动选择
 🇭🇰香港节点 = url-test,🇭🇰香港,url = http://www.qualcomm.cn/generate_204,interval = 600
 🇨🇳台湾节点 = url-test,🇨🇳台湾,url = http://www.qualcomm.cn/generate_204,interval = 600
 🇸🇬狮城节点 = url-test,🇸🇬新加坡,url = http://www.qualcomm.cn/generate_204,interval = 600
 🇰🇷韩国节点 = url-test,🇰🇷韩国,url = http://www.qualcomm.cn/generate_204,interval = 600
 🇯🇵日本节点 = url-test,🇯🇵日本,url = http://www.qualcomm.cn/generate_204,interval = 600
 🇺🇸美国节点 = url-test,🇺🇸美国,url = http://www.qualcomm.cn/generate_204,interval = 600
+
+# 负载均衡
+香港节点 = load-balance,🇭🇰香港,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+台湾节点 = load-balance,🇨🇳台湾,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+狮城节点 = load-balance,🇸🇬新加坡,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+韩国节点 = load-balance,🇰🇷韩国,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+日本节点 = load-balance,🇯🇵日本,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+美国节点 = load-balance,🇺🇸美国,url = http://www.qualcomm.cn/generate_204,interval = 600,max-timeout = 3000,algorithm = pcc
+
+# 做ping测试用！ 不要使用！不要使用！
+✈️Ping（做延迟测试用） = url-test,✈️ 机场订阅,url = http://www.qualcomm.cn/generate_204,interval = 600
 
 # SSID
 # 别名 = ssid, 默认 = 策略,  蜂窝 = 策略,  ssid名称 = 策略
