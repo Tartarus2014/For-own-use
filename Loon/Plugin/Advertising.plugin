@@ -1,3 +1,6 @@
+[Rule]
+URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT
+
 [URL Rewrite]
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
