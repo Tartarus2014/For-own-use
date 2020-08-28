@@ -197,7 +197,7 @@ https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.t
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Unlock/TikTokUK.plugin, tag=TikTok UK, enabled=true
 
 # Advertising
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Advertising.plugin, tag=Advertising, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Advertising.plugin, proxy=🚫广告屏蔽, tag=Advertising, enabled=true
 
 # General
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin, tag=General, enabled=true
