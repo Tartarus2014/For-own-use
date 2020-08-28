@@ -206,9 +206,9 @@ enable = true
 [Remote Script]
 # 远程脚本
 https://raw.githubusercontent.com/chavyleung/scripts/master/loon.box.conf, tag=Box, enabled=true
-https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=签到, enabled=true
-https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=脚本, enabled=true
-https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Script.conf, tag=Script, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Task.conf, tag=Task, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Cookie.conf, tag=Cookie, enabled=false
 
 [MITM]
 enable = true
