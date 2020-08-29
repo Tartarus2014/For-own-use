@@ -9,8 +9,6 @@ DOMAIN,interface.music.163.com
 DOMAIN,interface3.music.163.com
 DOMAIN,music.126.net
 DOMAIN,music.163.com
-DOMAIN-SUFFIX,music.126.net,DIRECT
-DOMAIN-SUFFIX,ehg-youtube.hitbox.com,REJECT
 IP-CIDR,101.71.154.241/32
 IP-CIDR,103.126.92.132/32
 IP-CIDR,103.126.92.133/32
@@ -30,3 +28,9 @@ IP-CIDR,59.111.160.197/32
 IP-CIDR,59.111.181.35/32
 IP-CIDR,59.111.181.38/32
 IP-CIDR,59.111.181.60/32
+DOMAIN-SUFFIX,music.126.net,DIRECT
+DOMAIN-SUFFIX,ehg-youtube.hitbox.com,REJECT
+DOMAIN,admusicpic.music.126.net,REJECT
+DOMAIN,iadmat.nosdn.127.net,REJECT
+DOMAIN,iadmusicmat.music.126.net,REJECT
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT
