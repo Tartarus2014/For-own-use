@@ -1,6 +1,8 @@
 # 跳过片头广告
 [URL Rewrite]
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) _ reject-dict
+^(http|https):\/\/[\w-]+\.googlevideo\.com\/.+(&oad|ctier) - reject
+^(http|https):\/\/\w+\.youtube\.com\/api\/stats\/ads - reject
+^(http|https):\/\/\w+\.youtube\.com\/(pagead|ptracking) - reject
 
 [MITM]
 hostname = *.googlevideo.com 
