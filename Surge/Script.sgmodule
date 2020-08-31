@@ -39,4 +39,4 @@ http-response https://api.zhihu.com/people/ script-path=https://raw.githubuserco
 http-request https?://link.zhihu.com/\?target= script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20link.js, requires-body=true, timeout=10, tag=知乎
 
 [MITM]
-hostname = %INSERT%,mp.weixin.qq.com, api.gamer.com.tw, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com,118.89.204.198
+hostname = %APPEND%, mp.weixin.qq.com, api.gamer.com.tw, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, ios.prod.ftl.netflix.com, trade-acs.m.taobao.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, link.zhihu.com,118.89.204.198
