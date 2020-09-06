@@ -17,15 +17,6 @@ USER-AGENT,AVOS*,REJECT
 URL-REGEX,^https?:\/\/api\.zhihu\.com\/(v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad),REJECT
 
 [URL Rewrite]
-
-# 知乎去除最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
-# 知乎去除未读消息红点
-^https?:\/\/api\.zhihu\.com\/notifications\/v3\/count url reject-dict
-# 知乎拦截部分预加载
-# 因为Loon URL-REGEX 规则的优先级很低，不一定生效，所以增加一条复写作为备用
-^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription) url reject
-
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
 ^(http|https):\/\/api\.21jingji\.com\/ad\/ - reject
@@ -497,6 +488,14 @@ URL-REGEX,^https?:\/\/api\.zhihu\.com\/(v3\/package|me\/guides|drama\/living-inf
 # > Zhangyue - webboot.zhangyue.com,saad.ms.zhangyue.net
 ^(http|https):\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
 ^(http|https):\/\/saad\.ms\.zhangyue\.net\/ad - reject
+
+# 知乎去除最常访问
+^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
+# 知乎去除未读消息红点
+^https?:\/\/api\.zhihu\.com\/notifications\/v3\/count url reject-dict
+# 知乎拦截部分预加载
+# 因为Loon URL-REGEX 规则的优先级很低，不一定生效，所以增加一条复写作为备用
+^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription) url reject
 
 [Script]
 # ---(By Choler)---
