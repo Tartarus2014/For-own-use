@@ -1,18 +1,35 @@
+# 知乎去广告及功能增强
+
 [Rule]
+# 知乎拦截部分预加载
+URL-REGEX,^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription),REJECT
+# 知乎去广告
+DOMAIN,118.89.204.198,REJECT,no-resolve
+DOMAIN-SUFFIX,118.89.204.198,REJECT,no-resolve
+DOMAIN-KEYWORD,118.89.204.198,REJECT,no-resolve
+IP-CIDR,118.89.204.198/32,REJECT,no-resolve
 DOMAIN,appcloud2.zhihu.com,REJECT
-DOMAIN,118.89.204.198,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
 USER-AGENT,AVOS*,REJECT
-URL-REGEX,https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad),REJECT
+URL-REGEX,^https?:\/\/api\.zhihu\.com\/(v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad),REJECT
+
+[URL Rewrite]
+# 知乎去除最常访问
+^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
+# 知乎去除未读消息红点
+^https?:\/\/api\.zhihu\.com\/notifications\/v3\/count url reject-dict
+# 知乎拦截部分预加载
+# 因为Loon URL-REGEX 规则的优先级很低，不一定生效，所以增加一条复写作为备用
+^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription) url reject
 
 [Script]
-http-response ^https?:\/\/api\.zhihu\.com\/people requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_去除MCN信息
-http-response ^https?:\/\/api\.zhihu\.com\/(moments|topstory)\/recommend requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_信息流去广告及黑名单增强
+http-response ^https?:\/\/api\.zhihu\.com\/people requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_处理用户信息
+http-response ^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=) requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_信息流去广告及黑名单增强
 http-response ^https?:\/\/api\.zhihu\.com\/settings\/blocked_users requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_获取黑名单
-http-response ^https?:\/\/api\.zhihu\.com\/v4/questions requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_回答去广告及黑名单增强
+http-response ^https?:\/\/api\.zhihu\.com\/v4\/questions requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_回答列表去广告及黑名单增强
 http-response ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message) requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_官方消息去广告
-http-request ^https?:\/\/api\.zhihu\.com\/moments\/recent requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_去除最常访问
-http-request ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/count requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_去除未读消息红点
-http-request ^https?:\/\/api\.zhihu\.com\/me\/guides requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/common/rewrite_blank_json.js,tag=知乎_指南屏蔽
+http-response ^https?:\/\/api\.zhihu\.com\/search\/preset_words\? requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_预置关键词去广告
+http-response ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js,tag=知乎_付费内容提醒
 
 [MITM]
-hostname = www.zhihu.com,api.zhihu.com,link.zhihu.com,118.89.204.198
+hostname = www.zhihu.com,api.zhihu.com
