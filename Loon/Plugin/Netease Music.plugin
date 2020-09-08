@@ -9,7 +9,6 @@ DOMAIN,interface.music.163.com
 DOMAIN,interface3.music.163.com
 DOMAIN,music.163.com
 DOMAIN-SUFFIX,music.126.net,DIRECT
-DOMAIN-SUFFIX,ehg-youtube.hitbox.com,REJECT
 DOMAIN,admusicpic.music.126.net,REJECT
 DOMAIN,iadmat.nosdn.127.net,REJECT
 DOMAIN,iadmusicmat.music.126.net,REJECT
