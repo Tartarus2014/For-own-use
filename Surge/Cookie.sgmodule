@@ -30,10 +30,6 @@ http-request ^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/c
 # 腾讯视频 (*.video.qq.com)
 http-request ^https:\/\/access.video.qq.com\/user\/auth_refresh script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js
 
-# 美团外卖 （promotion.waimai.meituan.com）
-http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
-http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js,requires-body=true
-
 # 字幕组 （*.rrys2020.com, ios.zmzapi.com）
 http-request ^https?:\/\/(www\.)?rrys2020\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
 http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
@@ -74,4 +70,4 @@ http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubuserc
 http-request ^https:\/\/cloud\.umetrip\.com\/gateway\/api\/web\/rest\/polite\/app\/sign\/signpageinitdata script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
 
 [MITM]
-hostname = %APPEND%, api.m.jd.com, ifac*.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, promotion.waimai.meituan.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me, www.52pojie.cn, passport.biligame.com, as.xiaojukeji.com, user-api-prd-mx.wandafilm.com, c.tieba.baidu.com, *.smzdm.com, cloud.umetrip.com
+hostname = %APPEND%, api.m.jd.com, ifac*.iqiyi.com, *.bilibili.com, *.acfun.cn, act.10010.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me, www.52pojie.cn, passport.biligame.com, as.xiaojukeji.com, user-api-prd-mx.wandafilm.com, c.tieba.baidu.com, *.smzdm.com, cloud.umetrip.com
