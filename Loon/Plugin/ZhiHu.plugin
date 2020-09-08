@@ -4,10 +4,10 @@
 # 知乎拦截部分预加载
 URL-REGEX,^https?:\/\/www\.zhihu\.com\/appview\/(p|v2\/answer|zvideo)\/.*entry=(preload-topstory|preload-search|preload-subscription),REJECT
 # 知乎去广告
-DOMAIN,118.89.204.198,REJECT,no-resolve
-DOMAIN-SUFFIX,118.89.204.198,REJECT,no-resolve
-DOMAIN-KEYWORD,118.89.204.198,REJECT,no-resolve
-IP-CIDR,118.89.204.198/32,REJECT,no-resolve
+DOMAIN,118.89.204.198,REJECT
+DOMAIN-SUFFIX,118.89.204.198,REJECT
+DOMAIN-KEYWORD,118.89.204.198,REJECT
+IP-CIDR,118.89.204.198/32,REJECT
 DOMAIN,appcloud2.zhihu.com,REJECT
 DOMAIN,appcloud2.in.zhihu.com,REJECT
 USER-AGENT,AVOS*,REJECT
