@@ -58,7 +58,7 @@ Bili漫画Cookie = type=http-request,pattern=^https:\/\/passport\.biligame\.com\
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js, timeout=10, tag=DiDi.js
 
 # 万达电影 （user-api-prd-mx.wandafilm.com）
-http-response ^https:\/\/user-api-prd-mx\.wandafilm\.com script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.cookie.js
+wanda = type=http-request,pattern=^https:\/\/user-api-prd-mx\.wandafilm\.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.cookie.js,debug=true
 
 # 百度贴吧 （c.tieba.baidu.com）
 http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
