@@ -1,4 +1,4 @@
-[Host]
+[host]
 *.tmall.com = server:223.6.6.6
 *.jd.com = server:119.28.28.28
 *.qq.com = server:119.28.28.28
@@ -15,5 +15,5 @@
 *.netease.com = server:119.29.29.29
 *.mi.com = server:119.29.29.29
 *.xiaomi.com = server:119.29.29.29
-*.pcbeta.com = 120.52.19.113
+*.pcbeta.com = server:120.52.19.113
 *testflight.apple.com = server:8.8.4.4
