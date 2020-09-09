@@ -65,4 +65,4 @@ cron "6 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/mas
 cron "7 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js
 
 # 航旅纵横
-# cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
+cron "0 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js
