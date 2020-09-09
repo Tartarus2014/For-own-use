@@ -1,9 +1,3 @@
-[Rule]
-# Bilibili
-URL-REGEX,^(http|https):\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT
-URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
-URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
-
 [URL Rewrite]
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
