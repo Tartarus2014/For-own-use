@@ -1,10 +1,9 @@
-[Rule]
-# 如果您是 YouTube Premium，请不要开启此模块。
-URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
-
-[Script]
-# > By Choler
-http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/YouTube.js
+# 跳过片头广告
+[URL Rewrite]
+^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
+^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
 
 [MITM]
 hostname = *.googlevideo.com 
