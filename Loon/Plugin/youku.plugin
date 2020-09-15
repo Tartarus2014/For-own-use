@@ -1,3 +1,0 @@
-# 跳过片头广告
-[Rule]
-URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT
