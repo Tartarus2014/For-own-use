@@ -6,7 +6,7 @@
 https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 
 [Script]
-http-response ^https:\/\/www\.zhihu\.com\/question max-size=0, requires-body=1, script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js , tag=ZhiHu WangYe
+http-response ^https:\/\/www\.zhihu\.com\/question max-size=0, requires-body=1, script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js, tag=ZhiHu WangYe
 
 [MITM]
 hostname = www.zhihu.com,link.zhihu.com
