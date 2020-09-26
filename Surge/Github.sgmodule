@@ -1,5 +1,5 @@
 #!name= Github
-#!desc=部分raw.githubusercontent走cdn
+#!desc=部分raw.githubusercontent走cdn  Via：热心网友894
 #!system=ios
 
 [URL Rewrite]
