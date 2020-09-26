@@ -3,7 +3,7 @@
 #!system=ios
 
 [URL Rewrite]
-^(http|https):\/\/raw\.githubusercontent\.com\/(NobyDa|chavyleung|DivineEngine|ConnersHua|lhie1|Tartarus2014|yichahucha|zZPiglet|Peng-YM)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
+^(http|https):\/\/raw\.githubusercontent\.com\/(NobyDa|chavyleung|DivineEngine|ConnersHua|lhie1)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
 
 [MITM]
 hostname = %APPEND% raw.githubusercontent.com
