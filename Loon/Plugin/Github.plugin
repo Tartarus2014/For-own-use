@@ -2,7 +2,7 @@
 # Via:热心群友894
 
 [URL Rewrite]
-^(http|https):\/\/raw\.githubusercontent\.com\/(NobyDa|chavyleung|DivineEngine|ConnersHua|lhie1|Tartarus2014)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
+^(http|https):\/\/raw\.githubusercontent\.com\/(NobyDa|chavyleung|DivineEngine|ConnersHua|lhie1|Tartarus2014|yichahucha|zZPiglet|Peng-YM)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
 
 [MITM]
 hostname = raw.githubusercontent.com
