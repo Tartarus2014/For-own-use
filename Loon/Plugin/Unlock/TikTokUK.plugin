@@ -1,7 +1,7 @@
 [URL Rewrite]
 (?<=_region=)CN(?=&) UK 307
-(?<=&app_version=)1(6|7|8)..(?=.?.?&) 1 307
-(?<=\?version_code=)1(6|7|8)..(?=.?.?&) 1 307
+(?<=&app_version=)1(6|7|8)..(?=.?.?&) 17.. 307
+(?<=\?version_code=)1(6|7|8)..(?=.?.?&) 17.. 307
 (.*video_id=\w{32})(.*watermark=)(.*) $1 302
 
 [MITM]
