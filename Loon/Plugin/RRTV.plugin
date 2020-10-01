@@ -9,4 +9,3 @@ http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$ script-path=http
 
 [MITM]
 hostname = api.rr.tv
- 
