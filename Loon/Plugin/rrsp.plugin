@@ -1,3 +1,5 @@
+# 作者GitHub：https://github.com/Choler
+
 [Rule]
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 
