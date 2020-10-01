@@ -1,5 +1,5 @@
 # 知乎网页显示优化
-# ios
+# 作者GitHub： https://github.com/elecV2
 
 [URL Rewrite]
 // 去掉知乎的中间跳转。
