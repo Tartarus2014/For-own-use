@@ -1,6 +1,5 @@
 [URL Rewrite]
 # Block Ads Start
-
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
 ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
