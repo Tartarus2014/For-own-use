@@ -19,7 +19,6 @@ URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getMangaPromotion,REJE
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getRecommendedGame,REJECT
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getNoticeConfig,REJECT
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getMangaPromotionActivity,REJECT
-URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/getHome,REJECT
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/\w+\/recommend,REJECT
 URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/ad,REJECT
 DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
