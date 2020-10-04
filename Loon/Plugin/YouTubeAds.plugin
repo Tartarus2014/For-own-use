@@ -1,4 +1,6 @@
 # 跳过片头广告
+# 改自 GitHub：https://github.com/jimmyorz/Surge/blob/master/YouTube.sgmodule
+
 [Rule]
 URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
 URL-REGEX,https?:\/\/.+.youtube.com\/api\/stats\/ads,REJECT
