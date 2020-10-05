@@ -57,5 +57,8 @@ http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login sc
 # 什么值得买（*.smzdm.com）
 http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js, tag=smzdm
 
+# 微博通知（m.weibo.cn）
+http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js, tag=微博通知
+
 [MITM]
-hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, *.bilibili.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, user-api-prd-mx.wandafilm.com, c.tieba.baidu.com, *.smzdm.com
+hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, *.bilibili.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, api.weibo.cn, pay.sc.weibo.com, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, user-api-prd-mx.wandafilm.com, c.tieba.baidu.com, *.smzdm.com
