@@ -16,11 +16,5 @@ URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
 URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
 URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
 
-[URL Rewrite]
-^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
-^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
-^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
-
 [MITM]
 hostname = *.googlevideo.com, *.youtube.com, youtubei.googleapis.com
