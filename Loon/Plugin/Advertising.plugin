@@ -45,8 +45,6 @@
 ^https?:\/\/.+?\.atm\.youku\.com - reject
 ^https?:\/\/.+?\.beacon\.qq\.com - reject
 ^https?:\/\/.+?\.gdt\.qq\.com - reject
-^https?:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
-^https?:\/\/.+?\.googlevideo\.com\/ptracking\?pltype=adhost - reject
 ^https?:\/\/.+?\.iydsj\.com\/api\/.+?\/ad - reject-200
 ^https?:\/\/.+?\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
 ^https?:\/\/.+?\.kingsoft-office-service\.com\/ad - reject
