@@ -27,3 +27,6 @@ Tartarus2014 对任何脚本问题概不负责，包括但不限于由任何脚�
 * [@chavyleung](https://github.com/chavyleung)
 
 * [@ACL4SSR](https://github.com/ACL4SSR)
+
+
+* [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)
