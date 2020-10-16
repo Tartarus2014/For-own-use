@@ -2,6 +2,11 @@
 # 作者GitHub： https://github.com/elecV2
 
 [URL Rewrite]
+https://www\.zhihu\.com/api/v4/questions/\d+/related-readings reject-200
+https://www\.zhihu\.com/api/v4/answers/\d+/related-readings reject-200
+https://www\.zhihu\.com/api/v4/hot_recommendation reject-200
+https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner reject-200
+https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation reject-200
 // 去掉知乎的中间跳转。
 https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 
