@@ -7,3 +7,6 @@ Rule部分：策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app�
 
 建议：
 建议用户订阅Advertising.plugin，General.plugin，Host.plugin。以获得更优秀的用户体验。
+
+提示：
+Advertising,ZhiHu，Bilibili，YouTube都在Block文件夹下。
