@@ -1,4 +1,5 @@
 #  YouTube.test
+# Premium 勿用且版本需 ＞ 15.26.4
 
 [Rule]
 URL-REGEX,^https:\/\/.+\.googlevideo\.com\/.+oad=,REJECT
