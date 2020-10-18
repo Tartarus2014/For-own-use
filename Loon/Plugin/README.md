@@ -2,9 +2,13 @@
 
 目前插件里面支持 ：Rule，URL Rewrite ，Script，hostname， host。
 
-Rule部分：策略可设置为DIRECT,REJECT,PROXY，其中PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
+Rule部分：策略可设置为DIRECT,REJECT,PROXY。
 
-插件可以是一个单独配置 它包含了rule rewrite script host hostname
+插件内DIRECT就会匹配直连，REJECT就会匹配拒绝。
+
+PROXY为用户在app中手动映射的策略，rule后不跟随策略默认使用PROXY
+
+插件可以是一个单独配置 它包含了Rule，URL Rewrite ，Script，hostname， host。
 
 官方事例链接：
 https://github.com/Loon0x00/LoonExampleConfig/tree/master/Plugin
