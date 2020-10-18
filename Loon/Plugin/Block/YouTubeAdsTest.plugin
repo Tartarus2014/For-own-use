@@ -2,7 +2,7 @@
 # Premium 勿用且版本需 ＞ 15.26.4
 
 [Rule]
-https:\/\/[\s\S]*\.googlevideo\.com/.*&(oad|ctier),REJECT
+URL-REGEX,https:\/\/[\s\S]*\.googlevideo\.com/.*&(oad|ctier),REJECT
 
 [URL Rewrite]
 ctier=[A-Z] citer=A 302
