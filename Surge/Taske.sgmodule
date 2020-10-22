@@ -18,6 +18,9 @@ cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/m
 # 爱奇艺
 cron "3 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
+# 京东种豆得豆
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js,tag=京东种豆得豆
+
 # 美团
 cron "3 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js
 
