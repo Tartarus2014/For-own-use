@@ -70,3 +70,6 @@ cron "0 * * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/mas
 
 # 京东星推官
 京东星推官 = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=320,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_xtg.js
+
+# 什么值得买
+什么值得买_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,type=cron,cronexp=5 0 * * *
