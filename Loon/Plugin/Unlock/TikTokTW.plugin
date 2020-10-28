@@ -1,5 +1,4 @@
 [URL Rewrite]
-(?<=&mcc_mnc=)4 2 307
 (?<=_region=)CN(?=&) TW 307
 (?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
 (?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
