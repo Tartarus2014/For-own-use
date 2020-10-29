@@ -19,6 +19,10 @@ https://github.com/Loon0x00/LoonExampleConfig/tree/master/Plugin
 
 建议用户订阅Advertising.plugin，General.plugin，Host.plugin。以获得更优秀的用户体验。
 
+Host: https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Host.plugin
+Adv：https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Block/Advertising.plugin
+General：https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin
+
 提示：
 
 Advertising,ZhiHu，Bilibili，YouTube, Block Update都在Block文件夹下。
