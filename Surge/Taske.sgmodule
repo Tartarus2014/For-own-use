@@ -13,7 +13,7 @@ cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,tag=进店领豆
 
 # 818
-cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, timeout=30, tag=京东818
+cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, timeout=60, tag=京东818
 
 #摇京豆
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js,tag=摇京豆
