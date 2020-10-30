@@ -1,11 +1,5 @@
-# 2020.10.30  16.13
+# 2020.10.30  16.28
 
 DOMAIN-SUFFIX,riotcdn.net
-DOMAIN-SUFFIX,riotgames.com
-DOMAIN-SUFFIX,leagueoflegends.com
-DOMAIN-SUFFIX,vivox.com
-DOMAIN-SUFFIX,akamaihd.net
-DOMAIN-SUFFIX,contentstack.io
-DOMAIN-SUFFIX,newrelic.com
 DOMAIN-SUFFIX,wr.pvp.net
-DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,riotgames.com
