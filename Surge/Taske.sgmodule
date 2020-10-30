@@ -12,6 +12,9 @@ cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/m
 # 取关京东店铺商品
 cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
 
+# 京东时光机
+cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_timeMachine.js, tag=京东时光机
+
 # 进店领豆
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,tag=进店领豆
 
