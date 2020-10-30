@@ -9,9 +9,6 @@
 # 京豆变化
 cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_bean_change.js, tag=京豆变动通知
 
-# 京东物流
-cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js
-
 # 取关京东店铺商品
 cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
 
