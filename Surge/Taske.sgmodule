@@ -26,6 +26,7 @@ cron "1 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/m
 cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_bean_change.js,timeout=650, wake-system=1, tag=京豆变动通知
 cron "20 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_collectProduceScore.js, wake-system=1, tag=京东全民营业领金币
 cron "20 5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js,timeout=30, timeout=30, wake-system=1, tag=京小超领蓝币(兑换京豆)
+京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 
 # 京东物流
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js
