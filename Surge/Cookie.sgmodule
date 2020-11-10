@@ -53,5 +53,8 @@ http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login sc
 # 微博通知（m.weibo.cn）
 http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js, tag=微博通知
 
+# 哔哩哔哩动漫 (api.vc.bilibili.com)
+http-request https:\/\/api.vc.bilibili.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new tag=获取哔哩哔哩, script-path=https://raw.githubusercontent.com/dompling/Script/master/BiliBili/bilibili.cookie.js
+
 [MITM]
-hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, api.bilibili.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,user-api-prd-mx.wandafilm.com,cms-activity-api-prd-mx.wandafilm.com, c.tieba.baidu.com
+hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, api.bilibili.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,user-api-prd-mx.wandafilm.com,cms-activity-api-prd-mx.wandafilm.com, c.tieba.baidu.com,api.vc.bilibili.com
