@@ -37,9 +37,6 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 # 吾爱破解 (www.52pojie.cn)
 http-request https:\/\/www\.52pojie\.cn\/home\.php\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=52pojie
 
-# Bilibli (m.bilibili.com, api.bilibili.com)
-bilibiliCoinsCookie = type=http-request,pattern=^https:\/\/(m|api)\.bilibili\.com\/(x\/v\d\/history\/shadow|service-worker).*,script-path=https://raw.githubusercontent.com/cyubuchen/scripts/master/cookie/bilibiliCoins.js
-
 # 滴滴 （as.xiaojukeji.com）
 http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js, timeout=10, tag=DiDi.js
 
@@ -57,4 +54,4 @@ http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubuserc
 http-request https:\/\/api.vc.bilibili.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new tag=获取哔哩哔哩, script-path=https://raw.githubusercontent.com/dompling/Script/master/BiliBili/bilibili.cookie.js
 
 [MITM]
-hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, api.bilibili.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,user-api-prd-mx.wandafilm.com,cms-activity-api-prd-mx.wandafilm.com, c.tieba.baidu.com,api.vc.bilibili.com
+hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,user-api-prd-mx.wandafilm.com,cms-activity-api-prd-mx.wandafilm.com, c.tieba.baidu.com,api.vc.bilibili.com
