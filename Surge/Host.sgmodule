@@ -1,6 +1,5 @@
 #!name=Host部分
 #!desc= 本地 DNS 映射记录。
-#!system=ios
 
 [Host]
 # 本地 DNS 映射记录
