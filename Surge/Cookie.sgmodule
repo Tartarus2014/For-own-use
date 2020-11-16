@@ -1,6 +1,5 @@
 #!name=Tartarus iOS Cookies Module
 #!desc=iOS Cookies 模块配置
-#!system=ios
 
 [Script]
 # 京东  （api.m.jd.com）
