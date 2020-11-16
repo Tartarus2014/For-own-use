@@ -1,6 +1,5 @@
 #!name=Tartarus iOS Tasks Module
 #!desc=iOS Tasks 模块配置
-#!system=ios
 
 [Script]
 # 京东--浏览器登录 https://bean.m.jd.com
