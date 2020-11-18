@@ -1,8 +1,0 @@
-#!name= Github
-#!desc=部分raw.githubusercontent走cdn  Via：热心网友894
-
-[URL Rewrite]
-^(http|https):\/\/raw\.githubusercontent\.com\/(DivineEngine|lhie1)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
-
-[MITM]
-hostname = %APPEND% raw.githubusercontent.com
