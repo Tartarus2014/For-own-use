@@ -1,6 +1,5 @@
 #!name=Tartarus iOS Hstorical Price Module
 #!desc=iOS Hstorical Price 模块配置
-#!system=ios
 
 [Script]
 # 京东历史价格
