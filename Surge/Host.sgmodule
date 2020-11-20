@@ -3,7 +3,7 @@
 
 [Host]
 # 本地 DNS 映射记录
-*.testflight.apple.com = 8.8.4.4
+*testflight.apple.com = server:8.8.8.8
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
 *.jd.com = server:119.28.28.28
