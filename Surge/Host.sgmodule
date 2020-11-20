@@ -3,8 +3,7 @@
 
 [Host]
 # 本地 DNS 映射记录
-testflight.apple.com = script:Dnspod
-iosapps.itunes.apple.com = script:Dnspod
+*.testflight.apple.com = 8.8.4.4
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
 *.jd.com = server:119.28.28.28
@@ -24,7 +23,3 @@ iosapps.itunes.apple.com = script:Dnspod
 cdn.pcbeta.attachment.inimc.com = 120.52.19.113
 cdn.pcbeta.css.inimc.com = 120.52.19.113
 cdn.pcbeta.static.inimc.com = 120.52.19.113
-
-[Script]
-# > Appstore Speed up download
-Dnspod = type=dns,script-path=https://raw.githubusercontent.com/maicoo-l/Surge/master/Script/dnspod.js,script-update-interval=0
