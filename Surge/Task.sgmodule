@@ -63,7 +63,7 @@ cron "5 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/No
 cron "10 8-22/2 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
 
 # 百度贴吧
-cron "7 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+cron "1 1 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 # 微博通知
 #cron "0 * * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
