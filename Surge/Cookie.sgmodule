@@ -11,6 +11,10 @@ http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.github
 # Bilibli漫画 (passport.biligame.com)
 http-request ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, timeout=10,  tag=Manga.js
 
+#bilibili动漫 （*.bilibili.com）
+http-request https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js, timeout=10, tag=哔哩哔哩番剧监控cookie
+ 
+
 # Acfun  (*.acfun.cn)
 http-request ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js, tag=acfun
 
@@ -49,4 +53,4 @@ http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubuserc
 http-request https:\/\/api.vc.bilibili.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new tag=获取哔哩哔哩, script-path=https://raw.githubusercontent.com/dompling/Script/master/BiliBili/bilibili.cookie.js
 
 [MITM]
-hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,c.tieba.baidu.com,api.vc.bilibili.com
+hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, *.acfun.cn, act.10010.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com,c.tieba.baidu.com,api.vc.bilibili.com, *.bilibili.com
