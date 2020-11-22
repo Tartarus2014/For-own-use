@@ -37,8 +37,7 @@ cron "2 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/ch
 cron "3 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js
 
 # 滴滴
-cron "59 23 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_reward.js
-cron "5 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+cron "0 1,20 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
 
 # 腾讯视频
 cron "3 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js
