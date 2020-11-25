@@ -18,11 +18,11 @@ cron "5 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/lx
 cron "2 9 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js,timeout=650
 京东抽奖机 = type=cron,cronexp=11 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 cron "11 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
-cron "0 */3 * * *" ,wake-system=1,script-path= https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_factory.js
 cron "0 12 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js
 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 cron "4 0 * * *" ,wake-system=1,script-path= https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js, tag=泡泡大作战
 cron "0 * * * *" script-path= https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js, tag=京喜工厂
+东东工厂 = type=cron,cronexp=0 */3 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/dd_factory.js,
 
 # 爱奇艺
 cron "3 0 * * *" ,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
