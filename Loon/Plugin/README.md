@@ -8,7 +8,7 @@
 
 （4）插件可以是一个单独配置 它包含了Rule，URL Rewrite ，Script，Hostname， Host。
 
-（5）官方事例链接：
+（5）官方示例链接：
 https://github.com/Loon0x00/LoonExampleConfig/tree/master/Plugin
 
 使用方法：
