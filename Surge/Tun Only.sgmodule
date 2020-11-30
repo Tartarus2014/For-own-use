@@ -1,0 +1,5 @@
+#!name=Tun Only
+#!desc=兼容模式
+
+[General]
+compatibility-mode = 3
