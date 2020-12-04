@@ -2,9 +2,6 @@
 #!desc=iOS Tasks 模块配置
 
 [Script]
-# 按需求自己选择和修改时间
-# 定时脚本
-
 # 京东--浏览器登录 https://bean.m.jd.com
 cron "13 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东
 
@@ -13,9 +10,9 @@ cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scri
 cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=京东农场
 cron "10 7-19/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=东东萌宠
 cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=京东种豆得豆
-#cron "8 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=京东天天加速
+cron "8 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, enable=false, tag=京东天天加速
 cron "11 1-23/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京小超
-cron "59 59 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑换奖品
+cron "58,59 59 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑换奖品
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=进店领豆
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=摇京豆
 cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知
@@ -23,9 +20,9 @@ cron "11 0 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/Qua
 cron "11 0 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜
 cron "2 */1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js,tag=东东工厂
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流
-cron "10 0,20 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js,tag=京东点点券
+cron "10 0,20 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js, tag=京东点点券
 cron "4 0 * * *" script-path= https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js, tag=泡泡大作战
-#cron "10 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js, tag=京喜工厂
+cron "10 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js, enable=false, tag=京喜工厂
 cron "16 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js, tag=东东小窝
 cron "10 7 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js,tag=十元街
 cron "15 */5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=京东摇钱树
@@ -59,7 +56,7 @@ cron "5 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/mas
 cron "50 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js, tag=饿了么
 
 # 电信
-cron "0,1,2,3,58,59 0,59 9,10 * * *" script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js, tag=电信兑换豆子
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js, tag=电信兑换豆子
 cron "6 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js, tag=电信签到
 
 # 美团
