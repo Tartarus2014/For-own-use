@@ -37,8 +37,8 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 http-request https:\/\/www\.52pojie\.cn\/home\.php\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=52pojie
 
 # 滴滴 （as.xiaojukeji.com）
-滴滴出行APPCookie = type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
-滴滴出行小程序Cookie = type=http-request,pattern=^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\?,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js
+http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
+http-request ^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
 
 # 百度贴吧 （c.tieba.baidu.com）
 http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=tieba
@@ -50,15 +50,11 @@ http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body
 # 微博通知（m.weibo.cn）
 http-request ^https:\/\/m\.weibo\.cn\/feed\/ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js, tag=微博通知
 
-# 哔哩哔哩动漫 (api.vc.bilibili.com)
-获取哔哩哔哩 = type=http-request,pattern=^https:\/\/api.vc.bilibili.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/BiliBili/bilibili.cookie.js,script-update-interval=0
-
-# qq读书 （mqqapi.reader.qq.com）
-企鹅读书 = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/user\/init,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
-企鹅读书 = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js, requires-header=true
+# 电信 （wapside.189.cn:9001）
+http-request ^https:\/\/wapside.189.cn:9001\/api\/exchange\/consume script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js, requires-body=true, tag=电信金豆换话费
 
 # 毒汤日历 （www.dutangapp.cn）
-毒汤日历 = type=http-response, pattern=^https:\/\/www.dutangapp.cn\/u\/wx_login*, script-path=https://raw.githubusercontent.com/dompling/Script/master/DJT/djt.cookie.js, require-body=true
+http-response ^https:\/\/www.dutangapp.cn\/u\/wx_login* script-path=https://raw.githubusercontent.com/dompling/Script/master/DJT/djt.cookie.js, require-body=true, tag=毒汤日历
 
 [MITM]
-hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com,api.vc.bilibili.com,mqqapi.reader.qq.com,www.dutangapp.cn
+hostname = %APPEND% m.weibo.cn, passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com,wapside.189.cn:9001,www.dutangapp.cn
