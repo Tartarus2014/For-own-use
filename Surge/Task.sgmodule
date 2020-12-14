@@ -62,7 +62,6 @@ cron "5 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/mas
 cron "50 23 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemPea.js,wake-system=1
 
 # 电信
-cron "0 10 * * *" script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js,wake-system=1
 cron "6 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,wake-system=1
 
 # 美团
