@@ -21,7 +21,7 @@
 东东工厂 = type=cron,cronexp="2 */1 * * ",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流
 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
-#京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
+京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
 东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
 京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
 秒杀红包雨 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
