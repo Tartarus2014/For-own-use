@@ -24,14 +24,14 @@ cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX
 京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
 东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
 京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
-秒杀红包雨 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
+秒杀红包雨 = type=cron,cronexp="20 9 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
 领京豆额外奖励 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
 京东快递签到 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
 京东汽车 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js
-健康抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
+健康抽奖机 = type=cron,cronexp="30 2 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
 京东代属 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ds.js
 苹果抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_apple_live.js
-直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js
+直播红包雨 = type=cron,cronexp="0 0,20,9-23/2 15-31 12 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js
 京东健康 = type=cron,cronexp="10 8 * * *",wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js
 京东赚赚 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js
 
