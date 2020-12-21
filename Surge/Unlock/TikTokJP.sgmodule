@@ -1,4 +1,4 @@
-#!name=Unlock TikTok JP
+#!name=Unlock TikTok KR
 #!desc=By pysat
 #!system=ios
 
@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% api-h2.tiktokv.com:443,api.tiktokv.com:443
 
 [URL Rewrite]
-(?<=_region=)CN(?=&) JP 307
+(?<=_region=)CN(?=&) KR 307
 (?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
 (?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
 ^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
