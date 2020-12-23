@@ -3,7 +3,7 @@
 
 [Script]
 # 京东--浏览器登录 https://bean.m.jd.com
-京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+京东多合一签到 = type=cron,cronexp=2 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # 京东系列
 取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js
@@ -19,7 +19,6 @@
 京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
 东东工厂 = type=cron,cronexp="2 */1 * * ",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
-cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流
 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
 东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
@@ -27,14 +26,13 @@ cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX
 秒杀红包雨 = type=cron,cronexp="20 9 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
 领京豆额外奖励 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
 京东快递签到 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
-京东汽车 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js
+京东汽车 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js
 健康抽奖机 = type=cron,cronexp="30 2 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
 京东代属 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ds.js
-苹果抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_apple_live.js
 直播红包雨 = type=cron,cronexp="1 0,20,9-23/2 15-31 12 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js
-京东健康 = type=cron,cronexp="3 8 * * *",wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js
-京东赚赚 = type=cron,cronexp="10 10 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js
-注销京东会员卡 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=620,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js
+京东健康 = type=cron,cronexp=7 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js
+京东赚赚 = type=cron,cronexp=6 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js
+注销京东会员卡 = type=cron,cronexp=55 23 * * *,wake-system=1,timeout=620,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js
 
 # 爱奇艺
 爱奇艺签到 = type=cron,cronexp="3 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
