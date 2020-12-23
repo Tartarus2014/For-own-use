@@ -3,7 +3,7 @@
 
 [Script]
 # 京东--浏览器登录 https://bean.m.jd.com
-京东多合一签到 = type=cron,cronexp=2 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+京东多合一签到 = type=cron,cronexp=2 0 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # 京东系列
 京东快递签到 = type=cron,cronexp="8 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
