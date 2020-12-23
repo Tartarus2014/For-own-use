@@ -19,8 +19,7 @@
 京豆变动通知 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=440,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js
 京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 京东排行榜 = type=cron,cronexp=12 9 * * *,wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
-
-东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
+东东小窝 = type=cron,cronexp="12 0 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
 
 京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
 东东农场 = type=cron,cronexp="5 6-18/6 * * *",wake-system=1,timeout=140,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js
@@ -28,7 +27,7 @@
 京东种豆得豆 = type=cron,cronexp="1 7-21/2 * * *",wake-system=1,timeout=140,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js
 #天天加速 = type=cron,cronexp="8 */3 * * *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js
 东东超市 = type=cron,cronexp="11 1-23/5 * * *",wake-system=1,timeout=340,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js
-直播红包雨 = type=cron,cronexp="1 0,20,9-23/2 15-31 12 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js
+直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,23 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live_redrain.js
 东东工厂 = type=cron,cronexp="2 */1 * * ",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
 秒杀红包雨 = type=cron,cronexp="20 9 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
 健康抽奖机 = type=cron,cronexp="30 2 1-31 12 *",wake-system=1,timeout=40,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
