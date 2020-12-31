@@ -1,7 +1,3 @@
-[Rule]
-# > 什么值得买
-URL-REGEX,^https?:\/\/((app-)?api|haojia\.m)\.smzdm\.com\/((v\d\/)?uti|detail_modu)l\/(loading|banner),REJECT
-
 [URL Rewrite]
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
@@ -10,12 +6,13 @@ URL-REGEX,^https?:\/\/((app-)?api|haojia\.m)\.smzdm\.com\/((v\d\/)?uti|detail_mo
 [Script]
 http-request ^https?:\/\/zhiyou\.smzdm\.com\/user$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取cookie
 http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取账号密码
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,tag=什么值得买_每日签到
+
 http-response ^https?:\/\/homepage-api\.smzdm\.com\/home script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, requires-body=true, timeout=10, tag=什么值得买_首页去广告
 http-response ^https?:\/\/haojia-api\.smzdm\.com\/home\/list script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, requires-body=true, timeout=10, tag=什么值得买_好价去广告
 http-response ^https?:\/\/app-api\.smzdm\.com\/util\/update script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, requires-body=true, timeout=10, tag=什么值得买_去浮动广告
 http-response ^https?:\/\/article-api\.smzdm\.com\/article\/index_home_page script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, requires-body=true, timeout=10, tag=什么值得买_首页去广告
 http-response ^https?:\/\/s-api\.smzdm\.com\/sou\/list script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js, requires-body=true, timeout=10, tag=什么值得买_搜索去广告
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,tag=什么值得买_每日签到
 
 [MITM]
 hostname = zhiyou.smzdm.com,user-api.smzdm.com, homepage-api.smzdm.com,haojia-api.smzdm.com,article-api.smzdm.com,haojia.m.smzdm.com,app-api.smzdm.com,s-api.smzdm.com
