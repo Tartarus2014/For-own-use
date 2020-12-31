@@ -1,10 +1,6 @@
 #!name=什么值得买
 #!desc=什么值得买签到和去广告
 
-[Rule]
-# > 什么值得买
-URL-REGEX,^https?:\/\/((app-)?api|haojia\.m)\.smzdm\.com\/((v\d\/)?uti|detail_modu)l\/(loading|banner),REJECT
-
 [URL Rewrite]
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
