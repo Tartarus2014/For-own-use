@@ -10,7 +10,6 @@
 
 摇京豆 = type=cron,cronexp="11 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js
 进店领豆 = type=cron,cronexp="1 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js
-京东代属 = type=cron,cronexp="9 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ds.js
 京东健康 = type=cron,cronexp=9 8 * * *,wake-system=1,timeout=300,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js
 京东赚赚 = type=cron,cronexp=9 0 * * *,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js
 京东抽奖机 = type=cron,cronexp=11 0 * * *,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
