@@ -2,17 +2,17 @@
 #!desc=TikTok Unlock
 
 [Rule]
-DOMAIN-SUFFIX,byteoversea.com, JP
-DOMAIN-SUFFIX,ibytedtos.com, JP
-DOMAIN-SUFFIX,ipstatp.com, JP
-DOMAIN-SUFFIX,muscdn.com, JP
-DOMAIN-SUFFIX,musical.ly, JP
-DOMAIN-SUFFIX,tik-tokapi.com, JP
-DOMAIN-SUFFIX,tiktok.com, JP
-DOMAIN-SUFFIX,tiktokcdn.com, JP
-DOMAIN-SUFFIX,tiktokv.com, JP
-DOMAIN-KEYWORD,-tiktokcdn-com, JP
-USER-AGENT,tiktok*, JP
+DOMAIN-SUFFIX,byteoversea.com,JP
+DOMAIN-SUFFIX,ibytedtos.com,JP
+DOMAIN-SUFFIX,ipstatp.com,JP
+DOMAIN-SUFFIX,muscdn.com,JP
+DOMAIN-SUFFIX,musical.ly,JP
+DOMAIN-SUFFIX,tik-tokapi.com,JP
+DOMAIN-SUFFIX,tiktok.com,JP
+DOMAIN-SUFFIX,tiktokcdn.com,JP
+DOMAIN-SUFFIX,tiktokv.com,JP
+DOMAIN-KEYWORD,-tiktokcdn-com,JP
+USER-AGENT,tiktok*,JP
 
 [URL Rewrite]
 #tiktok解锁直播区域限制
