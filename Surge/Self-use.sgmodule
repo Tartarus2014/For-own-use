@@ -51,3 +51,13 @@ hide-crash-reporter-request = 1
 cdn.pcbeta.attachment.inimc.com = 120.52.19.113
 cdn.pcbeta.css.inimc.com = 120.52.19.113
 cdn.pcbeta.static.inimc.com = 120.52.19.113
+
+[Script]
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price_lite.js
+
+[MITM]
+hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com
+
