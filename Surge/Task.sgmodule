@@ -17,7 +17,7 @@
 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 京东快递签到 = type=cron,cronexp="8 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
 京东汽车 = type=cron,cronexp="8 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js
-京东汽车兑换 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car_exchange
+京东汽车兑换 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car_exchange.js
 领京豆额外奖励 = type=cron,cronexp="8 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
 东东小窝 = type=cron,cronexp="12 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
 
