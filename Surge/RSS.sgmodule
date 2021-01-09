@@ -1,7 +1,6 @@
 #!name=RSS
 #!desc=Epic
 
-
 [Rule]
 DOMAIN,rsshub.app,PROXY
 
