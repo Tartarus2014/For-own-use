@@ -52,6 +52,26 @@ cdn.pcbeta.attachment.inimc.com = 120.52.19.113
 cdn.pcbeta.css.inimc.com = 120.52.19.113
 cdn.pcbeta.static.inimc.com = 120.52.19.113
 
+[Rule]
+DOMAIN-SUFFIX,byteoversea.com,JP
+DOMAIN-SUFFIX,ibytedtos.com,JP
+DOMAIN-SUFFIX,ipstatp.com,JP
+DOMAIN-SUFFIX,muscdn.com,JP
+DOMAIN-SUFFIX,musical.ly,JP
+DOMAIN-SUFFIX,tik-tokapi.com,JP
+DOMAIN-SUFFIX,tiktok.com,JP
+DOMAIN-SUFFIX,tiktokcdn.com,JP
+DOMAIN-SUFFIX,tiktokv.com,JP
+DOMAIN-KEYWORD,-tiktokcdn-com,JP
+USER-AGENT,tiktok*,JP
+
+[URL Rewrite]
+#tiktok解锁直播区域限制
+(?<=_region=)CN(?=&) JP 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/dm[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
 [Script]
 # 京东比价
 http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
@@ -75,5 +95,5 @@ weixin110.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 [MITM]
-hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com
+hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
 
