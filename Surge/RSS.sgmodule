@@ -1,8 +1,0 @@
-#!name=RSS
-#!desc=Epic
-
-[Rule]
-DOMAIN,rsshub.app,PROXY
-
-[Script]
-cron "0 12 * * 1" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js, tag=epic限免
