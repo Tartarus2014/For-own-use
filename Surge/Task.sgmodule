@@ -24,6 +24,7 @@ DOMAIN,rsshub.app,PROXY
 领京豆额外奖励 = type=cron,cronexp="8 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
 东东小窝 = type=cron,cronexp="12 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
 签到领现金 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js
+京喜签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jx_sign.js
 
 京喜工厂 = type=cron,cronexp="0 */1 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
 京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
