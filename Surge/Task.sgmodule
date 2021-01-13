@@ -11,6 +11,7 @@ DOMAIN,rsshub.app,PROXY
 # 京东系列
 京豆变动通知 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js
 
+京东家庭号 = type=cron,cronexp="1 * * * *",wake-system=1,timeout=2220,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_family.js
 摇京豆 = type=cron,cronexp="11 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js
 进店领豆 = type=cron,cronexp="1 0 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js
 京东健康 = type=cron,cronexp=9 8 * * *,wake-system=1,timeout=300,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js
