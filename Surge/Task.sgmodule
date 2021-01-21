@@ -11,7 +11,7 @@ DOMAIN,rsshub.app,PROXY
 # 京东系列
 京豆变动通知 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bean_change.js
 
-京小超兑换奖品 = type=cron,cronexp=”57,58,59 59 23 * * *“,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js
+#京小超兑换奖品 = type=cron,cronexp=”57,58,59 59 23 * * *“,wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js
 
 #东东农场 = type=cron,cronexp="40 8-18/5 * * *",wake-system=1,timeout=650,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js
 
