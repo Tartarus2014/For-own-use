@@ -1,57 +1,6 @@
 #!name=Self-use
 #!desc=自用
 
-[General]
-http-api = Tartarus@0.0.0.0:6166
-loglevel = notify
-dns-server = 119.29.29.29, system
-skip-proxy = 192.168.0.0/16, 193.168.0.0/24, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, 127.0.0.1, localhost, *.local
-wifi-access-http-port = 7222
-wifi-access-socks5-port = 7221
-proxy-test-url = http://www.gstatic.com/generate_204
-test-timeout = 3
-allow-wifi-access = false
-ipv6 = false
-show-error-page-for-reject = true
-tls-provider = default
-wifi-assist = true
-geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
-
-[Replica]
-# [抓取流量] => 过滤器
-# > 隐藏 Apple 请求
-hide-apple-request = 1
-# > 隐藏 Crashlytics 请求
-hide-crashlytics-request = true
-# > 隐藏 UDP 会话
-hide-udp = 0
-# > 关键词过滤器
-keyword-filter-type = blacklist
-keyword-filter = icloud, ocsp, logs, analytic, imap, adthor, applovin, appnext, talk, dropbox, github, spys, 149.154, 91.108
-hide-crash-reporter-request = 1
-
-[Host]
-*.taobao.com = server:223.5.5.5
-*.tmall.com = server:223.5.5.5
-*.jd.com = server:119.28.28.28
-*.qq.com = server:119.28.28.28
-*.tencent.com = server:119.28.28.28
-*.alicdn.com = server:223.5.5.5
-*.aliyun.com = server:223.5.5.5
-*.weixin.com = server:119.28.28.28
-*.163.com = server:119.29.29.29
-*.126.com = server:119.29.29.29
-*.126.net = server:119.29.29.29
-*.127.net = server:119.29.29.29
-*.netease.com = server:119.29.29.29
-*.mi.com = server:119.29.29.29
-*.xiaomi.com = server:119.29.29.29
-*.bilibili.com = server:119.29.29.29
-*testflight.apple.com = server:8.8.4.4
-cdn.pcbeta.attachment.inimc.com = 120.52.19.113
-cdn.pcbeta.css.inimc.com = 120.52.19.113
-cdn.pcbeta.static.inimc.com = 120.52.19.113
-
 [Rule]
 DOMAIN-SUFFIX,byteoversea.com,JP
 DOMAIN-SUFFIX,ibytedtos.com,JP
@@ -96,4 +45,3 @@ BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.
 
 [MITM]
 hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
-
