@@ -1,4 +1,6 @@
 # Clubhouse
+USER-AGENT,Clubhouse*
+IP-CIDR,52.52.84.170/32,no-resolve
 DOMAIN,www.clubhouseapi.com
 DOMAIN,clubhouseprod.s3.amazonaws.com
 DOMAIN,clubhouse.pubnub.com
