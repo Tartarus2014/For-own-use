@@ -1,8 +1,15 @@
 # Clubhouse
-USER-AGENT,Clubhouse*
-IP-CIDR,52.52.84.170/32,no-resolve
-DOMAIN,www.clubhouseapi.com
+DOMAIN-SUFFIX,clubhouseapi.com
+DOMAIN-SUFFIX,joinclubhouse.com
 DOMAIN,clubhouseprod.s3.amazonaws.com
 DOMAIN,clubhouse.pubnub.com
-DOMAIN,maintenance.joinclubhouse.com
-DOMAIN-KEYWORD,clubhouse
+IP-CIDR,164.52.102.66/32
+IP-CIDR,164.52.102.67/32
+IP-CIDR,164.52.102.68/32
+IP-CIDR,164.52.102.69/32
+IP-CIDR,164.52.102.70/32
+IP-CIDR,164.52.102.75/32
+IP-CIDR,164.52.102.76/32
+IP-CIDR,164.52.102.77/32
+IP-CIDR,199.190.44.36/32
+IP-CIDR,199.190.44.37/32
