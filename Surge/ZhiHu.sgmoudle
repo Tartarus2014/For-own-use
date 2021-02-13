@@ -1,11 +1,6 @@
 #!name=知乎
 #!desc=知乎去广告
 
-
-#!name=知乎
-#!desc=知乎助手Plus版，去广告及阅读体验增强
-#!system=ios
-
 [Rule]
 # 知乎广告拦截
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list,REJECT
