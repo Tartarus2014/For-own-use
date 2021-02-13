@@ -2,6 +2,7 @@
 #!desc=BiliBili去广告
 
 [Rule]
+# 去广告
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 # 可能的一些推广(beta)
@@ -11,24 +12,22 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 
 [URL Rewrite]
 # 去除搜索中的大家都在搜
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
+^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject-dict
 # 去除动态中的话题
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject-dict
 # 去除动态中的最常访问
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist - reject-dict
 # 可能的一些推广(beta)
-^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject
+^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\? - reject-dict
 # BiliBili漫画去广告
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject-dict
 
 [Script]
-BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_追番去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/bangumi,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_直播去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_动态去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-BiliBili_我的页面处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_推荐去广告
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_直播去广告
+http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_new\? requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_动态去广告
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_开屏去广告
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js,tag=BiliBili_我的页面处理
 
 http-response https://app.bilibili.com/x/v2/account/mine\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20account.js,tag=哔哩哔哩个人中心(精简)
 http-response https://app.bilibili.com/x/v2/view\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20view%20relate.js,tag=哔哩哔哩个人中心(精简)
