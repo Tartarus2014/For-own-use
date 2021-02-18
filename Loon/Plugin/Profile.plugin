@@ -16,9 +16,9 @@
 *.xiaomi.com = server:119.29.29.29
 *.bilibili.com = server:119.29.29.29
 *testflight.apple.com = server:8.8.4.4
-cdn.pcbeta.attachment.inimc.com = 120.52.19.113
-cdn.pcbeta.css.inimc.com = 120.52.19.113
-cdn.pcbeta.static.inimc.com = 120.52.19.113
+mtalk.google.com = 108.177.125.188
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
  
 [URL Rewrite]
 #Google 搜索及地图、微博短链接白名单、AbeamTV 区域限制的解锁几一些体验增强
