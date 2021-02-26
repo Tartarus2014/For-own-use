@@ -1,15 +1,25 @@
-# Emby
-# Maying-Emby
-DOMAIN-SUFFIX,emby.maying.club 
+# > 流媒体emby-paoche服务器
+DOMAIN,emby.cjpc.xyz
+DOMAIN,emby.paoche.ooo
+DOMAIN,emby-aga.cjpc.xyz
 
-# Mdss-Emby
+# > 流媒体emby-mdss服务器
 DOMAIN,emby.mdss.cloud
-  
-# PrPr-Emby
-DOMAIN-SUFFIX,emby.prprcloud.com
-  
-# Nexitally-Emby
-DOMAIN-SUFFIX,emby.nexitally.com
 
-# FlowerCloud-Emby
-DOMAIN-SUFFIX,emby.flowercloud.yt
+# > 流媒体emby-nexitally服务器
+DOMAIN,emby.nexitally.com
+
+# > 流媒体emby-ytoo服务器
+DOMAIN,emby.ytoo.li
+
+# > 流媒体emby-prpr服务器
+DOMAIN,emby.prprcloud.com
+
+# > 流媒体emby-nyancat服务器
+DOMAIN,emby.nyancat.net
+
+# > 流媒体emby-yoyu服务器
+DOMAIN,emby.yoyu.ltd
+
+# > 流媒体emby体验服
+DOMAIN,movie.xeton.dev
