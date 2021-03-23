@@ -20,9 +20,6 @@ cron "3 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/script
 # Acfun
 cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js,wake-system=1
 
-# 字幕组
-cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js,wake-system=1
-
 # rrtv
 cron "4 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,wake-system=1
 
