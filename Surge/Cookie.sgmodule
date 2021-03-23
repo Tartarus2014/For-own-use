@@ -23,10 +23,6 @@ http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=ht
 # 腾讯视频 (*.video.qq.com)
 http-request ^https:\/\/access.video.qq.com\/user\/auth_refresh script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js, tag=videoqq
 
-# 字幕组 （*.rrys2020.com, ios.zmzapi.com）
-http-request ^https?:\/\/(www\.)?rrys2020\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, tag=zimuzu
-http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, tag=zimuzu
-
 # rrtv (*.rr.tv)
 http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, tag=rrtv
 
@@ -54,4 +50,4 @@ http-response ^http:\/\/www.dutangapp.cn\/u\/me script-path=https://raw.githubus
 京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
 
 [MITM]
-hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, *.rrys2020.com, ios.zmzapi.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com,www.dutangapp.cn, wq.jd.com
+hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, *.rr.tv, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com,www.dutangapp.cn, wq.jd.com
