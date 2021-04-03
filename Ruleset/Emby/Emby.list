@@ -39,6 +39,10 @@ DOMAIN,emby.ok.edu.hk
 DOMAIN,emby.neko.edu.rs 
 DOMAIN,pub1.emby.wtf
 DOMAIN,pub1cf.emby.wtf
+DOMAIN,pub2.emby.wtf
+DOMAIN,pub2cf.emby.wtf
+DOMAIN,pub3.emby.wtf
+DOMAIN,pub3cf.emby.wtf
 
 # > 流媒体emby-jmsooo体验服
 DOMAIN,agahk1.jmsooo.com
