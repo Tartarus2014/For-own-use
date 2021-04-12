@@ -21,7 +21,6 @@ dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
  
 [URL Rewrite]
-
 # Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
