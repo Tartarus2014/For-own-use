@@ -1,3 +1,6 @@
+# > 流媒体emby-nexitally服务器
+DOMAIN,emby.nexitally.com
+
 # > 流媒体emby-paoche服务器
 DOMAIN,emby.cjpc.xyz
 DOMAIN,emby.paoche.ooo
@@ -6,13 +9,10 @@ DOMAIN,emby.paoche.ooo
 DOMAIN,emby.flowercloud.yt
 
 # > 流媒体emby-maying服务器
-
 DOMAIN,emby.maying.club
-# > 流媒体emby-mdss服务器
 
+# > 流媒体emby-mdss服务器
 DOMAIN,emby.mdss.cloud
-# > 流媒体emby-nexitally服务器
-DOMAIN,emby.nexitally.com
 
 # > 流媒体emby-ytoo服务器
 DOMAIN,emby.ytoo.li
@@ -53,5 +53,5 @@ DOMAIN,ntt1.jmsooo.com
 DOMAIN,hinet.jmsooo.com
 DOMAIN,cf1.jmsooo.com
 
-# > pornemby
+# > 流媒体pornemby服务器
 DOMAIN,aga.pornemby.club
