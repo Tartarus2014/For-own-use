@@ -141,4 +141,4 @@ BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.gi
 
 
 [MITM]
-hostname =  trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,www.google.cn,api.abema.io,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+hostname =  trade-acs.m.taobao.com, api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,www.google.cn, api.abema.io,*.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
