@@ -22,17 +22,17 @@ dl.l.google.com = server:119.29.29.29
 
 
 [Rule]
-DOMAIN-SUFFIX,byteoversea.com,JP
-DOMAIN-SUFFIX,ibytedtos.com,JP
-DOMAIN-SUFFIX,ipstatp.com,JP
-DOMAIN-SUFFIX,muscdn.com,JP
-DOMAIN-SUFFIX,musical.ly,JP
-DOMAIN-SUFFIX,tik-tokapi.com,JP
-DOMAIN-SUFFIX,tiktok.com,JP
-DOMAIN-SUFFIX,tiktokcdn.com,JP
-DOMAIN-SUFFIX,tiktokv.com,JP
-DOMAIN-KEYWORD,-tiktokcdn-com,JP
-USER-AGENT,tiktok*,JP
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,ipstatp.com
+DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-KEYWORD,-tiktokcdn-com
+USER-AGENT,tiktok*
 
 
 [URL Rewrite]
@@ -66,4 +66,4 @@ weixin110.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 [MITM]
-hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com
+hostname = trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com
