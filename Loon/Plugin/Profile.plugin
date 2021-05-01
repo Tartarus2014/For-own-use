@@ -20,7 +20,21 @@ mtalk.google.com = 108.177.125.188
 dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
+
 [Rule]
+DOMAIN-SUFFIX,byteoversea.com,JP
+DOMAIN-SUFFIX,ibytedtos.com,JP
+DOMAIN-SUFFIX,ipstatp.com,JP
+DOMAIN-SUFFIX,muscdn.com,JP
+DOMAIN-SUFFIX,musical.ly,JP
+DOMAIN-SUFFIX,tik-tokapi.com,JP
+DOMAIN-SUFFIX,tiktok.com,JP
+DOMAIN-SUFFIX,tiktokcdn.com,JP
+DOMAIN-SUFFIX,tiktokv.com,JP
+DOMAIN-KEYWORD,-tiktokcdn-com,JP
+USER-AGENT,tiktok*,JP
+
+
 URL-REGEX,^https?:\/\/socketio\.ctrip\.com\/api,REJECT
 URL-REGEX,^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt),REJECT
 URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/,REJECT
@@ -29,6 +43,13 @@ URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtop
  
 
 [URL Rewrite]
+#tiktok解锁直播区域限制
+(?<=_region=)CN(?=&) JP 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+
+
 # Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
@@ -95,6 +116,7 @@ URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtop
 # AbeamTV - api.abema.io
 ^(http|https):\/\/api\.abema\.io\/v\d\/ip\/check - reject
 
+
 [Script]
 # 京东比价
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/zZPiglet/surge/master/jd_price_lite.js, tag=京东比价 Lite(通知版)
@@ -117,5 +139,6 @@ weixin110.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/
 # Boxjs
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
+
 [MITM]
-hostname =  trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,www.google.cn,api.abema.io
+hostname =  trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com,www.google.cn,api.abema.io,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
