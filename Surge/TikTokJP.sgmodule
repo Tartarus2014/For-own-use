@@ -1,0 +1,25 @@
+#!name=Self-use
+#!desc=自用
+
+[Rule]
+DOMAIN-SUFFIX,byteoversea.com,JP
+DOMAIN-SUFFIX,ibytedtos.com,JP
+DOMAIN-SUFFIX,ipstatp.com,JP
+DOMAIN-SUFFIX,muscdn.com,JP
+DOMAIN-SUFFIX,musical.ly,JP
+DOMAIN-SUFFIX,tik-tokapi.com,JP
+DOMAIN-SUFFIX,tiktok.com,JP
+DOMAIN-SUFFIX,tiktokcdn.com,JP
+DOMAIN-SUFFIX,tiktokv.com,JP
+DOMAIN-KEYWORD,-tiktokcdn-com,JP
+USER-AGENT,tiktok*,JP
+
+[URL Rewrite]
+#tiktok解锁直播区域限制
+(?<=_region=)CN(?=&) JP 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 18.4 307
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
