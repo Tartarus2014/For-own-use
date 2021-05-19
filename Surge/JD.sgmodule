@@ -2,14 +2,7 @@
 #!desc=jd Cookies 模块配置
 
 [Script]
-# 京东  （api.m.jd.com）
-http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=jd
-
-# 京东--浏览器登录 https://bean.m.jd.com
-京东多合一签到 = type=cron,cronexp=3 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-
-# 京东比价
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/JDHelloWorld/jd_price/main/jd_price.js, requires-body=true, timeout=10
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js, tag=京东比价
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
