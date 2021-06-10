@@ -44,5 +44,6 @@ http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-pa
 
 # Boxjs
 http-request ^https?://boxjs.net script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs.net, api.revenuecat.com
+
 [MITM]
-hostname = trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com
+hostname = trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com
