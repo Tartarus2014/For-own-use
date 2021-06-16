@@ -40,11 +40,8 @@ http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login sc
 http-request ^https?:\/\/zhiyou\.smzdm\.com\/user$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取cookie
 http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取账号密码
 
-# 毒汤日历 （www.dutangapp.cn）
-http-response ^http:\/\/www.dutangapp.cn\/u\/me script-path=https://raw.githubusercontent.com/dompling/Script/master/DJT/djt.cookie.js, requires-body=true, tag=毒汤日历
-
-#京喜 （wq.jd.com）
-京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
+# 华住会
+华住会获取签到Cookie = http-request https:\/\/newactivity\.huazhu\.com\/v1\/pointStore\/signIn script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com,www.dutangapp.cn, wq.jd.com
+hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, h5.ele.me, www.52pojie.cn, *.bilibili.com, as.xiaojukeji.com, c.tieba.baidu.com, zhiyou.smzdm.com,user-api.smzdm.com, newactivity.huazhu.com
