@@ -61,3 +61,6 @@ DOMAIN,ru.odysseyplus.site
 
 # > 流媒体Exflux服务器
 DOMAIN,line.emby.men
+
+# > 流媒体SoCloud服务器
+DOMIN,emby.run
