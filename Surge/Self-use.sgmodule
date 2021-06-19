@@ -65,6 +65,9 @@ cron "10 8-22/2 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/Qua
 # Epic
 cron "0 12 * * 5" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js, tag=epic限免,wake-system=1
 
+# 顺丰
+cron "0 7 * * *" ,wake-system=1,timeout=36000,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+
 # 华住会
 华住会 = type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js
 
