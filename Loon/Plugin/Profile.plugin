@@ -45,5 +45,43 @@ http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-pat
 # Boxjs
 http-request ^https?://boxjs.net script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs.net
 
+
+
+# 爱奇艺
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺
+
+# 网易云音乐
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, tag=网易云音乐
+
+# 腾讯视频
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js, tag=腾讯视频
+
+# Acfun
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js, tag=acfun
+
+# 吾爱破解
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=吾爱破解
+
+# bilibili 动漫
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, tag=哔哩哔哩动漫
+
+# 电信
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js, tag=电信签到
+
+# 美团
+cron "3 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, tag=美团
+
+# 彩云天气
+cron "10 8-22/2 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+
+# 百度贴吧
+cron "1 1 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧
+
+# 顺丰
+cron "15 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰速运
+
+# 华住会
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, tag=华住会
+
 [MITM]
 hostname = trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com
