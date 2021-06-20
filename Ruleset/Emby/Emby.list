@@ -65,6 +65,15 @@ DOMAIN,line.emby.men
 # > 流媒体SoCloud服务器
 DOMAIN,emby.run
 
+# > 流媒体普拉斯影业服务器
+DOMAIN,emby.plusmedia.site
+DOMAIN,emby-sg.plusmedia.site
+DOMAIN,emby-cf.plusmedia.site
+DOMAIN,emby.xeton.dev
+DOMAIN,jellyfin.xeton.dev
+DOMAIN,movie.xeton.dev
+DOMAIN,servers.xeton.dev
+
 # > 流媒体终点站服务器
 DOMAIN,pub1.emby.wtf
 DOMAIN,pub1.emby.wtf
