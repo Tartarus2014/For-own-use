@@ -184,3 +184,6 @@ DOMAIN,pub3back12.emby.wtf
 DOMAIN,pub3back13.emby.wtf
 DOMAIN,pub3sgp.emby.wtf
 DOMAIN,pub3cf.emby.wtf
+
+# > 流媒体WaveCloud服务器
+DOMAIN,embyserver.ga
