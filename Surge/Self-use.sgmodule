@@ -5,10 +5,6 @@
 # 京东比价
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价 Lite(通知版)
 
-# 淘宝比价
-http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-
 # 微信去广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
@@ -75,4 +71,4 @@ cron "0 7 * * *" ,wake-system=1,timeout=36000,script-path=https://raw.githubuser
 滴滴出行_每日签到 = type=cron,timeout=120,cronexp=00 9 * * *,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js
 
 [MITM]
-hostname = %APPEND% trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, api.revenuecat.com
+hostname = %APPEND% api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, api.revenuecat.com
