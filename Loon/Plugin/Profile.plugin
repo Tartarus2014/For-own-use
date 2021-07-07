@@ -86,5 +86,8 @@ cron "00 10 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/io
 # 滴滴出行
 cron "00 9 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js, tag=滴滴出行_每日签到
 
+# 京东
+cron "12 19 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_bean_change.js, tag=京东资产变动通知
+
 [MITM]
 hostname = api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com
