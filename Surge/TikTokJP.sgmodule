@@ -1,5 +1,5 @@
-#!name=Self-use
-#!desc=自用
+#!name=Tiktok
+#!desc=JP
 
 [Rule]
 DOMAIN-SUFFIX,byteoversea.com,JP
