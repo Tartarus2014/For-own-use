@@ -11,9 +11,6 @@ http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.github
 # Bilibli漫画 (passport.biligame.com)
 http-request ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, tag=Manga.js
 
-# Acfun  (*.acfun.cn)
-http-request ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js, tag=acfun
-
 # 网易云音乐 (music.163.com)
 http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js, requires-body=true, tag=neteasemusic
 
@@ -57,4 +54,4 @@ http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body
 滴滴出行_获取GroupId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index
 
 [MITM]
-hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, newactivity.huazhu.com, h5.ele.me, api.didialift.com, bosp-api.xiaojukeji.com, as.xiaojukeji.com, pay.diditaxi.com.cn
+hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, newactivity.huazhu.com, api.didialift.com, bosp-api.xiaojukeji.com, as.xiaojukeji.com, pay.diditaxi.com.cn
