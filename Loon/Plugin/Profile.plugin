@@ -52,9 +52,6 @@ cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/script
 # 腾讯视频
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js, tag=腾讯视频
 
-# Acfun
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js, tag=acfun
-
 # 吾爱破解
 cron "2 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=吾爱破解
 
