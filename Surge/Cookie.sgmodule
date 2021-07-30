@@ -26,10 +26,6 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 # 吾爱破解 (www.52pojie.cn)
 http-request https:\/\/www\.52pojie\.cn\/home\.php\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, tag=52pojie
 
-# 滴滴 （as.xiaojukeji.com）
-http-request ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
-http-request ^https:\/\/common\.diditaxi\.com\.cn\/webapp\/config\/sidebar\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
-
 # 百度贴吧 （c.tieba.baidu.com）
 http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=tieba
 
@@ -54,4 +50,4 @@ http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body
 滴滴出行_获取GroupId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index
 
 [MITM]
-hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, newactivity.huazhu.com, api.didialift.com, bosp-api.xiaojukeji.com, as.xiaojukeji.com, pay.diditaxi.com.cn
+hostname = %APPEND% passport.biligame.com, api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, newactivity.huazhu.com,
