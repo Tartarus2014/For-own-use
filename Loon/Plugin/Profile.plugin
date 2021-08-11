@@ -20,7 +20,6 @@ mtalk.google.com = 108.177.125.188
 dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
-  
 [URL Rewrite]
 # 屏蔽京东收集信息
 https://wqs.jd.com/portal/wx/storageBridge2?\.shtml reject
