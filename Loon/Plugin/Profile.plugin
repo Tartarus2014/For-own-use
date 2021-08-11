@@ -20,6 +20,28 @@ mtalk.google.com = 108.177.125.188
 dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
+  
+[URL Rewrite]
+# 屏蔽京东收集信息
+https://wqs.jd.com/portal/wx/storageBridge2?\.shtml reject
+https://uranus.jd.com/log/m reject-dict
+https://m.jingxi.com/webmonitor/collect/biz.json reject-dict
+https://hermes.jd.com/log.gif reject-dict
+https://saturn.jd.com/log/sdk reject-dict
+https://api.m.jd.com/api\?functionId=pingou_rpds_custom reject-dict
+https://api.m.jd.com/api\?functionId=pingou_webmonitor_biz reject-dict
+https://sgm-m.jd.com/h5/custom reject-dict
+https://blackhole.m.jd.com/bypass reject-dict
+https://api.m.jd.com/client.action\?$ reject-dict
+https://ex.m.jd.com/exception_monitor/report reject-dict
+https://api.m.jd.com/client.action\?functionId=getIosDegrade reject-dict
+https://api.m.jd.com/client.action\?functionId=xview2Config reject-dict
+https://mars.jd.com/log/sdk reject-dict
+https:\/\/.+\.m\.jd.com\/m2 reject-dict
+https://lbsgw.m.jd.com/m reject-dict
+https://hawks.jd.com/log reject-dict
+https://perf.m.jd.com/app_monitor/v1/report reject-dict
+
 [Script]
 # 京东比价
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价 Lite(通知版)
