@@ -30,9 +30,6 @@ http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login sc
 http-request ^https?:\/\/zhiyou\.smzdm\.com\/user$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取cookie
 http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,tag=什么值得买_获取账号密码
 
-# 华住会
-华住会获取签到Cookie = http-request https:\/\/newactivity\.huazhu\.com\/v1\/pointStore\/signIn script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, requires-body=true
-
 # 顺丰
 顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=true
 
@@ -47,4 +44,4 @@ http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body
 滴滴出行_获取GroupId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, newactivity.huazhu.com,ms.jr.jd.com, me-api.jd.com
+hostname = %APPEND% api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, ms.jr.jd.com, me-api.jd.com
