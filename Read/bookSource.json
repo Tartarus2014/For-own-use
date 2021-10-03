@@ -176,5 +176,62 @@
   },
   "searchUrl": "https://www.xbiquge.so/modules/article/search.php?searchkey={{key}}&page={{page}},{\n  \"charset\": \"gbk\"\n}",
   "weight": 0
+{
+  "bookSourceComment": "",
+  "bookSourceGroup": "Tartarus",
+  "bookSourceName": "妙 笔 阁",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.imiaobige.com",
+  "bookUrlPattern": "",
+  "customOrder": 34,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "玄幻奇幻::/xuanhuan/{{page}}.html\n武侠仙侠::/wuxia/{{page}}.html\n都市生活::/dushi/{{page}}.html\n历史军事::/lishi/{{page}}.html\n游戏竞技::/youxi/{{page}}.html\n科幻未来::/kehuan/{{page}}.html\n",
+  "header": "",
+  "lastUpdateTime": 1630119080167,
+  "loginUrl": "",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "class.booktitle@tag.a@text",
+    "coverUrl": "id.bookimg@tag.img@src",
+    "intro": "id.bookintro@text",
+    "kind": "class.count@tag.span.0@text",
+    "lastChapter": "class.keywords@tag.a@text&&class.uptime@text##..\\:.*",
+    "name": "class.booktitle@tag.h1@text",
+    "tocUrl": "class.newrap@tag.a@href",
+    "wordCount": "class.count@tag.span.2@text"
+  },
+  "ruleContent": {
+    "content": "id.content@html##您可以在百度.*最新章节！"
+  },
+  "ruleExplore": {
+    "author": "class.author@text##作者：||tag.a.2@text",
+    "bookList": "id.main@tag.dl||id.sitebox@tag.dl",
+    "bookUrl": "tag.a.1@href",
+    "coverUrl": "tag.img@src",
+    "intro": "class.intro@text||class.book_des@text",
+    "kind": "tag.span.1@text",
+    "lastChapter": "tag.a.-1@text",
+    "name": "tag.a.1@text",
+    "wordCount": "class.uptime@text"
+  },
+  "ruleSearch": {
+    "author": "tag.a.3@text",
+    "bookList": "id.sitembox@tag.dl",
+    "bookUrl": "tag.a.1@href",
+    "coverUrl": "tag.img@src",
+    "intro": "class.book_des@text",
+    "kind": "tag.a.2@text",
+    "lastChapter": "tag.a.-1@text&&tag.span.-1@text##..\\:.*",
+    "name": "tag.a.1@text",
+    "wordCount": "tag.span.-2@text"
+  },
+  "ruleToc": {
+    "chapterList": "id.readerlists@tag.li!0:1:2:3:4:5:6:7:8:9:10:11",
+    "chapterName": "tag.a@text",
+    "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "https://www.imiaobige.com/search.html,{\n  \"method\": \"POST\",\n  \"body\": \"searchkey={{key}}\"\n}",
+  "weight": 0
 }
 ]
