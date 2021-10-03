@@ -1,7 +1,7 @@
 [
   {
     "bookSourceComment": "",
-    "bookSourceGroup": "🇨🇳Namo",
+    "bookSourceGroup": "Tartarus",
     "bookSourceName": "笔趣阁斯",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.biquges.com",
@@ -47,7 +47,7 @@
 },
 {
   "bookSourceComment": "",
-  "bookSourceGroup": "🇨🇳Namo",
+  "bookSourceGroup": "Tartarus",
   "bookSourceName": "书 本 网",
   "bookSourceType": 0,
   "bookSourceUrl": "https://www.bookben.net",
@@ -92,8 +92,8 @@
 },
 {
     "bookSourceComment": "https://celeter.github.io/SourceGo",
-    "bookSourceGroup": "🎉精选",
-    "bookSourceName": "🎉小说txt",
+    "bookSourceGroup": "Tartarus",
+    "bookSourceName": "小说txt",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xstxt.com/",
     "bookUrlPattern": "",
@@ -133,5 +133,48 @@
     },
     "searchUrl": "http://www.xstxt.com/s.php?ie=gbk&q={{key}}",
     "weight": 0
-  }
+{
+  "bookSourceComment": "",
+  "bookSourceGroup": "Tartarus",
+  "bookSourceName": "新笔趣阁",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.xbiquge.so#",
+  "bookUrlPattern": "",
+  "customOrder": 18,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "",
+  "header": "",
+  "lastUpdateTime": 1632409579017,
+  "loginUrl": "",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "id.info@tag.p.0@tag.a@text",
+    "coverUrl": "id.fmimg@img@src",
+    "init": "class.box_con",
+    "intro": "id.intro@text",
+    "lastChapter": "id.info@tag.p.3@tag.a@text&&id.info@tag.p.2@text##更新时间.|..\\:.*",
+    "name": "id.info@tag.h1@text"
+  },
+  "ruleContent": {
+    "content": "id.content@html##一秒记住.*无弹窗免费阅读！|笔趣阁.*最新章节！|笔趣阁.*！"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+    "author": "class.s4@text",
+    "bookList": "class.novelslistss@tag.li",
+    "bookUrl": "class.s2@tag.a@href",
+    "coverUrl": "class.s2@tag.a@href<js>\nvar id = result.match(/(\\d+)\\/?$/)[1];\nvar iid = parseInt(id/1000);\n'https://www.xbiquge.so/files/article/image/'+iid+'/'+id+'/'+id+'s.jpg';\n</js>",
+    "kind": "class.s1@text##\\,&&\nclass.s7@text",
+    "lastChapter": "class.s3@tag.a@text&&class.s5@text",
+    "name": "class.s2@tag.a@text"
+  },
+  "ruleToc": {
+    "chapterList": "id.list@tag.dd",
+    "chapterName": "tag.a@text",
+    "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "https://www.xbiquge.so/modules/article/search.php?searchkey={{key}}&page={{page}},{\n  \"charset\": \"gbk\"\n}",
+  "weight": 0
+}
 ]
