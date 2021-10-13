@@ -74,6 +74,8 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/ad,REJECT
 URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?,REJECT
 # BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
+# 开屏广告
+URL-REGEX, ^https://app\.bilibili\.com/x/v2/splash/list, REJECT
 
 [URL Rewrite]
 # 去除搜索中的大家都在搜
@@ -102,7 +104,7 @@ http-response https://app.bilibili.com/x/v2/account/mine\?access_key requires-bo
 http-response https://app.bilibili.com/x/v2/view\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20view%20relate.js,tag=哔哩哔哩个人中心(精简)
 http-response https://api.bilibili.com/x/v2/reply/main\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20reply.js,tag=哔哩哔哩个人中心(精简)
 
-http-response ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js ,tag=BiliBili_动态去广告
+http-response ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js, tag=BiliBili_动态去广告
 
 [MITM]
 hostname = app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com
