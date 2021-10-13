@@ -9,6 +9,9 @@ http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBu
 http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
+# EmbyPremiere
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js,tag=embyUnlocked
+
 # 微信去广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
@@ -68,4 +71,4 @@ cron "0 7 * * *" ,wake-system=1,timeout=36000,script-path=https://raw.githubuser
 cron "12 19 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_bean_change.js, tag=京东资产变动通知
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, api.revenuecat.com,testflight.apple.com,trade-acs.m.taobao.com
+hostname = %APPEND% api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, api.revenuecat.com,testflight.apple.com,trade-acs.m.taobao.com, mb3admin.com
