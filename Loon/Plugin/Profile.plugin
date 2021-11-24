@@ -46,7 +46,7 @@ https://perf.m.jd.com/app_monitor/v1/report _ reject-dict
 
 [Script]
 # 京东比价
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价 Lite(通知版)
+http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jdjf_price.js, tag=京东比价 Lite(通知版)
 
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
 http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js, tag=BaiduChangeUA
