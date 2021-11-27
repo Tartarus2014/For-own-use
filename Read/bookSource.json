@@ -1,5 +1,51 @@
 [
   {
+  "bookSourceComment": "",
+  "bookSourceGroup": "🇨🇳Namo",
+  "bookSourceName": "燃文看书",
+  "bookSourceType": 0,
+  "bookSourceUrl": "http://www.ranwenn.com",
+  "bookUrlPattern": "",
+  "customOrder": 16,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "",
+  "header": "",
+  "lastUpdateTime": 1638026180478,
+  "loginUrl": "",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "id.info@tag.p.2@text##作.*者.",
+    "coverUrl": "di.fmimg@tag.img@src",
+    "intro": "id.intro@tag.p.0@text",
+    "kind": "id.info@tag.p.0@text##分类.",
+    "lastChapter": "id.info@tag.a.-1@text&&id.info@tag.p.-1@text##最后更新.|..\\:.*",
+    "name": "id.info@tag.h1@text"
+  },
+  "ruleContent": {
+    "content": "id.content@html",
+    "imageStyle": "0"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+    "author": "class.author@text##作者.",
+    "bookList": "class.bookbox",
+    "bookUrl": "tag.a.0@href",
+    "coverUrl": "class.bookimg@tag.img@src",
+    "intro": "tag.p@text",
+    "kind": "class.cat@text##分类.",
+    "lastChapter": "class.update@tag.a@text",
+    "name": "tag.h4@text"
+  },
+  "ruleToc": {
+    "chapterList": "class.listmain@tag.dd",
+    "chapterName": "tag.a@text",
+    "chapterUrl": "tag.a@href"
+  },
+  "searchUrl": "http://www.ranwenn.com/s.php?ie=gbk&q={{key}}",
+  "weight": 0
+  }
+  {
     "bookSourceComment": "",
     "bookSourceGroup": "Tartarus",
     "bookSourceName": "笔趣阁斯",
