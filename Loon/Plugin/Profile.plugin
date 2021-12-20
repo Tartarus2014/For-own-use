@@ -74,37 +74,5 @@ http-request ^https?://boxjs.net script-path=https://raw.githubusercontent.com/c
 # TF 下载
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TF区域限制解除
 
-
-# 爱奇艺
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺
-
-# 网易云音乐
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, tag=网易云音乐
-
-# 腾讯视频
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js, tag=腾讯视频
-
-# 电信
-cron "2 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js, tag=电信签到
-
-# 美团
-cron "3 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, tag=美团
-
-# 彩云天气
-cron "10 8-22/2 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
-
-# 百度贴吧
-cron "11 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧
-
-# 顺丰
-cron "15 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰速运
-
-# 饿了么
-cron "10 00 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js, tag=饿了么_领取吃货豆
-cron "00 10 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_mission.js, tag=饿了么_领取会员任务
-
-# 京东
-cron "12 19 * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_bean_change.js, tag=京东资产变动通知
-
 [MITM]
 hostname = api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com,testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com
