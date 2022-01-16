@@ -21,26 +21,6 @@ dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
 [URL Rewrite]
-# 屏蔽京东收集信息
-https://wqs.jd.com/portal/wx/storageBridge2?\.shtml _ reject
-https://uranus.jd.com/log/m _ reject-dict
-https://m.jingxi.com/webmonitor/collect/biz.json _ reject-dict
-https://hermes.jd.com/log.gif _ reject-dict
-https://saturn.jd.com/log/sdk _ reject-dict
-https://api.m.jd.com/api\?functionId=pingou_rpds_custom _ reject-dict
-https://api.m.jd.com/api\?functionId=pingou_webmonitor_biz _ reject-dict
-https://sgm-m.jd.com/h5/custom _ reject-dict
-https://blackhole.m.jd.com/bypass _ reject-dict
-https://api.m.jd.com/client.action\?$ _ reject-dict
-https://ex.m.jd.com/exception_monitor/report _ reject-dict
-https://api.m.jd.com/client.action\?functionId=getIosDegrade _ reject-dict
-https://api.m.jd.com/client.action\?functionId=xview2Config _ reject-dict
-https://mars.jd.com/log/sdk _ reject-dict
-https:\/\/.+\.m\.jd.com\/m2 _ reject-dict
-https://lbsgw.m.jd.com/m _ reject-dict
-https://hawks.jd.com/log _ reject-dict
-https://perf.m.jd.com/app_monitor/v1/report _ reject-dict
-
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
 ^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
 
@@ -78,4 +58,4 @@ http-request ^https?://boxjs.net script-path=https://raw.githubusercontent.com/c
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TF区域限制解除
 
 [MITM]
-hostname = api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com,testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com
+hostname = api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com,testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, m.weibo.cn
