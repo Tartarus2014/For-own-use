@@ -5,8 +5,8 @@
 # 京东  （api.m.jd.com,ms.jr.jd.com, me-api.jd.com）
 获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
-# 爱奇艺   （ifac*.iqiyi.com）
-http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=iqyi
+# 爱奇艺   （passport.iqiyi.com）
+爱奇艺获取Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # 网易云音乐 (music.163.com)
 http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js, requires-body=true, tag=neteasemusic
@@ -44,4 +44,4 @@ http-request ^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$ requires-body
 滴滴出行_获取GroupId = type=http-response,requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/didichuxing/didi_checkin.js,pattern=^https?:\/\/bosp-api\.xiaojukeji\.com\/wechat\/benefit\/public\/v2\/index
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, ifac*.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, ms.jr.jd.com, me-api.jd.com
+hostname = %APPEND% api.m.jd.com, passport.iqiyi.com, i.meituan.com, m.bilibili.com, act.10010.com,g.com, *.video.qq.com, h5.ele.me, www.52pojie.cn, *.bilibili.com, c.tieba.baidu.com, zt.wps.cn, ccsp-egmas.sf-express.com, ms.jr.jd.com, me-api.jd.com
