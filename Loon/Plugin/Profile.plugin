@@ -34,9 +34,6 @@ http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://r
 # 微信去广告
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, tag=微信去广告
 
-# EmbyPremiere
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1, script-path=https://subweb.oss-cn-hongkong.aliyuncs.com/Script/embyPremiere.js,tag=embyUnlocked
-
 # Display netflix ratings
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, requires-body=true, timeout=10, tag=奈菲评分
 http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, requires-body=true, timeout=10, tag=奈菲评分
