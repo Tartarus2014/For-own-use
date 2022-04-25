@@ -1,3 +1,6 @@
+#!name= SMZDM
+#!desc= 什么值得买去广告
+
 [URL Rewrite]
 # 什么值得买_好价详情页去广告
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul - reject
