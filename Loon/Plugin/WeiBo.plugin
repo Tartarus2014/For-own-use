@@ -1,3 +1,6 @@
+#!name=Weibo
+#!desc=Weibo app removes ad.
+
 [Script]
 // 微博下面的评论
 http-response ^https://(api\.weibo\.cn|mapi\.weibo\.com)/2/comments/build_comments\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/weibo/weibo_comment.js
