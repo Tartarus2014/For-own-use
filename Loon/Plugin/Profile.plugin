@@ -2,7 +2,6 @@
 #!desc= 自用，集成了一些Host Script 
 
 [Host]
-
 # > Alphabet
 *.google = server:https://dns.google/dns-query // Google
 *.goog = server:https://dns.google/dns-query // Google sites
