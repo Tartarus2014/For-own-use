@@ -50,7 +50,7 @@
 *.aliyuncdn.* = server:https://dns.alidns.com/dns-query
 *.aliyunddos????.com = server:https://dns.alidns.com/dns-query
 *.aliyuncs.com = server:https://dns.alidns.com/dns-query
-*.aliyundunwaf.com = server:https://dns.alidns.com/dns-query // 阿里云Web应用防火墙
+*.aliyundunwaf.com = server:https://dns.alidns.com/dns-query
 *.aliapp.com = server:https://dns.alidns.com/dns-query
 *.aliapp.org = server:https://dns.alidns.com/dns-query
 *.alibabausercontent.com = server:https://dns.alidns.com/dns-query
