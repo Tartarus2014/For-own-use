@@ -9,6 +9,5 @@
         "15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js , tag=顺丰速运 , img-url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/dragonball/19.PNG",
         "10 00 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js , tag=饿了么_领取吃货豆 , img-url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/dragonball/22.PNG",
         "00 10 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_mission.js , tag=饿了么_领取会员任务 , img-url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/dragonball/13.PNG",
-        "0 7-21/7 * * * https://raw.githubusercontent.com/Tartarus2014/Script/master/Bilibili.js , tag=Bilibili , img-url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/dragonball/20.PNG" 
     ]
 }
