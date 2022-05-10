@@ -22,6 +22,16 @@ tplinklogin.net = server:system
 melogin.cn = server:system
 falogin.cn = server:system
 
+# > UnBreak
+blog.google = server:system
+googletraveladservices.com = server:system
+clientservices.googleapis.com = server:system
+dl.google.com = server:system
+dl.l.google.com = server:system
+update.googleapis.com = server:system
+translate.googleapis.com = server:system
+*-mtalk.google.com = server:system
+
 # > Apple
 networking.apple = server:https://doh.dns.apple.com/dns-query
 *.apple.com = server:https://doh.dns.apple.com/dns-query
@@ -177,10 +187,12 @@ uuu.glass = server:https://a.passcloud.xyz/dns-query
 *.gia.wiki = server:https://a.passcloud.xyz/dns-query
 *.checkmails.xyz = server:https://a.passcloud.xyz/dns-query
 
+# > 🇨🇳 CN
 # CNNIC SDNS
 # *.gov.cn = server:1.2.4.8
 # *.政务 = server:1.2.4.8
 
+# > 🇭🇰 HK
 # PCCW Enterprises Limited
 # *.pccw.com = server:dns1.pccw.com
 # *.1010.com.hk = server:dns1.pccw.com
@@ -199,6 +211,7 @@ uuu.glass = server:https://a.passcloud.xyz/dns-query
 # KDDI Hong Kong Limited
 # *.hk.kddi.com = server:apple.kdd.net.hk
 
+# > 🇹🇼 TW
 # 中华电信
 *.cht.com.tw  = server:https://dns.hinet.net/dns-query
 *.hinet.net = server:https://dns.hinet.net/dns-query
@@ -210,6 +223,7 @@ uuu.glass = server:https://a.passcloud.xyz/dns-query
 *.tw = server:https://dns.twnic.tw/dns-query
 *.taipei = server:https://dns.twnic.tw/dns-query
 
+# > 🇺🇸 US
 # Hurricane Electric
 *.he.net = server:https://ordns.he.net/dns-query
 
