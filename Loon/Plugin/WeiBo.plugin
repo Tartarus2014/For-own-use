@@ -1,5 +1,6 @@
 #!name=Weibo
 #!desc=Weibo app removes ad.
+#!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/WeiBo.png
 
 [Script]
 # > 微博个人信息
