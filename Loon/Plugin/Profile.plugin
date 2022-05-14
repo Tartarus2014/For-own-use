@@ -1,5 +1,4 @@
 #!name= Profile
-#!desc= 自用 
 
 [URL Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
