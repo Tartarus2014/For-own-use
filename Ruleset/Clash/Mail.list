@@ -8,3 +8,8 @@ DOMAIN,outlook.office365.com
 DOMAIN,smtp.office365.com
 DOMAIN,imap-mail.outlook.com
 DOMAIN,smtp-mail.outlook.com
+
+# Yahool
+DOMAIN,pop.mail.yahoo.com
+DOMAIN,imap.mail.yahoo.com
+DOMAIN,smtp.mail.yahoo.com
