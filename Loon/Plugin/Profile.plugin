@@ -1,8 +1,5 @@
 #!name= Profile
 
-[General]
-skip-proxy = iosapps.itunes.apple.com
-
 [URL Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
 ^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
@@ -25,8 +22,5 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-at
 # > vsco
 http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js, requires-body=true, tag=VSCO
 
-# TF 下载
-http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TF区域限制
-
 [MITM]
-hostname = api.m.jd.com, ios.prod.ftl.netflix.com, weixin110.qq.com, api.revenuecat.com,testflight.apple.com, *.baidu.com, www.zhihu.com,
+hostname = api.m.jd.com, ios.prod.ftl.netflix.com, api.revenuecat.com, *.baidu.com, www.zhihu.com,
