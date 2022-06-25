@@ -1,6 +1,13 @@
 #!name=Self-use
 #!desc=自用
 
+[Header Rewrite]
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+http-request ^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+
+# 百度（全站替换为手机百度 Quark 的 User-Agent）
+http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+
 [Script]
 # 京东比价
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价 Lite(通知版)
@@ -20,4 +27,4 @@ BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baid
 http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js ,requires-body=true,tag=VSCO
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, *.baidu.com, api.revenuecat.com, mp.weixin.qq.com
+hostname = %APPEND% api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, *.baidu.com, www.zhihu.com, api.revenuecat.com, mp.weixin.qq.com
