@@ -4,8 +4,6 @@
 #vvebo shortcuts
 (^https?:\/\/m\.weibo\.cn\/.+) shortcuts://x-callback-url/run-shortcut?name=vvebo&input=text&text=$0 302
 
-[MITM]
-hostname = %APPEND% m.weibo.cn
 [Script]
 # Emby
 http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=embyUnlocked
