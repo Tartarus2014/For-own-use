@@ -1,6 +1,12 @@
 #!name=Self-use
 #!desc=自用
 
+[URL Rewrite]
+#vvebo shortcuts
+(^https?:\/\/m\.weibo\.cn\/.+) shortcuts://x-callback-url/run-shortcut?name=vvebo&input=text&text=$0 302
+
+[MITM]
+hostname = %APPEND% m.weibo.cn
 [Header Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
 http-request ^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
@@ -27,4 +33,4 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-at
 http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js ,requires-body=true,tag=VSCO
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, *.baidu.com, www.zhihu.com, api.revenuecat.com, mp.weixin.qq.com, mb3admin.com
+hostname = %APPEND% api.m.jd.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, *.baidu.com, www.zhihu.com, api.revenuecat.com, mp.weixin.qq.com, mb3admin.com, m.weibo.cn
