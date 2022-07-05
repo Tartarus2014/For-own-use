@@ -2,7 +2,7 @@
 
 [URL Rewrite]
 #vvebo shortcuts
-(^https?:\/\/m\.weibo\.cn\/.+) shortcuts://x-callback-url/run-shortcut?name=vvebo&input=text&text=$0 302
+(^https?:\/\/m\.weibo\.cn\/(?!ttarticle).+) shortcuts://x-callback-url/run-shortcut?name=vvebo&input=text&text=$0 302
 
 [Script]
 # Emby
