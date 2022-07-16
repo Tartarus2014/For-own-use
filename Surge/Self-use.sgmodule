@@ -10,7 +10,7 @@ http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex U
 
 [Script]
 # Grow
-Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
+Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/revenuecat.js
 
 # Emby
 http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=embyUnlocked
