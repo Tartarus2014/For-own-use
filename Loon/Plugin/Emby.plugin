@@ -1,0 +1,9 @@
+#!name=Emby Unlock
+#!desc=Emby Unlock
+
+[Script]
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js,tag=embyUnlocked
+
+
+[MITM]
+hostname =  mb3admin.com
