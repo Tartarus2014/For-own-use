@@ -1,6 +1,5 @@
 # PT
 DOMAIN-SUFFIX,audiences.me
-DOMAIN-SUFFIX,chdbits.co
 DOMAIN-SUFFIX,lemonhd.org
 DOMAIN-SUFFIX,kp.m-team.cc
 DOMAIN-SUFFIX,totheglory.im
@@ -11,7 +10,11 @@ DOMAIN-SUFFIX,hdhome.org
 DOMAIN-SUFFIX,nextpt.net
 DOMAIN-SUFFIX,springsunday.net
 DOMAIN-SUFFIX,pt.keepfrds.com
+DOMAIN-SUFFIX,www.pthome.net
+
+
+# 和Tracker同域名
+DOMAIN-SUFFIX,chdbits.co
 DOMAIN-SUFFIX,ourbits.club
 DOMAIN-SUFFIX,hhanclub.top
-DOMAIN-SUFFIX,www.pthome.net
 DOMAIN-SUFFIX,club.hares.top
