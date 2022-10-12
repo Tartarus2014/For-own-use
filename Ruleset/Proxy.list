@@ -1,7 +1,7 @@
 # NasTools
-DOMAIN,api.themoviedb.org
-DOMAIN,themoviedb.org
-DOMAIN,opensubtitles.org
-DOMAIN,trakt.tv
+DOMAIN-SUFFIX,api.themoviedb.org
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,opensubtitles.org
+DOMAIN-SUFFIX,trakt.tv
 
-DOMAIN,mikanani.me
+DOMAIN-SUFFIX,mikanani.me
