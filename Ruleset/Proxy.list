@@ -1,7 +1,7 @@
 # NasTools
 DOMAIN,api.themoviedb.org
-DOMAIN,www.themoviedb.org
-DOMAIN,www.opensubtitles.org
+DOMAIN,themoviedb.org
+DOMAIN,opensubtitles.org
 DOMAIN,trakt.tv
 
 DOMAIN,mikanani.me
