@@ -1,6 +1,9 @@
 # NasTools
 DOMAIN-SUFFIX,api.themoviedb.org
 DOMAIN-SUFFIX,opensubtitles.org
+
+# Emby
 DOMAIN-SUFFIX,trakt.tv
 
+# 蜜柑
 DOMAIN-SUFFIX,mikanani.me
