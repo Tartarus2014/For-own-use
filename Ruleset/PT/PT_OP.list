@@ -14,7 +14,7 @@ DOMAIN-SUFFIX,www.pthome.net
 
 
 # 和Tracker同域名
-DOMAIN-SUFFIX,chdbits.co
-DOMAIN-SUFFIX,ourbits.club
-DOMAIN-SUFFIX,hhanclub.top
-DOMAIN-SUFFIX,club.hares.top
+# DOMAIN-SUFFIX,chdbits.co
+# DOMAIN-SUFFIX,ourbits.club
+# DOMAIN-SUFFIX,hhanclub.top
+# DOMAIN-SUFFIX,club.hares.top
