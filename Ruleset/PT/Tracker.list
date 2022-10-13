@@ -1,22 +1,22 @@
 # Tracker （岛,柠檬,瓷,猫完全不限制盒子，但是需要独立ip）
-DOMAIN-KEYWORD,t.audiences.me
-DOMAIN-KEYWORD,tracker.hdsky.me
-DOMAIN-KEYWORD,the.keepfrds.com
-DOMAIN-KEYWORD,nginx2.azurewebsites.net
-DOMAIN-KEYWORD,tracker.keepfrds.com
-DOMAIN-KEYWORD,tracker.m-team.cc
-DOMAIN-KEYWORD,daydream.dmhy.best
-DOMAIN-KEYWORD,on.springsunday.net
-DOMAIN-KEYWORD,t.hdhome.org
-DOMAIN-KEYWORD,tracker.pterclub.com
-DOMAIN-KEYWORD,tracker.totheglory.im
-DOMAIN-KEYWORD,announce.leaguehd.com
-DOMAIN-KEYWORD,t.pthome.net
-DOMAIN-KEYWORD,pt.eastgame.org
-DOMAIN-KEYWORD,creditracker.net
+DOMAIN-SUFFIX,t.audiences.me
+DOMAIN-SUFFIX,tracker.hdsky.me
+DOMAIN-SUFFIX,the.keepfrds.com
+DOMAIN-SUFFIX,nginx2.azurewebsites.net
+DOMAIN-SUFFIX,tracker.keepfrds.com
+DOMAIN-SUFFIX,tracker.m-team.cc
+DOMAIN-SUFFIX,daydream.dmhy.best
+DOMAIN-SUFFIX,on.springsunday.net
+DOMAIN-SUFFIX,t.hdhome.org
+DOMAIN-SUFFIX,tracker.pterclub.com
+DOMAIN-SUFFIX,tracker.totheglory.im
+DOMAIN-SUFFIX,announce.leaguehd.com
+DOMAIN-SUFFIX,t.pthome.net
+DOMAIN-SUFFIX,pt.eastgame.org
+DOMAIN-SUFFIX,creditracker.net
 
 # 和PT同域名
-DOMAIN-KEYWORD,ourbits.club
-DOMAIN-KEYWORD,hhanclub.top
-DOMAIN-KEYWORD,chdbits.co
-DOMAIN-KEYWORD,club.hares.top
+DOMAIN-SUFFIX,ourbits.club
+DOMAIN-SUFFIX,hhanclub.top
+DOMAIN-SUFFIX,chdbits.co
+DOMAIN-SUFFIX,club.hares.top
