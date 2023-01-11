@@ -1,23 +1,23 @@
 # PT
-DOMAIN,audiences.me
-DOMAIN,lemonhd.org
-DOMAIN,kp.m-team.cc
-DOMAIN,totheglory.im
-DOMAIN,u2.dmhy.org
-DOMAIN,hdsky.me
-DOMAIN,pterclub.com
-DOMAIN,hdhome.org
-DOMAIN,nextpt.net
-DOMAIN,springsunday.net
-DOMAIN,pt.keepfrds.com
-DOMAIN,www.pthome.net
-DOMAIN,hdchina.org
-DOMAIN,www.tjupt.org
+DOMAIN-SUFFIX,audiences.me
+DOMAIN-SUFFIX,lemonhd.org
+DOMAIN-SUFFIX,kp.m-team.cc
+DOMAIN-SUFFIX,totheglory.im
+DOMAIN-SUFFIX,u2.dmhy.org
+DOMAIN-SUFFIX,hdsky.me
+DOMAIN-SUFFIX,pterclub.com
+DOMAIN-SUFFIX,hdhome.org
+DOMAIN-SUFFIX,nextpt.net
+DOMAIN-SUFFIX,springsunday.net
+DOMAIN-SUFFIX,pt.keepfrds.com
+DOMAIN-SUFFIX,www.pthome.net
+DOMAIN-SUFFIX,hdchina.org
+DOMAIN-SUFFIX,www.tjupt.org
 
 
 # 和Tracker同域名
-DOMAIN,chdbits.co
-DOMAIN,ourbits.club
-DOMAIN,hhanclub.top
-DOMAIN,club.hares.top
-DOMAIN,pt.eastgame.org
+DOMAIN-SUFFIX,chdbits.co
+DOMAIN-SUFFIX,ourbits.club
+DOMAIN-SUFFIX,hhanclub.top
+DOMAIN-SUFFIX,club.hares.top
+DOMAIN-SUFFIX,pt.eastgame.org
