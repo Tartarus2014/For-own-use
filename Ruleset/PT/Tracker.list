@@ -1,4 +1,4 @@
-# Tracker （岛,柠檬,瓷,猫完全不限制盒子，但是需要独立ip）
+# Tracker
 DOMAIN-SUFFIX,t.audiences.me
 DOMAIN-SUFFIX,tracker.hdsky.me
 DOMAIN-SUFFIX,the.keepfrds.com
@@ -13,11 +13,9 @@ DOMAIN-SUFFIX,tracker.totheglory.im
 DOMAIN-SUFFIX,announce.leaguehd.com
 DOMAIN-SUFFIX,t.pthome.net
 DOMAIN-SUFFIX,pt.eastgame.org
-DOMAIN-SUFFIX,creditracker.net
 DOMAIN-SUFFIX,tracker.hdchina.org
-
-# 和PT同域名
 DOMAIN-SUFFIX,ourbits.club
 DOMAIN-SUFFIX,hhanclub.top
 DOMAIN-SUFFIX,chdbits.co
 DOMAIN-SUFFIX,club.hares.top
+DOMAIN-SUFFIX,creditracker.net
