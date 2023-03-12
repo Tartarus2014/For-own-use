@@ -8,3 +8,6 @@ DOMAIN-SUFFIX,trakt.tv
 # 蜜柑
 DOMAIN-SUFFIX,mikanani.me
 DOMAIN-SUFFIX,dmhy.org
+
+# jsdelivr
+DOMAIN-SUFFIX,jsdelivr.net
