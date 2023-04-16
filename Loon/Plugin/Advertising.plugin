@@ -4,7 +4,7 @@
 [Rule]
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
-[URL Rewrite]
+[Rewrite]
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
 ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
