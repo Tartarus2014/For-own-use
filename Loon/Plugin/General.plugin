@@ -1,7 +1,7 @@
 #!name=Advanced Settings & URL Redirect
 #!desc=高级设置及通用的 URL 重定向优化（如 Google 搜索及地图、AbeamTV 区域限制等）
 
-[URL Rewrite]
+[Rewrite]
 # Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
