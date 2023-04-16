@@ -14,7 +14,7 @@ DOMAIN-SUFFIX,tiktokv.com,PROXY
 DOMAIN-KEYWORD,-tiktokcdn-com,PROXY
 USER-AGENT,tiktok*,PROXY
 
-[URL Rewrite]
+[Rewrite]
 (?<=_region=)CN(?=&) JP 307
 (^h.+v5\/)(.+) $1 302
 (?<=&mcc_mnc=)4 2 307
