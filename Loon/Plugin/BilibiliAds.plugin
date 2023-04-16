@@ -1,6 +1,6 @@
 #!name= Bilibili 去广告
 #!desc= Bilibili app removes ad.
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
+#!icon= https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Bilibili.png
 
 [Rule]
 # 去广告
