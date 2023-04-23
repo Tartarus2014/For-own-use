@@ -11,7 +11,7 @@ URL-REGEX,^https?:\/\/api\.bilibili\.com\/pgc\/season\/app\/related\/recommend\?
 # BiliBili漫画去广告
 URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJECT
 # 开屏广告
-URL-REGEX, ^https://app\.bilibili\.com/x/v2/splash/list, REJECT
+URL-REGEX, ^https://app\.bilibili\.com/x/v2/splash/list,REJECT
 
 [Rewrite]
 # 去除搜索中的大家都在搜
