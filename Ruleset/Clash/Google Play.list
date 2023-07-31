@@ -4,3 +4,4 @@
 # 原理是 services.googleapis.cn  会解析到国内ip，导致下载不了。将对应国内ip加入代理就可以下载了
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,services.googleapis.cn
+DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com
