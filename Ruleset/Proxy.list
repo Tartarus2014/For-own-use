@@ -12,7 +12,5 @@ DOMAIN-SUFFIX,dmhy.org
 # jsdelivr
 DOMAIN-SUFFIX,jsdelivr.net
 
-# 微信
-DOMAIN-SUFFIX,short.weixin.qq.com
-DOMAIN-SUFFIX,dns.weixin.qq.com.cn
-DOMAIN-SUFFIX,long.weixin.qq.com 
+# ip测试
+DOMAIN-SUFFIX,ipwho.is
