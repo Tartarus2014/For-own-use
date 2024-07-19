@@ -40,9 +40,9 @@ dns:
   ipv6: true
   listen: 0.0.0.0:53
   default-nameserver:
+    - 180.184.1.1  # 字节 DNS
     - 223.5.5.5  # 阿里 DNS
     - 223.6.6.6  # 阿里 DNS
-    - 119.29.29.29  # 騰訊 DNS
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 #
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
