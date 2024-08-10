@@ -1,5 +1,20 @@
-# Gemini 2024-03-31 15:02:45
-DOMAIN,aistudio.google.com
-DOMAIN,bard.google.com
-DOMAIN,gemini.google.com
-DOMAIN,generativelanguage.googleapis.com
+# Copilot
+- DOMAIN,api.githubcopilot.com
+- DOMAIN,copilot-proxy.githubusercontent.com
+- DOMAIN,copilot.microsoft.com
+- DOMAIN,sydney.bing.com
+- DOMAIN,www.bing.com
+
+# Gemini
+- DOMAIN,bard.google.com
+- DOMAIN,gemini.google.com
+- DOMAIN,generativelanguage.googleapis.com
+- DOMAIN,ai.google.dev
+- DOMAIN,aida.googleapis.com
+- DOMAIN,aistudio.google.com
+- DOMAIN,alkalimakersuite-pa.clients6.google.com
+- DOMAIN,makersuite.google.com
+
+# Meta AI
+- DOMAIN,imagine.meta.com
+- DOMAIN-SUFFIX,meta.ai
