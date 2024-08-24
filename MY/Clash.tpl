@@ -1,5 +1,3 @@
-# {{ downloadUrl }}
-
 # 混合端口 
 mixed-port: 7890
 
@@ -168,7 +166,6 @@ dns:
   nameserver:
     - https://223.5.5.5/dns-query  # 阿里 DoH
     - https://223.6.6.6/dns-query  # 阿里 DoH
-    - https://doh.pub/dns-query  # 騰訊 DoH
   fallback:
     - tls://dns.google:853  # Google DoT
     - https://1.1.1.1/dns-query  # CloudFlare DoH
