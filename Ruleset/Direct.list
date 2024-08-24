@@ -37,9 +37,3 @@ DOMAIN,sms.imagetasks.com
 # > Speed Test
 DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN,speedtest.macpaw.com
-# ------
-# > PT
-DOMAIN-SUFFIX,redacted.ch
-DOMAIN-SUFFIX,gazellegames.net
-DOMAIN-SUFFIX,morethantv.me
-DOMAIN-SUFFIX,animebytes.tv
