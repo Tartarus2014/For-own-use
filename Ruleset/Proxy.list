@@ -1,3 +1,10 @@
+# My
+DOMAIN-SUFFIX,ipwho.is
+DOMAIN-SUFFIX,dmhy.org
+DOMAIN-SUFFIX,mikanani.me
+DOMAIN-SUFFIX,trakt.tv
+DOMAIN-SUFFIX,tmdb.org
+
 # Proxy
 DOMAIN-SUFFIX,9cache.com
 DOMAIN-SUFFIX,9gag.com
@@ -482,15 +489,15 @@ DOMAIN,wego.here.com
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
 # ---(Apple)---
-DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
-DOMAIN-SUFFIX,smoot.apple.com // Spotlight
-DOMAIN,amp-api.podcasts.apple.com // Podcasts
-DOMAIN,beta.music.apple.com // Apple Music Web
-DOMAIN,books.itunes.apple.com // iBooks Store download
-DOMAIN,facetime.apple.com // FaceTime Links
-DOMAIN,lookup-api.apple.com // Look Up
-DOMAIN,radio.itunes.apple.com // Apple Music Radio
-DOMAIN,apple-relay.apple.com // Apple Intelligence
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,amp-api.podcasts.apple.com
+DOMAIN,beta.music.apple.com
+DOMAIN,books.itunes.apple.com
+DOMAIN,facetime.apple.com
+DOMAIN,lookup-api.apple.com
+DOMAIN,radio.itunes.apple.com
+DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
