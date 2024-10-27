@@ -1,5 +1,4 @@
 # Proxy
-DOMAIN-SUFFIX,ipwho.is
 DOMAIN-SUFFIX,9cache.com
 DOMAIN-SUFFIX,9gag.com
 DOMAIN-SUFFIX,abc.com
@@ -35,7 +34,6 @@ DOMAIN-SUFFIX,comparitech.com
 DOMAIN-SUFFIX,conoha.jp
 DOMAIN-SUFFIX,coursehero.com
 DOMAIN-SUFFIX,c-span.org
-DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,dailymotion.com
 DOMAIN-SUFFIX,daum.net
 DOMAIN-SUFFIX,deadline.com
@@ -92,7 +90,6 @@ DOMAIN-SUFFIX,kakao.com
 DOMAIN-SUFFIX,kobo.com
 DOMAIN-SUFFIX,listennotes.com
 DOMAIN-SUFFIX,livestream.com
-DOMAIN-SUFFIX,mikanani.me
 DOMAIN-SUFFIX,mailchimp.com
 DOMAIN-SUFFIX,matrix.org
 DOMAIN-SUFFIX,medibang.com
@@ -116,7 +113,6 @@ DOMAIN-SUFFIX,newyorker.com
 DOMAIN-SUFFIX,now.com
 DOMAIN-SUFFIX,ok.ru
 DOMAIN-SUFFIX,omny.fm
-DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openvpn.net
 DOMAIN-SUFFIX,owltail.com
 DOMAIN-SUFFIX,oxfordscholarship.com
@@ -164,7 +160,6 @@ DOMAIN-SUFFIX,straitstimes.com
 DOMAIN-SUFFIX,streamable.com
 DOMAIN-SUFFIX,substack.com
 DOMAIN-SUFFIX,swissinfo.ch
-DOMAIN-SUFFIX,trakt.tv
 DOMAIN-SUFFIX,tapatalk.com
 DOMAIN-SUFFIX,techspot.com
 DOMAIN-SUFFIX,textnow.me
@@ -176,7 +171,6 @@ DOMAIN-SUFFIX,thediplomat.com
 DOMAIN-SUFFIX,theguardian.com
 DOMAIN-SUFFIX,theinitium.com
 DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,thetvdb.com
 DOMAIN-SUFFIX,time.com
 DOMAIN-SUFFIX,tineye.com
@@ -366,6 +360,9 @@ DOMAIN,assets2.xboxlive.com
 DOMAIN,az416426.vo.msecnd.net
 DOMAIN,az668014.vo.msecnd.net
 DOMAIN,github.global.ssl.fastly.net
+# > OpenAI
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,openai.com
 # > Pinterest
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-KEYWORD,.pinterest.
@@ -493,6 +490,10 @@ DOMAIN,books.itunes.apple.com // iBooks Store download
 DOMAIN,facetime.apple.com // FaceTime Links
 DOMAIN,lookup-api.apple.com // Look Up
 DOMAIN,radio.itunes.apple.com // Apple Music Radio
+DOMAIN,apple-relay.apple.com // Apple Intelligence
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
 # > Mi
 DOMAIN,c.mi.com
 DOMAIN,new.c.mi.com
