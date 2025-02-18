@@ -34,15 +34,11 @@ hosts:
   'dl.google.com': 180.163.151.161
   'dl.l.google.com': 180.163.150.33
 dns:
-  enable: true # 是否启用dns false
-  ipv6: true
-  listen: 0.0.0.0:53
-  default-nameserver:
-    - 180.184.1.1  # 字节 DNS
-    - 223.5.5.5  # 阿里 DNS
-    - 223.6.6.6  # 阿里 DNS
+  enable: true  # 启用DNS服务
+  ipv6: true  # 启用IPv6解析
+  listen: 0.0.0.0:53  # DNS服务监听地址和端口
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
-  fake-ip-range: 198.18.0.1/16 #
+  fake-ip-range: 198.18.0.1/16 #  # fake-ip地址池范围
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
     - "*.lan"
     - "*.localdomain"
@@ -163,31 +159,22 @@ dns:
     - "+.weibo.com"
     - "+.cowtransfer.com"
     - "+.battle.net"
-  nameserver:
-    - https://223.5.5.5/dns-query  # 阿里 DoH
-    - https://223.6.6.6/dns-query  # 阿里 DoH
-    - https://doh.pub/dns-query  # 騰訊 DoH
-  fallback:
-    - tls://dns.google:853  # Google DoT
+  default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
+    - 180.184.1.1  # 字节 DNS
+    - 223.5.5.5  # 阿里 DNS
+    - 119.29.29.29  # 腾讯 DNS
+  nameserver:  # 主要DNS服务器列表
+    - https://dns.alidns.com/dns-query  # 阿里 DoH
+    - https://doh.pub/dns-query  # DNSPod DoH
+  fallback:  # 国外域名DNS服务器
     - https://1.1.1.1/dns-query  # CloudFlare DoH
     - https://8.8.8.8/dns-query  # Google DoH
-  fallback-filter:
-     geoip: true # 默认
-     geoip-code: CN  # GEOIP 地區
-     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-       - 240.0.0.0/4
-     domain:
-       - "+.google.com"
-       - "+.facebook.com"
-       - "+.youtube.com"
-       - "+.crisp.chat"
-       - "+.githubusercontent.com"
-       - "+.googlevideo.com"
-       - "+.msftconnecttest.com"
-       - "+.msftncsi.com"
-       - msftconnecttest.com
-       - msftncsi.com
-     nameserver-policy:
-       "*.msftconnecttest.com": https://223.5.5.5/dns-query
-       "*.msftncsi.com": https://223.5.5.5/dns-query
-       '*.annas-archive.org': https://1.1.1.1/dns-query
+  fallback-filter:  # fallback触发条件
+    geoip: true  # 启用 GeoIP
+    geoip-code: CN  # 国家代码
+    ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+      - 240.0.0.0/4  # 保留地址
+    domain:
+      - "+.google.com"  # Google相关域名    
+      - "+.facebook.com"  # Facebook相关域名
+      - "+.youtube.com"  # YouTube相关域名
