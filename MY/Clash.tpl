@@ -21,18 +21,6 @@ log-level: silent
 
 # Clash 的 RESTful API
 external-controller: 127.0.0.1:9090
-hosts:
-  mtalk.google.com: 142.250.157.188
-  alt1-mtalk.google.com: 142.250.157.188
-  alt2-mtalk.google.com: 142.250.115.188
-  alt3-mtalk.google.com: 108.177.97.188
-  alt4-mtalk.google.com: 173.194.202.188
-  alt5-mtalk.google.com: 142.250.141.188
-  alt6-mtalk.google.com: 142.250.115.188
-  alt7-mtalk.google.com: 142.250.141.188
-  alt8-mtalk.google.com: 142.250.152.188
-  dl.google.com: 180.163.151.161
-  dl.l.google.com: 180.163.150.33
 dns:
   enable: true  # 启用DNS服务
   ipv6: true  # 启用IPv6解析
@@ -145,6 +133,15 @@ dns:
     - +.dns.alidns.com  # 阿里云（Alibaba Cloud）的公共 DNS 服务器。
     - +.dns.adguard-dns.com  # AdGuard 的 DNS 服务器。
     - +.doh.dnspod.cn # DNSPod 的 的 DNS 服务器。
+    - mtalk.google.com
+    - alt1-mtalk.google.com
+    - alt2-mtalk.google.com
+    - alt3-mtalk.google.com
+    - alt4-mtalk.google.com
+    - alt5-mtalk.google.com
+    - alt6-mtalk.google.com
+    - alt7-mtalk.google.com
+    - alt8-mtalk.google.com
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
     - 180.184.1.1  # 字节 DNS
     - 223.5.5.5  # 阿里 DNS
