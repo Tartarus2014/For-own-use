@@ -19,7 +19,7 @@ mode: rule
 
 # 设置日志输出级别 （默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: silent
+log-level: info
 
 # Clash 的 RESTful API
 external-controller: 127.0.0.1:9090
