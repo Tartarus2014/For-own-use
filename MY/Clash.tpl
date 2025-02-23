@@ -27,16 +27,28 @@ dns:
   listen: 0.0.0.0:53  # DNS服务监听地址和端口
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 #  # fake-ip地址池范围
-  fake-ip-filter:  # filter之后,回应的是真实ip。
-    - mtalk.google.com
-    - alt1-mtalk.google.com
-    - alt2-mtalk.google.com
-    - alt3-mtalk.google.com
-    - alt4-mtalk.google.com
-    - alt5-mtalk.google.com
-    - alt6-mtalk.google.com
-    - alt7-mtalk.google.com
-    - alt8-mtalk.google.com
+  fake-ip-filter:  
+    - "*.lan"  # 用于局域网。
+    - "*.localdomain"  # 用于本地网络。
+    - "*.localhost"  # 指向本地回环地址。
+    - "*.local"  # mDNS 常用的域名。
+    - "*.home.arpa"  # 用于家庭网络。
+    - mtalk.google.com  # FCM域名。
+    - alt1-mtalk.google.com  # FCM域名。
+    - alt2-mtalk.google.com  # FCM域名。
+    - alt3-mtalk.google.com  # FCM域名。
+    - alt4-mtalk.google.com  # FCM域名。
+    - alt5-mtalk.google.com  # FCM域名。
+    - alt6-mtalk.google.com  # FCM域名。
+    - alt7-mtalk.google.com  # FCM域名。
+    - alt8-mtalk.google.com  # FCM域名。
+    - *.srv.nintendo.net  # Nintendo。
+    - *.stun.playstation.net  # PlayStation。
+    - xbox.*.microsoft.com # Xbox。
+    - xnotify.xboxlive.com # Xbox。
+    - "*.mcdn.bilivideo.cn"  # Bilibili 视频网站的媒体内容分发网络。
+    - *.upos.biliapi.net  # Bilibili 视频网站的媒体内容分发网络。
+    - *.bilivideo.com  # Bilibili 视频网站的媒体内容分发网络。
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
     - 180.184.1.1  # 字节 DNS
     - 223.5.5.5  # 阿里 DNS
@@ -51,8 +63,12 @@ dns:
     geoip: true  # 启用 GeoIP
     geoip-code: CN  # 国家代码
     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
-      - 240.0.0.0/4  # 保留地址
+      - 240.0.0.0/4  # 保留地址，检测 DNS 污染
     domain:
       - "+.google.com"  # Google相关域名    
       - "+.facebook.com"  # Facebook相关域名
       - "+.youtube.com"  # YouTube相关域名
+      - "+.twitter.com"  # twitter相关域名
+      - "+.instagram.com"  # instagram相关域名
+      - "+.telegram.org" # Telegram相关域名
+      - "+.whatsapp.com" # Whatsapp相关域名
