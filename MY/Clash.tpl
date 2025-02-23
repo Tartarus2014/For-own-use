@@ -1,3 +1,5 @@
+# {{ downloadUrl }}
+
 # 混合端口 
 mixed-port: 7890
 
@@ -27,7 +29,7 @@ dns:
   listen: 0.0.0.0:53  # DNS服务监听地址和端口
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 #  # fake-ip地址池范围
-  fake-ip-filter:  
+  fake-ip-filter: 
     - "*.lan"  # 用于局域网。
     - "*.localdomain"  # 用于本地网络。
     - "*.localhost"  # 指向本地回环地址。
@@ -42,13 +44,6 @@ dns:
     - alt6-mtalk.google.com  # FCM域名。
     - alt7-mtalk.google.com  # FCM域名。
     - alt8-mtalk.google.com  # FCM域名。
-    - *.srv.nintendo.net  # Nintendo。
-    - *.stun.playstation.net  # PlayStation。
-    - xbox.*.microsoft.com # Xbox。
-    - xnotify.xboxlive.com # Xbox。
-    - "*.mcdn.bilivideo.cn"  # Bilibili 视频网站的媒体内容分发网络。
-    - *.upos.biliapi.net  # Bilibili 视频网站的媒体内容分发网络。
-    - *.bilivideo.com  # Bilibili 视频网站的媒体内容分发网络。
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
     - 180.184.1.1  # 字节 DNS
     - 223.5.5.5  # 阿里 DNS
