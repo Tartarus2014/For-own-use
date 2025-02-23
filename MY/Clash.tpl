@@ -1,5 +1,3 @@
-# {{ downloadUrl }}
-
 # 混合端口 
 mixed-port: 7890
 
