@@ -52,6 +52,8 @@ dns:
   fallback:  # 国外域名DNS服务器
     - https://1.1.1.1/dns-query  # CloudFlare DoH
     - https://8.8.8.8/dns-query  # Google DoH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+    - https://dns.google/dns-query  # Google DoH
   fallback-filter:  # fallback触发条件
     geoip: true  # 启用 GeoIP
     geoip-code: CN  # 国家代码
@@ -59,9 +61,6 @@ dns:
       - 240.0.0.0/4  # 保留地址，检测 DNS 污染
     domain:
       - "+.google.com"  # Google相关域名    
-      - "+.facebook.com"  # Facebook相关域名
       - "+.youtube.com"  # YouTube相关域名
       - "+.twitter.com"  # twitter相关域名
-      - "+.instagram.com"  # instagram相关域名
       - "+.telegram.org" # Telegram相关域名
-      - "+.whatsapp.com" # Whatsapp相关域名
