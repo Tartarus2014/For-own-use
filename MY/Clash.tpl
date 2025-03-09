@@ -54,3 +54,13 @@ dns:
     - https://dns.google/dns-query  # Google DoH
     - https://1.1.1.1/dns-query  # CloudFlare DoH
     - https://cloudflare-dns.com/dns-query # Cloudflare DoH
+  fallback-filter:  # fallback触发条件
+     geoip: true  # 启用 GeoIP
+     geoip-code: CN  # 国家代码
+     ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
+       - 240.0.0.0/4  # 保留地址，检测 DNS 污染
+     domain:
+       - "*.google.com"  # Google相关域名    
+       - "*.youtube.com"  # YouTube相关域名
+       - "*.twitter.com"  # twitter相关域名
+       - "*.telegram.org" # Telegram相关域名
