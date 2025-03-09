@@ -50,7 +50,7 @@ dns:
     - https://dns.alidns.com/dns-query  # 阿里 DoH
     - https://doh.pub/dns-query  # DNSPod DoH
   fallback:  # 国外域名DNS服务器
-    - https://1.1.1.1/dns-query  # CloudFlare DoH
     - https://8.8.8.8/dns-query  # Google DoH
-    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
     - https://dns.google/dns-query  # Google DoH
+    - https://1.1.1.1/dns-query  # CloudFlare DoH
+    - https://cloudflare-dns.com/dns-query # Cloudflare DoH
