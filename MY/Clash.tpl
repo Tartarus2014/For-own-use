@@ -21,18 +21,6 @@ log-level: info
 
 # Clash 的 RESTful API
 external-controller: 127.0.0.1:9090
-hosts:
-   'mtalk.google.com': 142.250.157.188
-   'alt1-mtalk.google.com': 142.250.157.188
-   'alt2-mtalk.google.com': 142.250.115.188  
-   'alt3-mtalk.google.com': 108.177.97.188
-   'alt4-mtalk.google.com': 173.194.202.188 
-   'alt5-mtalk.google.com': 142.250.141.188
-   'alt6-mtalk.google.com': 142.250.115.188 
-   'alt7-mtalk.google.com': 142.250.141.188
-   'alt8-mtalk.google.com': 142.250.152.188
-   'dl.google.com': 180.163.151.161
-   'dl.l.google.com': 180.163.150.33
 dns:
   enable: true  # 启用DNS服务
   ipv6: true  # 启用IPv6解析
@@ -45,10 +33,19 @@ dns:
     - "*.localhost"  # 指向本地回环地址。
     - "*.local"  # mDNS 常用的域名。
     - "*.home.arpa"  # 用于家庭网络。
+    - mtalk.google.com  # FCM域名。
+    - alt1-mtalk.google.com  # FCM域名。
+    - alt2-mtalk.google.com  # FCM域名。
+    - alt3-mtalk.google.com  # FCM域名。
+    - alt4-mtalk.google.com  # FCM域名。
+    - alt5-mtalk.google.com  # FCM域名。
+    - alt6-mtalk.google.com  # FCM域名。
+    - alt7-mtalk.google.com  # FCM域名。
+    - alt8-mtalk.google.com  # FCM域名。
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
-    - 180.184.1.1  # 字节 DNS
     - 223.5.5.5  # 阿里 DNS
     - 119.29.29.29  # 腾讯 DNS
+    - 180.184.1.1  # 字节 DNS
   nameserver:  # 主要DNS服务器列表
     - https://dns.alidns.com/dns-query  # 阿里 DoH
     - https://doh.pub/dns-query  # DNSPod DoH
