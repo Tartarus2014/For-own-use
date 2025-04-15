@@ -106,7 +106,7 @@ dns:
   use-hosts: true # 查询 hosts
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
-      # LAN
+    # === LAN ===
     - '*.lan'
     - '*.localdomain'
     - '*.example'
@@ -115,12 +115,34 @@ dns:
     - '*.test'
     - '*.local'
     - '*.home.arpa'
-      # 放行NTP服务
+    # === FCM ===
+    - 'mtalk.google.com'
+    - 'mtalk4.google.com'
+    - 'mtalk-staging.google.com'
+    - 'mtalk-dev.google.com'
+    - 'alt1-mtalk.google.com'
+    - 'alt2-mtalk.google.com'
+    - 'alt3-mtalk.google.com'
+    - 'alt4-mtalk.google.com'
+    - 'alt5-mtalk.google.com'
+    - 'alt6-mtalk.google.com'
+    - 'alt7-mtalk.google.com'
+    - 'alt8-mtalk.google.com'
+    # === Apple Software Update Service ===
+    - 'mesu.apple.com'
+    - 'swscan.apple.com'
+    - 'swquery.apple.com'
+    - 'swdownload.apple.com'
+    - 'swcdn.apple.com'
+    - 'swdist.apple.com'
+    # === Windows 10 Connnect Detection ===
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    # === NTP Service ===
     - 'time.*.com'
     - 'time.*.gov'
     - 'time.*.edu.cn'
     - 'time.*.apple.com'
-    - 'time-ios.apple.com'
     - 'time1.*.com'
     - 'time2.*.com'
     - 'time3.*.com'
@@ -140,142 +162,56 @@ dns:
     - '*.ntp.org.cn'
     - '+.pool.ntp.org'
     - 'time1.cloud.tencent.com'
-      # 放行网易云音乐
+    # === Music Service ===
+    # 网易云音乐
     - 'music.163.com'
     - '*.music.163.com'
     - '*.126.net'
-      # 百度音乐
-    - 'musicapi.taihe.com'
-    - 'music.taihe.com'
-      # 酷狗音乐
-    - 'songsearch.kugou.com'
-    - 'trackercdn.kugou.com'
-      # 酷我音乐
-    - '*.kuwo.cn'
-      # JOOX音乐
-    - 'api-jooxtt.sanook.com'
-    - 'api.joox.com'
-    - 'joox.com'
-      # QQ音乐
-    - 'y.qq.com'
-    - '*.y.qq.com'
-    - 'streamoc.music.tc.qq.com'
-    - 'mobileoc.music.tc.qq.com'
-    - 'isure.stream.qqmusic.qq.com'
-    - 'dl.stream.qqmusic.qq.com'
+    # QQ音乐
+    - '+.y.qq.com'
+    - '+.music.tc.qq.com'
     - 'aqqmusic.tc.qq.com'
-    - 'amobile.music.tc.qq.com'
-      # 虾米音乐
-    - '*.xiami.com'
-      # 咪咕音乐
-    - '*.music.migu.cn'
-    - 'music.migu.cn'
-      # win10本地连接检测
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-      # QQ登录
-    - 'localhost.ptlogin2.qq.com'
-    - 'localhost.sec.qq.com'
-    - '+.qq.com'
-    - '+.tencent.com'
-      # Game
-      # Steam
+    - '+.stream.qqmusic.qq.com'
+    # === Game ===
+    # Steam
     - '+.steamcontent.com'
-      # Nintendo Switch
+    # Nintendo Switch
     - '+.srv.nintendo.net'
     - '*.n.n.srv.nintendo.net'
     - '+.cdn.nintendo.net'
-      # Sony PlayStation
+    # Sony PlayStation
     - '+.stun.playstation.net'
-      # Microsoft Xbox
-    - 'xbox.*.*.microsoft.com'
-    - '*.*.xboxlive.com'
+    # Microsoft Xbox
     - 'xbox.*.microsoft.com'
-    - 'xnotify.xboxlive.com'
-      # Wotgame
+    - '+.xboxlive.com'
+    - '+.xboxlive.cn'
+    # Wotgame
     - '+.battlenet.com.cn'
     - '+.wotgame.cn'
     - '+.wggames.cn'
     - '+.wowsgame.cn'
     - '+.wargaming.net'
-      # Golang
-    - 'proxy.golang.org'
-      # STUN
+    # === Streaming Media ===
+    # Netflix
+    - '+.nflxvideo.net'
+    # Bilibili
+    - '*.mcdn.bilivideo.cn'
+    # Disney Plus
+    - '+.media.dssott.com'
+    # === Other ===
+    # QQ Quick Login
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - '+.qq.com'
+    - '+.tencent.com'
+    # STUN
     - 'stun.*.*'
     - 'stun.*.*.*'
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
-    - '+.stun.*.*.*.*'
-    - '+.stun.*.*.*.*.*'
-      # Linksys Router
-    - 'heartbeat.belkin.com'
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-      # ASUS Router
-    - '*.router.asus.com'
-      # Apple Software Update Service
-    - 'mesu.apple.com'
-    - 'swscan.apple.com'
-    - 'swquery.apple.com'
-    - 'swdownload.apple.com'
-    - 'swcdn.apple.com'
-    - 'swdist.apple.com'
-      # Google
-    - 'lens.l.google.com'
-    - 'stun.l.google.com'
-    - 'na.b.g-tun.com'
-      # Netflix
-    - '+.nflxvideo.net'
-      # FinalFantasy XIV Worldwide Server & CN Server
-    - '*.square-enix.com'
-    - '*.finalfantasyxiv.com'
-    - '*.ffxiv.com'
-    - '*.ff14.sdo.com'
-    - 'ff.dorado.sdo.com'
-      # Bilibili
-    - '*.mcdn.bilivideo.cn'
-      # Disney Plus
-    - '+.media.dssott.com'
-      # shark007 Codecs 
-    - 'shark007.net'
-      # Mijia
-    - 'Mijia Cloud'
-      # Xiaomi
+    # Xiaomi
     - '+.market.xiaomi.com'
-      # 招商银行
-    - '+.cmbchina.com'
-    - '+.cmbimg.com'
-      # AdGuard
-    - 'adguardteam.github.io'
-    - 'adrules.top'
-    - 'anti-ad.net'
-    - 'local.adguard.org'
-    - 'static.adtidy.org'
-      # 迅雷
+    # 迅雷
     - '+.sandai.net'
     - '+.n0808.com'
-      # T-mobile and Ultra Mobile wifi calling
-    - '+.3gppnetwork.org'
-      # UU Plugin
-    - '+.uu.163.com'
-    - 'ps.res.netease.com'
-      # 向日葵远程控制
-    - '+.oray.com'
-    - '+.orayimg.com'
-    - 'WORKGROUP'
-      # FCM
-    - 'mtalk.google.com'
-    - 'mtalk4.google.com'
-    - 'mtalk-staging.google.com'
-    - 'mtalk-dev.google.com'
-    - 'alt1-mtalk.google.com'
-    - 'alt2-mtalk.google.com'
-    - 'alt3-mtalk.google.com'
-    - 'alt4-mtalk.google.com'
-    - 'alt5-mtalk.google.com'
-    - 'alt6-mtalk.google.com'
-    - 'alt7-mtalk.google.com'
-    - 'alt8-mtalk.google.com'
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
     - 223.5.5.5  # 阿里 DNS
     - 223.6.6.6  # 阿里 DNS
@@ -304,3 +240,55 @@ dns:
        - "*.youtube.com"  # YouTube相关域名
        - "*.twitter.com"  # twitter相关域名
        - "*.telegram.org" # Telegram相关域名
+
+
+proxy-groups:
+- name: FINAL
+  type: select
+  proxies:
+  - DIRECT
+  - PROXY
+
+- name: PROXY
+  type: select
+  proxies:
+  - HK
+  - SG
+  - JP
+
+- name: Emby
+  type: select
+  proxies:
+  - DE
+  - SG
+  - HK
+
+- type: fallback
+  name: HK
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.HK) | json }}
+
+- type: fallback
+  name: JP
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.JP) | json }}
+
+- type: fallback
+  name: SG
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.SG) | json }}
+
+- type: fallback
+  name: US
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.US) | json }}
+
+- type: fallback
+  name: DE
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.DE) | json }}
