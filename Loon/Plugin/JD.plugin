@@ -1,15 +1,15 @@
 #!name=京东比价
-#!desc=京东App历史价格（商品详情页面触发）需CK
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Weslie-Wolffy/Weslie-Wolffy-1084.png
-#!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT_NAME:慢慢买CK 脚本前往慢慢买App获取Cookie\n2.避免不必要的重写，禁用请设置为"#"
+#!desc=京东App历史价格（商品详情页面）表格折线版
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Weslie-Wolffy/Weslie-Wolffy-1055.png
+#!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT:慢慢买CK 脚本前往慢慢买App获取Cookie\n2.避免不必要的重写，禁用请设置为"#"
 
 [Argument]
-MMMCK_SCRIPT_NAME=input,慢慢买CK,tag=MMMCK_SCRIPT_NAME, desc=MMMCK_SCRIPT_NAME
+MMMCK_SCRIPT=input,慢慢买CK,tag=MMMCK_SCRIPT, desc=MMMCK_SCRIPT
 
 [Script]
-http-request ^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com/baoliao\/center\/menu script-path=https://raw.githubusercontent.com/githubdulong/Script/master/MmmCK.js, requires-body=true, tag={MMMCK_SCRIPT_NAME}
+http-request ^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$ script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price1.js, requires-body=true, timeout=60, tag={MMMCK_SCRIPT}
 
-http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=30, tag=京东比价
+http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price1.js, requires-body=true, timeout=60, tag=京东比价
 
 [MITM]
 hostname = in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
