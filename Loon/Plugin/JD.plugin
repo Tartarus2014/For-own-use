@@ -1,6 +1,6 @@
 #!name=京东比价
 #!desc=京东App历史价格（商品详情页面）表格折线版
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Weslie-Wolffy/Weslie-Wolffy-1055.png
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Weslie-Wolffy/Weslie-Wolffy-1010.png
 #!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT:慢慢买CK 脚本前往慢慢买App获取Cookie\n2.避免不必要的重写，禁用请设置为"#"
 
 [Argument]
