@@ -1,44 +1,61 @@
-mixed-port: 7890 # 混合端口 
+# 混合端口 
+mixed-port: 7890
 
-socks-port: 7891 # SOCKS5 代理端口
+# SOCKS5 代理端口
+socks-port: 7891
 
-port: 7892 # HTTP 代理端口
+# HTTP 代理端口
+port: 7892
 
-allow-lan: true # 允许局域网连接
-bind-address: "*" # 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
-skip-auth-prefixes: # 设置跳过验证的 IP 段
-  - 127.0.0.1/8
-  - ::1/128
-lan-allowed-ips: # 允许连接的 IP 地址段，仅作用于 allow-lan 为 true, 默认值为 0.0.0.0/0 和::/0
-  - 0.0.0.0/0
-  - ::/0
+# 允许局域网连接
+allow-lan: true
+# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
+bind-address: "*"
 #  find-process-mode has 3 values:always, strict, off
 #  - always, 开启，强制匹配所有进程
 #  - strict, 默认，由 mihomo 判断是否开启
 #  - off, 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
+# 全局 TLS 指纹
+global-client-fingerprint: chrome
 
-mode: rule # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+mode: rule
 
-geodata-loader: standard # 可选的加载模式如下：standard：标准加载器/ memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geodata-mode: false # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-udp: true # 是否允许 UDP 通过代理，默认为 false。此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
+# 可选的加载模式如下：standard：标准加载器/ memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-loader: standard
+# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-mode: false
+# 是否允许 UDP 通过代理，默认为 false。此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
+udp: true
 
-geox-url: #自定义 geodata url
+#自定义 geodata url
+geox-url:
   geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
   geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
   asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-geo-auto-update: true # 是否自动更新 geodata
-geo-update-interval: 24 # 更新间隔，单位：小时
+# 是否自动更新 geodata
+geo-auto-update: true
+# 更新间隔，单位：小时
+geo-update-interval: 24
 
-log-level: info # 设置日志输出级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+# 设置日志输出级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: info
 
-ipv6: true # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+# 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+ipv6: true
 
-tcp-concurrent: true # TCP 并发连接所有 IP, 将使用最快握手的 TCP
+# 统一延迟
+# 更换延迟计算方式,去除握手等额外延迟
+unified-delay: true
+# TCP 并发
+# 同时对所有ip进行连接，返回延迟最低的地址
+tcp-concurrent: true
 
-profile: # 储存 API 对策略组的选择，以供下次启动时使用
+# 缓存
+profile:
+  # 储存 API 对策略组的选择，以供下次启动时使用
   store-selected: true
   # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
   store-fake-ip: true
@@ -63,22 +80,15 @@ tun:
   udp-timeout: 300
   endpoint-independent-nat: false
 
-# 嗅探域名 可选配置
+# 嗅探域名
 sniffer:
   enable: true
-  ## 对 redir-host 类型识别的流量进行强制嗅探
-  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
-  force-dns-mapping: true
-  ## 对所有未获取到域名的流量进行强制嗅探
-  parse-pure-ip: true
-  # 是否使用嗅探结果作为实际访问，默认 true
-  # 全局配置，优先级低于 sniffer.sniff 实际配置
-  override-destination: true
-  sniff: # TLS 和 QUIC 默认如果不配置 ports 默认嗅探 443
-    # 默认嗅探 80
-    HTTP: # 需要嗅探的端口
+  force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
+  parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
+  override-destination: true # 是否使用嗅探结果作为实际访问
+  sniff:
+    HTTP:
       ports: [80, 8080-8880]
-      # 可覆盖 sniffer.override-destination
       override-destination: true
     TLS:
       ports: [443, 8443]
@@ -86,8 +96,7 @@ sniffer:
       ports: [443, 8443]
   force-domain:
     - '+.v2ex.com'
-  ## 对嗅探结果进行跳过
-  skip-domain:
+  skip-domain: # 需要跳过嗅探的域名, 主要解决部分站点 sni 字段非域名, 导致嗅探结果异常的问题, 如米家设备
     - "Mijia Cloud"
     - "dlg.io.mi.com"
     - "+.push.apple.com"
@@ -98,7 +107,7 @@ dns:
   cache-algorithm: arc
   enable: true # 关闭将使用系统 DNS
   prefer-h3: true # 是否开启 DoH 支持 HTTP/3，将并发尝试
-  listen: 0.0.0.0:53 # 开启 DNS 服务器监听
+  listen: 0.0.0.0:1053 # 开启 DNS 服务器监听
   ipv6: true # 启用IPv6解析
   ipv6-timeout: 300 # 单位：ms，内部双栈并发时，向上游查询 AAAA 时，等待 AAAA 的时间，默认 100ms
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
@@ -213,33 +222,24 @@ dns:
     - '+.sandai.net'
     - '+.n0808.com'
   default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
-    - 223.5.5.5  # 阿里 DNS
-    - 223.6.6.6  # 阿里 DNS
-    - 119.29.29.29  # 腾讯 DNS
-    - 180.184.1.1  # 字节 DNS
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   proxy-server-nameserver:  # 专用于节点域名解析的 DNS 服务器
-    - 223.5.5.5  # 阿里 DNS
-    - 223.6.6.6  # 阿里 DNS
-    - 119.29.29.29  # 腾讯 DNS
-    - 180.184.1.1  # 字节 DNS
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   nameserver:  # 主要DNS服务器列表
     - https://dns.alidns.com/dns-query  # 阿里 DoH
     - https://doh.pub/dns-query  # DNSPod DoH
   fallback:  # 国外域名DNS服务器
-    - https://8.8.8.8/dns-query#PROXY  # Google DoH
-    - https://dns.google/dns-query#PROXY   # Google DoH
-    - https://1.1.1.1/dns-query#PROXY   # CloudFlare DoH
-    - https://cloudflare-dns.com/dns-query#PROXY  # Cloudflare DoH
+    - https://8.8.8.8/dns-query#PROXY&h3=true  # Google DoH
+    - https://1.1.1.1/dns-query#PROXY&h3=true   # CloudFlare DoH
   fallback-filter:  # fallback触发条件
      geoip: true  # 启用 GeoIP
      geoip-code: CN  # 国家代码
+     geosite:
+       - gfw
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
        - 240.0.0.0/4  # 保留地址，检测 DNS 污染
-     domain:
-       - "*.google.com"  # Google相关域名    
-       - "*.youtube.com"  # YouTube相关域名
-       - "*.twitter.com"  # twitter相关域名
-       - "*.telegram.org" # Telegram相关域名
 
 
 proxy-groups:
