@@ -231,8 +231,8 @@ dns:
     - https://dns.alidns.com/dns-query  # 阿里 DoH
     - https://doh.pub/dns-query  # DNSPod DoH
   fallback:  # 国外域名DNS服务器
-    - https://8.8.8.8/dns-query#PROXY&h3=true  # Google DoH
-    - https://1.1.1.1/dns-query#PROXY&h3=true   # CloudFlare DoH
+    - tls://8.8.8.8
+    - tls://1.1.1.1
   fallback-filter:  # fallback触发条件
      geoip: true  # 启用 GeoIP
      geoip-code: CN  # 国家代码
@@ -240,6 +240,10 @@ dns:
        - gfw
      ipcidr: # 在这个网段内的 IP 地址会被考虑为被污染的 IP
        - 240.0.0.0/4  # 保留地址，检测 DNS 污染
+     domain:
+       - '+.google.com'
+       - '+.facebook.com'
+       - '+.youtube.com'
 
 
 proxy-groups:
