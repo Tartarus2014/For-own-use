@@ -1,5 +1,6 @@
-#!name=Block Advertising
-#!desc=Block Advertising
+#!name = Advertising
+#!desc= 去广告
+#!author= ConnersHua
 
 [Rewrite]
 (?i)\b\/ad\/ - reject

@@ -1,8 +1,9 @@
-#!name=Emby Unlock
-#!desc=Emby Unlock
+#!name= embyUnlocked
+#!desc = Emby破解
+#!icon= https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/EMBY.png
 
 [Script]
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js,tag=embyUnlocked
+http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=embyUnlocked
 
 [MITM]
-hostname =  mb3admin.com
+hostname = mb3admin.com
