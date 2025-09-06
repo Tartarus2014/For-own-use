@@ -1,6 +1,6 @@
 #!name = 京东比价
 #!desc = 京东App历史价格（商品详情页面）表格折线版
-#!system = 
+#!system = iOS,iPadOS,tvOS,macOS
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!openUrl = https://apps.apple.com/cn/app/id414245413
