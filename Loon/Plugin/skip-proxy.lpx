@@ -1,0 +1,16 @@
+#!name = Skip Proxy And Real-IP Lists
+#!desc = 跳过部分应用的代理检测
+#!author = mieqq
+#!system = iOS,iPadOS,tvOS,macOS
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+#!homepage = https://github.com/Tartarus2014/Loon-Script/blob/master/Plugin/skip-proxy.md
+
+[General]
+skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,id6.me
+real-ip = easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
+skip-first-packet = server.ovital.com:443
+
+[Rule]
+DOMAIN,msmp.abchina.com.cn,REJECT
