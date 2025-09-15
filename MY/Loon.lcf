@@ -113,16 +113,17 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, policy=REJECT, tag=Reject, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, policy=REJECT, tag=Reject, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=SG, tag=AI, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=DIRECT, tag=Spotify, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TestFlight/TestFlight.list, policy=PROXY, tag=Apple, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple.list, policy=DIRECT, tag=Apple, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Spotify.lsr, policy=DIRECT, tag=Spotify, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/TestFlight.lsr, policy=PROXY, tag=Apple, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT_Direct.list, policy=DIRECT, tag=PT, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT.list, policy=SG, tag=PT, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/TikTok.list, policy=JP, tag=TikTok, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=PROXY, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Telegram.lsr, policy=PROXY, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=PROXY, tag=PROXY, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Proxy.list, policy=PROXY, tag=PROXY, enabled=true
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list, policy=DIRECT, tag=DIRECT, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Direct.lsr, policy=DIRECT, tag=DIRECT, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/GEOIP.list, policy=DIRECT, tag=GEOIP, enabled=true
 
 [Plugin]
