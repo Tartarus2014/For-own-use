@@ -18,12 +18,13 @@
 
 * Tartarus2014 保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或For-own-use项目的规则，则视为您已接受此免责声明.
 
+
 ### 特别感谢 ：
 * [@NobyDa](https://github.com/NobyDa)
 
-* [@lhie1](https://github.com/lhie1)
+* [@lhie1](https://github.com/dler-io/Rules)
 
-* [@ConnersHua](https://github.com/DivineEngine)
+* [@ConnersHua](https://github.com/ConnersHua/RuleGo/tree/master)
 
 * [@chavyleung](https://github.com/chavyleung)
 
