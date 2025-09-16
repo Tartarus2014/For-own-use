@@ -7,7 +7,6 @@ AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,p
 DOMAIN-KEYWORD,gitlab,PROXY
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
 
-GEOIP,CN,DIRECT
 FINAL,FINAL
 
 [Proxy]
@@ -111,17 +110,18 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, policy=REJECT, tag=Reject, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, policy=REJECT, tag=Reject, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=SG, tag=AI, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Spotify.lsr, policy=DIRECT, tag=Spotify, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/TestFlight.lsr, policy=PROXY, tag=Apple, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/Spotify.lsr, policy=DIRECT, tag=Spotify, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Apple/TestFlight.lsr, policy=PROXY, tag=Apple, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Apple/Apple.lsr, policy=DIRECT, tag=Apple, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT_Direct.list, policy=DIRECT, tag=PT, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT.list, policy=SG, tag=PT, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/TikTok.list, policy=JP, tag=TikTok, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Telegram.lsr, policy=PROXY, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/TikTok.lsr, policy=JP, tag=TikTok, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Telegram.lsr, policy=PROXY, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Proxy.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Direct.lsr, policy=DIRECT, tag=DIRECT, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/GEOIP.lsr, policy=DIRECT, tag=GEOIP_CN, enabled=true
 
 [Plugin]
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=PROXY, enabled=true
