@@ -7,6 +7,7 @@ AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,p
 DOMAIN-KEYWORD,gitlab,PROXY
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
 
+GEOIP,CN,DIRECT
 FINAL,FINAL
 
 [Proxy]
