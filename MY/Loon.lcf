@@ -13,12 +13,12 @@ FINAL,FINAL
 [Proxy]
 
 [Remote Proxy]
-Chen =  https://suo.yt/W7BkpTS,udp=default,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
+Chen =  https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
 Bywave =  https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
-FlowerCloud =  https://suo.yt/W7BkpTS,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=false
+FlowerCloud =  https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
 ShiYanTian =  https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
 nerwo = https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
-Nex =  https://suo.yt/W7BkpTS,udp=true,block-quic=false,fast-open=default,vmess-aead=default,skip-cert-verify=default,enabled=false,flexible-sni=false
+Nex =  https://suo.yt/W7BkpTS,udp=true,block-quic=true,fast-open=true,vmess-aead=default,skip-cert-verify=default,enabled=true,flexible-sni=false
 
 [General]
 # IPv6 支持
@@ -122,7 +122,6 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Proxy.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Loon/Rule/Direct.lsr, policy=DIRECT, tag=DIRECT, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/GEOIP.list, policy=DIRECT, tag=GEOIP, enabled=true
 
 [Plugin]
 https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/modules/script-hub.loon.plugin, policy=PROXY, enabled=true
