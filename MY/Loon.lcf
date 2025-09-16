@@ -116,7 +116,7 @@ https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rul
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT_Direct.list, policy=DIRECT, tag=PT, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/PT/PT.list, policy=SG, tag=PT, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Media/TikTok.lsr, policy=JP, tag=TikTok, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Telegram.lsr, policy=PROXY, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Rule/Other/Telegram.lsr, policy=PROXY, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=PROXY, tag=PROXY, enabled=true
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Ruleset/Proxy.list, policy=PROXY, tag=PROXY, enabled=true
