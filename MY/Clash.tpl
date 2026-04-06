@@ -209,7 +209,8 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - HK
+  - US
+  - JP
   - SG
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png'
 
