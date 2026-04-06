@@ -140,8 +140,8 @@ dns:
     - time.*.edu.cn
     - time.apple.com
     - ntp.*.com
-    - *.time.edu.cn
-    - *.ntp.org.cn
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
     - +.pool.ntp.org
     - mtalk.google.com
     - alt1-mtalk.google.com
