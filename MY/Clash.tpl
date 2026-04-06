@@ -1,5 +1,3 @@
-# {{ downloadUrl }}
-
 # 混合端口 # HTTP(S) 和 SOCKS 代理混合端口
 mixed-port: 7890
 
