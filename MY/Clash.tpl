@@ -1,57 +1,31 @@
 # 混合端口 
 mixed-port: 7890
 
-# SOCKS5 代理端口
-socks-port: 7891
-
-# HTTP 代理端口
-port: 7892
+# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+mode: rule
+# 设置日志输出级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
+log-level: info
+# 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+ipv6: true
+# 是否允许 UDP 通过代理，默认为 false。此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
+udp: true
+# 统一延迟。更换延迟计算方式,去除握手等额外延迟
+unified-delay: true
+# TCP 并发。同时对所有ip进行连接，返回延迟最低的地址
+tcp-concurrent: true
 
 # 允许局域网连接
 allow-lan: true
-# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
-bind-address: "*"
 #  find-process-mode has 3 values:always, strict, off
 #  - always, 开启，强制匹配所有进程
 #  - strict, 默认，由 mihomo 判断是否开启
 #  - off, 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
-# 全局 TLS 指纹
-global-client-fingerprint: chrome
 
-# 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
-mode: rule
-
-# 可选的加载模式如下：standard：标准加载器/ memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
-geodata-loader: standard
-# 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
-geodata-mode: false
-# 是否允许 UDP 通过代理，默认为 false。此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
-udp: true
-
-#自定义 geodata url
-geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
-  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-# 是否自动更新 geodata
-geo-auto-update: true
-# 更新间隔，单位：小时
-geo-update-interval: 24
-
-# 设置日志输出级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: info
-
-# 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
-ipv6: true
-
-# 统一延迟
-# 更换延迟计算方式,去除握手等额外延迟
-unified-delay: true
-# TCP 并发
-# 同时对所有ip进行连接，返回延迟最低的地址
-tcp-concurrent: true
+# WebUI
+external-controller: 127.0.0.1:9090
+external-ui: WebUI/ZashBoard
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 # 缓存
 profile:
@@ -59,6 +33,45 @@ profile:
   store-selected: true
   # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
   store-fake-ip: true
+
+#自定义 geodata url
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+# 是否自动更新 geodata
+geo-auto-update: false
+# 更新间隔，单位：小时
+geo-update-interval: 24
+
+# 嗅探域名
+sniffer:
+  enable: true
+  # 对 redir-host 类型识别的流量进行强制嗅探
+  force-dns-mapping: true
+  # 对所有未获取到域名的流量进行强制嗅探
+  parse-pure-ip: true 
+  # 是否使用嗅探结果作为实际访问
+  override-destination: false 
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  # 需要跳过嗅探的域名, 主要解决部分站点 sni 字段非域名, 导致嗅探结果异常的问题, 如米家设备
+  skip-domain: 
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+  # 对于目标ip跳过嗅探
+  skip-dst-address:
+# Telegram
+    - "91.108.0.0/16"
+    - "95.161.64.0/20"
+    - "109.239.140.0/24"
+    - "149.154.160.0/20"
 
 # Tun 配置
 tun:
@@ -71,167 +84,78 @@ tun:
   # mixed 混合堆栈，tcp 使用 system栈，udp 使用 gvisor栈，使用体验可能相对更好
   stack: mixed
   dns-hijack:
-    - any:53
-    - tcp://any:53
+    - "any:53"
+    - "tcp://any:53"
   auto-detect-interface: true
   auto-route: true
   auto-redirect: true
-  mtu: 1500
-  udp-timeout: 300
-  endpoint-independent-nat: false
-
-# 嗅探域名
-sniffer:
-  enable: true
-  force-dns-mapping: true # 对 redir-host 类型识别的流量进行强制嗅探
-  parse-pure-ip: true # 对所有未获取到域名的流量进行强制嗅探
-  override-destination: true # 是否使用嗅探结果作为实际访问
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  force-domain:
-    - '+.v2ex.com'
-  skip-domain: # 需要跳过嗅探的域名, 主要解决部分站点 sni 字段非域名, 导致嗅探结果异常的问题, 如米家设备
-    - "Mijia Cloud"
-    - "dlg.io.mi.com"
-    - "+.push.apple.com"
-    - "+.apple.com"
 
 # DNS 配置
 dns:
+  # 关闭将使用系统 DNS
+  enable: true 
+  # 是否开启 DoH 支持 HTTP/3，将并发尝试
+  prefer-h3: false 
+  # 开启 DNS 服务器监听
+  listen: 0.0.0.0:1053 
+  # 启用IPv6解析
+  ipv6: true 
+  # 自适应替换缓存算法
   cache-algorithm: arc
-  enable: true # 关闭将使用系统 DNS
-  prefer-h3: true # 是否开启 DoH 支持 HTTP/3，将并发尝试
-  listen: 0.0.0.0:1053 # 开启 DNS 服务器监听
-  ipv6: true # 启用IPv6解析
-  ipv6-timeout: 300 # 单位：ms，内部双栈并发时，向上游查询 AAAA 时，等待 AAAA 的时间，默认 100ms
-  enhanced-mode: fake-ip # 模式：redir-host或fake-ip
-  fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
-  use-hosts: true # 查询 hosts
+  # 是否回应配置中的 hosts
+  use-hosts: true
+  # 模式：redir-host或fake-ip
+  enhanced-mode: fake-ip 
+  # fake-ip 池设置
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-range6: fc00::/18
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
-    # === LAN ===
-    - '*.lan'
-    - '*.localdomain'
-    - '*.example'
-    - '*.invalid'
-    - '*.localhost'
-    - '*.test'
-    - '*.local'
-    - '*.home.arpa'
-    # === FCM ===
-    - 'mtalk.google.com'
-    - 'mtalk4.google.com'
-    - 'mtalk-staging.google.com'
-    - 'mtalk-dev.google.com'
-    - 'alt1-mtalk.google.com'
-    - 'alt2-mtalk.google.com'
-    - 'alt3-mtalk.google.com'
-    - 'alt4-mtalk.google.com'
-    - 'alt5-mtalk.google.com'
-    - 'alt6-mtalk.google.com'
-    - 'alt7-mtalk.google.com'
-    - 'alt8-mtalk.google.com'
-    # === Apple Software Update Service ===
-    - 'mesu.apple.com'
-    - 'swscan.apple.com'
-    - 'swquery.apple.com'
-    - 'swdownload.apple.com'
-    - 'swcdn.apple.com'
-    - 'swdist.apple.com'
-    # === Windows 10 Connnect Detection ===
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    # === NTP Service ===
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
-    - 'ntp.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '+.pool.ntp.org'
-    - 'time1.cloud.tencent.com'
-    # === Music Service ===
-    # 网易云音乐
-    - 'music.163.com'
-    - '*.music.163.com'
-    - '*.126.net'
-    # QQ音乐
-    - '+.y.qq.com'
-    - '+.music.tc.qq.com'
-    - 'aqqmusic.tc.qq.com'
-    - '+.stream.qqmusic.qq.com'
-    # === Game ===
-    # Steam
-    - '+.steamcontent.com'
-    # Nintendo Switch
-    - '+.srv.nintendo.net'
-    - '*.n.n.srv.nintendo.net'
-    - '+.cdn.nintendo.net'
-    # Sony PlayStation
-    - '+.stun.playstation.net'
-    # Microsoft Xbox
-    - 'xbox.*.microsoft.com'
-    - '+.xboxlive.com'
-    - '+.xboxlive.cn'
-    # Wotgame
-    - '+.battlenet.com.cn'
-    - '+.wotgame.cn'
-    - '+.wggames.cn'
-    - '+.wowsgame.cn'
-    - '+.wargaming.net'
-    # === Streaming Media ===
-    # Netflix
-    - '+.nflxvideo.net'
-    # Bilibili
-    - '*.mcdn.bilivideo.cn'
-    # Disney Plus
-    - '+.media.dssott.com'
-    # === Other ===
-    # QQ Quick Login
-    - 'localhost.ptlogin2.qq.com'
-    - 'localhost.sec.qq.com'
-    - '+.qq.com'
-    - '+.tencent.com'
-    # STUN
-    - 'stun.*.*'
-    - 'stun.*.*.*'
-    # Xiaomi
-    - '+.market.xiaomi.com'
-    # 迅雷
-    - '+.sandai.net'
-    - '+.n0808.com'
-  default-nameserver:  # 基础DNS服务器，用于解析其他DNS服务器的地址
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-  proxy-server-nameserver:  # 专用于节点域名解析的 DNS 服务器
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-  nameserver:  # 主要DNS服务器列表
-    - https://dns.alidns.com/dns-query  # 阿里 DoH
-    - https://doh.pub/dns-query  # DNSPod DoH
+    - "*.lan"
+    - "*.local"
+    - time.*.com
+    - ntp.*.com
+    - mtalk.google.com
+    - alt1-mtalk.google.com
+    - alt2-mtalk.google.com
+    - alt3-mtalk.google.com
+    - alt4-mtalk.google.com
+    - alt5-mtalk.google.com
+    - alt6-mtalk.google.com
+    - alt7-mtalk.google.com
+    - alt8-mtalk.google.com
+  # 用于解析 DOH/DOT 域名的基础 DNS，必须为静态 IP
+  default-nameserver:  
+    - 223.5.5.5
+    - 119.29.29.29
+  # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 代理服务器域名解析（用于连接节点服务器）
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 主要解析服务器 （作为兜底）
+  nameserver: 
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 根据域名分流 DNS
+  nameserver-policy:
+    "geosite:cn":
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    "geosite:!cn":
+    - https://dns.google/dns-query#PROXY
+    - https://cloudflare-dns.com/dns-query#PROXY
 
-    
+hosts:
+  'dns.alidns.com': ['223.5.5.5', '223.6.6.6']
+  'doh.pub': ['1.12.12.21', '120.53.53.53']
+  'dns.google': ['8.8.8.8', '8.8.4.4']
+  'cloudflare-dns.com': ['1.1.1.1', '1.0.0.1']
+
+
 proxies: {{ getClashNodes(nodeList) | json }}
 
 proxy-groups:
@@ -240,6 +164,7 @@ proxy-groups:
   proxies:
   - DIRECT
   - PROXY
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png'
 
 - name: PROXY
   type: select
@@ -247,41 +172,47 @@ proxy-groups:
   - HK
   - SG
   - JP
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'
 
-- name: Emby
+- name: Telegram
   type: select
   proxies:
   - HK
   - SG
-  - US
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png'
 
-- name: FCM
+- name: Emby
   type: select
   proxies:
   - DIRECT
-  - US
+  - HK
   - SG
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png'
 
 - type: fallback
   name: HK
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.HK) | json }}
-
-- type: fallback
-  name: JP
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies: {{ getClashNodeNames(nodeList, customFilters.JP) | json }}
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png'
 
 - type: fallback
   name: SG
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.SG) | json }}
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png'
+
+- type: fallback
+  name: JP
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  proxies: {{ getClashNodeNames(nodeList, customFilters.JP) | json }}
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png'
 
 - type: fallback
   name: US
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.US) | json }}
+  icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png'
