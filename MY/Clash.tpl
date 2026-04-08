@@ -142,8 +142,8 @@ dns:
   # 根据域名分流 DNS
   nameserver-policy:
     "geosite:cn":
-    - https://dns.alidns.com/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
     "geosite:!cn":
     - https://dns.google/dns-query#PROXY
     - https://cloudflare-dns.com/dns-query#PROXY
