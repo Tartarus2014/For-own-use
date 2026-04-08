@@ -130,7 +130,7 @@ dns:
     - "time.*.com"
     - "time.*.gov"
     - "time.*.edu.cn"
-    - "time.apple.com"
+    - "time.*.apple.com"
     - "ntp.*.com"
     - "*.time.edu.cn"
     - "*.ntp.org.cn"
