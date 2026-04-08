@@ -145,23 +145,23 @@ dns:
     - 119.29.29.29
   # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
   direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
   # 代理服务器域名解析（用于连接节点服务器）
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
   # 主要解析服务器 （作为兜底）
   nameserver: 
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
   # 根据域名分流 DNS
   nameserver-policy:
     "geosite:cn":
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
     "geosite:!cn":
-    - https://dns.google/dns-query#PROXY
+    - https://dns.google/dns-queryDIRECT
     - https://cloudflare-dns.com/dns-query#PROXY
 
 
