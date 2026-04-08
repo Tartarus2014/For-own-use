@@ -4,9 +4,7 @@
 mixed-port: 7890
 
 # 允许局域网连接
-allow-lan: true
-# 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
-bind-address: "*"
+allow-lan: false
 #  find-process-mode has 3 values:always, strict, off
 #  - always, 开启，强制匹配所有进程
 #  - strict, 默认，由 mihomo 判断是否开启
@@ -119,6 +117,14 @@ dns:
   nameserver: 
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  # 根据域名分流 DNS
+  nameserver-policy:
+    "geosite:cn":
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    "geosite:!cn":
+    - https://dns.google/dns-query#PROXY
+    - https://cloudflare-dns.com/dns-query#PROXY
 
 
 proxies: {{ getClashNodes(nodeList) | json }}
