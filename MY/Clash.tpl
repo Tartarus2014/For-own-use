@@ -1,3 +1,5 @@
+# {{ downloadUrl }}
+
 # 混合端口 # HTTP(S) 和 SOCKS 代理混合端口
 mixed-port: 7890
 
@@ -161,7 +163,7 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
     "geosite:!cn":
-    - https://dns.google/dns-queryDIRECT
+    - https://dns.google/dns-query#PROXY
     - https://cloudflare-dns.com/dns-query#PROXY
 
 
