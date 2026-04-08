@@ -104,8 +104,6 @@ sniffer:
 
 # DNS 配置
 dns:
-  # 自适应替换缓存算法
-  cache-algorithm: arc
   # 关闭将使用系统 DNS
   enable: true 
   # 是否开启 DoH 支持 HTTP/3，将并发尝试
@@ -114,12 +112,12 @@ dns:
   listen: 0.0.0.0:1053 
   # 启用IPv6解析
   ipv6: true 
-  # 单位：ms，内部双栈并发时，向上游查询 AAAA 时，等待 AAAA 的时间
-  ipv6-timeout: 300
+  # 自适应替换缓存算法
+  cache-algorithm: arc
   # 模式：redir-host或fake-ip
   enhanced-mode: fake-ip 
   # fake-ip 池设置
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16 
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
     - "*.lan"
