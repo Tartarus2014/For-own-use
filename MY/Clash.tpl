@@ -32,6 +32,8 @@ geo-update-interval: 24
 log-level: info
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 ipv6: true
+# 是否允许 UDP 通过代理，默认为 false。此选项在 TUIC 等基于 UDP 的协议以及 direct 和 dns 类型中默认开启
+udp: true
 
 # 统一延迟。更换延迟计算方式,去除握手等额外延迟
 unified-delay: true
@@ -42,12 +44,6 @@ tcp-concurrent: true
 external-controller: 127.0.0.1:9090
 external-ui: WebUI/ZashBoard
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
-
-hosts:
-  'dns.alidns.com': ['223.5.5.5', '223.6.6.6']
-  'doh.pub': ['1.12.12.21', '120.53.53.53']
-  'dns.google': ['8.8.8.8', '8.8.4.4']
-  'cloudflare-dns.com': ['1.1.1.1', '1.0.0.1']
 
 # 缓存
 profile:
@@ -81,7 +77,7 @@ sniffer:
   # 对所有未获取到域名的流量进行强制嗅探
   parse-pure-ip: true 
   # 是否使用嗅探结果作为实际访问
-  override-destination: false 
+  override-destination: true 
   sniff:
     HTTP:
       ports: [80, 8080-8880]
@@ -121,10 +117,6 @@ dns:
   ipv6: true 
   # 单位：ms，内部双栈并发时，向上游查询 AAAA 时，等待 AAAA 的时间
   ipv6-timeout: 300
-  # 是否回应配置中的 hosts
-  use-hosts: true
-  # 是否查询系统 hosts
-  use-system-hosts: true
   # 模式：redir-host或fake-ip
   enhanced-mode: fake-ip 
   # fake-ip 池设置
