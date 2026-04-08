@@ -111,14 +111,8 @@ dns:
   fake-ip-filter:
     - "*.lan"
     - "*.local"
-    - "time.*.com"
-    - "time.*.gov"
-    - "time.*.edu.cn"
-    - "time.*.apple.com"
-    - "ntp.*.com"
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - "+.pool.ntp.org"
+    - time.*.com
+    - ntp.*.com
     - mtalk.google.com
     - alt1-mtalk.google.com
     - alt2-mtalk.google.com
@@ -128,22 +122,23 @@ dns:
     - alt6-mtalk.google.com
     - alt7-mtalk.google.com
     - alt8-mtalk.google.com
+    - alt8-mtalk.google.com
   # 用于解析 DOH/DOT 域名的基础 DNS，必须为静态 IP
   default-nameserver:  
     - 223.5.5.5
     - 119.29.29.29
   # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
   direct-nameserver:
-    - https://dns.alidns.com/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   # 代理服务器域名解析（用于连接节点服务器）
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   # 主要解析服务器 （作为兜底）
   nameserver: 
-    - https://dns.alidns.com/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   # 根据域名分流 DNS
   nameserver-policy:
     "geosite:cn":
