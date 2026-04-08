@@ -13,8 +13,6 @@ find-process-mode: strict
 
 # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
-# 更改 geoip 使用文件
-geodata-mode: true
 # 可选的加载模式如下：standard：标准加载器/ memconservative：专为内存受限 (小内存) 设备优化的加载器
 geodata-loader: standard
 #自定义 geodata url
