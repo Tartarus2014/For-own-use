@@ -145,9 +145,7 @@ dns:
   # 用于解析 DOH/DOT 域名的基础 DNS，必须为静态 IP
   default-nameserver:  
     - 223.5.5.5
-    - 223.6.6.6
     - 119.29.29.29
-    - 182.254.116.116
   # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
   direct-nameserver:
     - https://dns.alidns.com/dns-query
