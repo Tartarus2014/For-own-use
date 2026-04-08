@@ -15,17 +15,6 @@ find-process-mode: strict
 
 # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
-# 可选的加载模式如下：standard：标准加载器/ memconservative：专为内存受限 (小内存) 设备优化的加载器
-geodata-loader: standard
-#自定义 geodata url
-geox-url:
-  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
-# 是否自动更新 geodata
-geo-auto-update: true
-# 更新间隔，单位：小时
-geo-update-interval: 24
 
 # 设置日志输出级别：silent / error / warning / info / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: info
