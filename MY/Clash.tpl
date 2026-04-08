@@ -125,16 +125,16 @@ dns:
   fake-ip-filter-mode: blacklist
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
-    - +.lan
-    - +.local
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.apple.com
-    - ntp.*.com
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - +.pool.ntp.org
+    - "*.lan"
+    - "*.local"
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.edu.cn"
+    - "time.apple.com"
+    - "ntp.*.com"
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
     - mtalk.google.com
     - alt1-mtalk.google.com
     - alt2-mtalk.google.com
