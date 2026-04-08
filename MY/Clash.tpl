@@ -121,8 +121,6 @@ dns:
   enhanced-mode: fake-ip 
   # fake-ip 池设置
   fake-ip-range: 198.18.0.1/16
-  # 设置 fake-ip 过滤模式
-  fake-ip-filter-mode: blacklist
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
     - "*.lan"
