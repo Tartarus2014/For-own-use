@@ -113,6 +113,14 @@ dns:
   default-nameserver:  
     - 223.5.5.5
     - 119.29.29.29
+  # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 代理服务器域名解析（用于连接节点服务器）
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   # 主要解析服务器 （作为兜底）
   nameserver: 
     - https://dns.alidns.com/dns-query
@@ -125,7 +133,6 @@ dns:
     "geosite:!cn":
     - https://dns.google/dns-query#PROXY
     - https://cloudflare-dns.com/dns-query#PROXY
-
 
 proxies: {{ getClashNodes(nodeList) | json }}
 
