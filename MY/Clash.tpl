@@ -118,8 +118,6 @@ dns:
   enhanced-mode: fake-ip 
   # fake-ip 池设置
   fake-ip-range: 198.18.0.1/16
-  # 设置 fake-ip 过滤模式
-  fake-ip-filter-mode: blacklist
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
     - "*.lan"
@@ -145,7 +143,6 @@ dns:
   default-nameserver:  
     - 223.5.5.5
     - 119.29.29.29
-    - 180.184.1.1
   # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
   direct-nameserver:
     - https://dns.alidns.com/dns-query
