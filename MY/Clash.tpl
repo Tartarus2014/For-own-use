@@ -49,8 +49,8 @@ tun:
   # mixed 混合堆栈，tcp 使用 system栈，udp 使用 gvisor栈，使用体验可能相对更好
   stack: mixed
   dns-hijack:
-    - "any:53"
     - "tcp://any:53"
+    - "udp://any:53"
   auto-detect-interface: true
   auto-route: true
   auto-redirect: true
@@ -113,26 +113,14 @@ dns:
   default-nameserver:  
     - 223.5.5.5
     - 119.29.29.29
-  # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
-  direct-nameserver:
+  # 主要解析服务器 （作为兜底）
+  nameserver: 
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   # 代理服务器域名解析（用于连接节点服务器）
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  # 主要解析服务器 （作为兜底）
-  nameserver: 
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  # 根据域名分流 DNS
-  nameserver-policy:
-    "geosite:cn":
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    "geosite:!cn":
-    - https://dns.google/dns-query#PROXY
-    - https://cloudflare-dns.com/dns-query#PROXY
+
 
 proxies: {{ getClashNodes(nodeList) | json }}
 
