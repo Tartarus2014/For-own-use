@@ -109,14 +109,7 @@ dns:
     - "geosite:cn"
     # Google Talk服务
     - "mtalk.google.com"
-    - "alt1-mtalk.google.com"
-    - "alt2-mtalk.google.com"
-    - "alt3-mtalk.google.com"
-    - "alt4-mtalk.google.com"
-    - "alt5-mtalk.google.com"
-    - "alt6-mtalk.google.com"
-    - "alt7-mtalk.google.com"
-    - "alt8-mtalk.google.com"
+    - "alt[1-8]-mtalk.google.com"
   # 用于解析 DOH/DOT 域名的基础 DNS，必须为静态 IP
   default-nameserver:  
     - 223.5.5.5
