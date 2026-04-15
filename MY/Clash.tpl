@@ -1,5 +1,3 @@
-# {{ downloadUrl }}
-
 # 混合端口 # HTTP(S) 和 SOCKS 代理混合端口
 mixed-port: 7890
 
@@ -95,31 +93,56 @@ dns:
   fake-ip-range: 198.18.0.1/16 
   # 配置不使用 fake-ip 的域名
   fake-ip-filter:
+    # 本地域名
     - "*.lan"
     - "*.local"
-    - time.*.com
-    - ntp.*.com
-    - mtalk.google.com
-    - alt1-mtalk.google.com
-    - alt2-mtalk.google.com
-    - alt3-mtalk.google.com
-    - alt4-mtalk.google.com
-    - alt5-mtalk.google.com
-    - alt6-mtalk.google.com
-    - alt7-mtalk.google.com
-    - alt8-mtalk.google.com
-    - alt8-mtalk.google.com
+    - "*.localhost"
+    # NTP时间服务器
+    - "time.*.com"
+    - "ntp.*.com"
+    - "pool.ntp.org"
+    - "*.pool.ntp.org"
+    - "time.windows.com"
+    - "time.apple.com"
+    - "time.google.com"
+    # 中国大陆网站
+    - "geosite:cn"
+    # Google Talk服务
+    - "mtalk.google.com"
+    - "alt1-mtalk.google.com"
+    - "alt2-mtalk.google.com"
+    - "alt3-mtalk.google.com"
+    - "alt4-mtalk.google.com"
+    - "alt5-mtalk.google.com"
+    - "alt6-mtalk.google.com"
+    - "alt7-mtalk.google.com"
+    - "alt8-mtalk.google.com"
   # 用于解析 DOH/DOT 域名的基础 DNS，必须为静态 IP
   default-nameserver:  
     - 223.5.5.5
     - 119.29.29.29
-  # 主要解析服务器 （作为兜底）
-  nameserver: 
+  # 强制部分请求走直连 DNS 解析（用于 DIRECT 规则）
+  direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   # 代理服务器域名解析（用于连接节点服务器）
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 根据域名分流 DNS
+  nameserver-policy:
+    # 国内域名使用国内 DNS
+    "geosite:cn":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    # 海外域名使用代理 DNS
+    "geosite:!cn":
+      - https://dns.google/dns-query#PROXY
+      - https://cloudflare-dns.com/dns-query#PROXY
+  # 主要解析服务器 （作为兜底）
+  nameserver: 
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 
 
 proxies: {{ getClashNodes(nodeList) | json }}
