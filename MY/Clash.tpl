@@ -161,41 +161,42 @@ proxy-groups:
   proxies:
   - HK
   - SG
+  - JP
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png'
 
 - name: Emby
   type: select
   proxies:
   - DIRECT
-  - US
-  - JP
   - SG
+  - JP
+  - US
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png'
 
 - type: fallback
   name: HK
-  url: http://g.cn/generate_204
+  url: https://g.cn/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.HK) | json }}
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HK.png'
 
 - type: fallback
   name: SG
-  url: http://g.cn/generate_204
+  url: https://g.cn/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.SG) | json }}
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png'
 
 - type: fallback
   name: JP
-  url: http://g.cn/generate_204
+  url: https://g.cn/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.JP) | json }}
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png'
 
 - type: fallback
   name: US
-  url: http://g.cn/generate_204
+  url: https://g.cn/generate_204
   interval: 300
   proxies: {{ getClashNodeNames(nodeList, customFilters.US) | json }}
   icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/US.png'
