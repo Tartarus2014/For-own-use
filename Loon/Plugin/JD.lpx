@@ -3,7 +3,7 @@
 #!system = iOS,iPadOS,tvOS,macOS
 #!loon_version = 3.5.1(984)
 #!openUrl = https://apps.apple.com/cn/app/id414245413
-#!icon = https://github.com/Toperlock/Quantumult/raw/main/icon/Weslie-Wolffy/Weslie-Wolffy-1010.png
+#!icon = https://raw.githubusercontent.com/Tartarus2014/For-own-use/refs/heads/master/Color/JD.png
 #!arguments-desc = [参数设置]\n1. MMMCK_SCRIPT:慢慢买CK 脚本前往慢慢买App获取Cookie\n2.避免不必要的重写，禁用请设置为"#"
 
 [Argument]
